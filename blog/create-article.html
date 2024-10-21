@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- <script src="tailwind.config.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Include Select2 CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Include Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <title>Ecommerce Blade Template</title>
+  </head>
+  <body>
+    <nav
+      class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+    >
+      <div class="px-3 py-3 lg:px-5 lg:pl-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center justify-start rtl:justify-end">
+            <button
+              data-drawer-target="logo-sidebar"
+              data-drawer-toggle="logo-sidebar"
+              aria-controls="logo-sidebar"
+              type="button"
+              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            >
+              <span class="sr-only">Open sidebar</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+                ></path>
+              </svg>
+            </button>
+            <a href="https://flowbite.com" class="flex ms-2 md:me-24">
+              <!-- <img
+                src="https://flowbite.com/docs/images/logo.svg"
+                class="h-8 me-3"
+                alt="VitasoftsolutionsLogo"
+              /> -->
+              <span
+                class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"
+                >Vitasoft Solution</span
+              >
+            </a>
+          </div>
+          <div class="flex items-center">
+            <div class="flex items-center ms-3">
+              <div>
+                <button
+                  type="button"
+                  class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                  aria-expanded="false"
+                  data-dropdown-toggle="dropdown-user"
+                  data-dropdown-offset-skidding="-100"
+                >
+                  <span class="sr-only">Open user menu</span>
+                  <img
+                    class="w-8 h-8 rounded-full"
+                    src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                    alt="user photo"
+                  />
+                </button>
+              </div>
+              <div
+                class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600 dropdown-menu"
+                id="dropdown-user"
+              >
+                <div class="px-5 py-3" role="none">
+                  <p class="text-lg text-gray-900 dark:text-white" role="none">
+                    Vitasoft Solution Admin
+                  </p>
+                  <p
+                    class="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
+                    role="none"
+                  >
+                    vitasoftsolutions@gmail.com
+                  </p>
+                </div>
+                <ul class="py-1 px-4" role="none">
+                  <li
+                    class="flex items-center text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                  >
+                    <img
+                      src="/asset/icon/dashboard-1-svgrepo-com.svg"
+                      alt=""
+                      class="w-5"
+                    />
+                    <a href="#" class="block p-2 text-sm" role="menuitem"
+                      >Dashboard</a
+                    >
+                  </li>
+                  <li
+                    class="flex items-center text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                  >
+                    <img
+                      src="/asset/icon/setting-config-svgrepo-com.svg"
+                      alt=""
+                      class="w-5"
+                    />
+                    <a href="#" class="block p-2 text-sm" role="menuitem"
+                      >General Settings</a
+                    >
+                  </li>
+                  <li
+                    class="flex items-center text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                  >
+                    <img
+                      src="/asset/icon/user-svgrepo-com.svg"
+                      alt=""
+                      class="w-5"
+                    />
+                    <a href="#" class="block p-2 text-sm" role="menuitem"
+                      >Admin Profile</a
+                    >
+                  </li>
+                  <li
+                    class="flex items-center text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                  >
+                    <img
+                      src="/asset/icon/password-svgrepo-com.svg"
+                      alt=""
+                      class="w-5"
+                    />
+                    <a href="#" class="block p-2 text-sm" role="menuitem"
+                      >Password Update</a
+                    >
+                  </li>
+                  <li
+                    class="flex items-center text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                  >
+                    <img
+                      src="/asset/icon/sign-out-2-svgrepo-com.svg"
+                      alt=""
+                      class="w-5"
+                    />
+                    <a href="#" class="block p-2 text-sm" role="menuitem"
+                      >Sign out</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <aside
+      id="logo-sidebar"
+      class="fixed top-0 sm:translate-x-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+        <ul class="space-y-2 font-medium" id="sidebar-menu"></ul>
+        <ul
+          class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"
+          id="sidebar-extra"
+        ></ul>
+        <div
+          id="dropdown-cta"
+          class="p-4 mt-6 rounded-lg bg-blue-50 dark:bg-blue-900"
+          role="alert"
+        >
+          <div class="flex items-center mb-3">
+            <span
+              class="bg-orange-100 text-orange-800 text-sm font-semibold me-2 px-2.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-900"
+              >Beta</span
+            >
+            <button
+              type="button"
+              class="ms-auto -mx-1.5 -my-1.5 bg-blue-50 inline-flex justify-center items-center w-6 h-6 text-blue-900 rounded-lg focus:ring-2 focus:ring-blue-400 p-1 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-400 dark:hover:bg-blue-800"
+              data-dismiss-target="#dropdown-cta"
+              aria-label="Close"
+            >
+              <span class="sr-only">Close</span>
+              <svg
+                class="w-2.5 h-2.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+            </button>
+          </div>
+          <p class="mb-3 text-sm text-blue-800 dark:text-blue-400">
+            Preview the new ecommerce dashboard navigation! You can now see /
+            add your comapany cta here
+          </p>
+          <a
+            class="text-sm text-blue-800 underline font-medium hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
+            href="#"
+            >Add new cta</a
+          >
+        </div>
+      </div>
+    </aside>
+
+    <!-- general settings -->
+    <div class="p-4 ml-0 sm:ml-64">
+      <div class="p-4 rounded-lg dark:border-gray-700 mt-14">
+        <div class="text-3xl w-full text-center lg:text-start">
+          Create Article
+        </div>
+
+        <section class="mt-10 relative">
+          <form id="articleForm" class="">
+            <div
+              class="flex flex-col lg:flex-row gap-8 lg:gap-0 items-center justify-between mb-10"
+            >
+              <nav
+                class="flex w-full justify-center lg:justify-start"
+                aria-label="Breadcrumb"
+              >
+                <ol
+                  class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse"
+                >
+                  <li class="inline-flex items-center">
+                    <a
+                      href="/"
+                      class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                    >
+                      <svg
+                        class="w-3 h-3 me-2.5"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"
+                        />
+                      </svg>
+                      Dashboard
+                    </a>
+                  </li>
+                  <li>
+                    <div class="flex items-center">
+                      <svg
+                        class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 6 10"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 9 4-4-4-4"
+                        />
+                      </svg>
+                      <a
+                        href="/blog/article.html"
+                        class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white"
+                        >Article</a
+                      >
+                    </div>
+                  </li>
+                  <li aria-current="page">
+                    <div class="flex items-center">
+                      <svg
+                        class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 6 10"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 9 4-4-4-4"
+                        />
+                      </svg>
+                      <span
+                        class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400"
+                        >Article Create</span
+                      >
+                    </div>
+                  </li>
+                </ol>
+              </nav>
+              <div
+                class="flex justify-center lg:justify-end items-center gap-2 w-full"
+              >
+                <button
+                  type="button"
+                  class="hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 border hover:text-white text-xs md:text-sm"
+                  onclick="window.location.href='/blog/article.html'"
+                >
+                  Go Back
+                </button>
+                <button
+                  type="submit"
+                  id="save"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-xs md:text-sm"
+                >
+                  Save
+                </button>
+                <button
+                  type="submit"
+                  id="saveAndCreate"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-3 md:px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-xs md:text-sm"
+                >
+                  Save & Create
+                </button>
+              </div>
+            </div>
+
+            <div class="w-full lg:w-[80%] xl:w-[60%] mx-auto space-y-8">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                <div>
+                  <label
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    for="articleTitle"
+                    >Article Title <span class="text-red-600">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="articleTitle"
+                    name="articleTitle"
+                    class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Enter the article title"
+                    required
+                  />
+                </div>
+                <div class="relative">
+                  <label
+                    for="articleCategory"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Select Category <span class="text-red-600">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="articleCategory"
+                    placeholder="Search for a category"
+                    class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    onfocus="showDropdown()"
+                    autocomplete="off"
+                    required
+                  />
+                  <div
+                    id="dropdown"
+                    class="absolute z-10 hidden w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg text-sm"
+                  >
+                    <ul id="category-list" class="max-h-60 overflow-auto">
+                      <li
+                        class="cursor-pointer px-4 py-2 text-left hover:bg-blue-500 hover:text-white"
+                        data-value="US"
+                      >
+                        United States
+                      </li>
+                      <li
+                        class="cursor-pointer px-4 py-2 hover:bg-blue-500 hover:text-white"
+                        data-value="CA"
+                      >
+                        Canada
+                      </li>
+                      <li
+                        class="cursor-pointer px-4 py-2 hover:bg-blue-500 hover:text-white"
+                        data-value="FR"
+                      >
+                        France
+                      </li>
+                      <li
+                        class="cursor-pointer px-4 py-2 hover:bg-blue-500 hover:text-white"
+                        data-value="DE"
+                      >
+                        Germany
+                      </li>
+                    </ul>
+                  </div>
+
+                  <script>
+                    const searchInput =
+                      document.getElementById("articleCategory");
+                    const dropdown = document.getElementById("dropdown");
+                    const categoryList =
+                      document.getElementById("category-list");
+
+                    // Show dropdown when input is focused
+                    function showDropdown() {
+                      dropdown.classList.remove("hidden");
+                      filterCountries();
+                    }
+
+                    // Hide dropdown when clicking outside
+                    document.addEventListener("click", function (event) {
+                      if (
+                        !searchInput.contains(event.target) &&
+                        !dropdown.contains(event.target)
+                      ) {
+                        dropdown.classList.add("hidden");
+                      }
+                    });
+
+                    // Filter countries based on input
+                    searchInput.addEventListener("input", filterCountries);
+
+                    function filterCountries() {
+                      const filter = searchInput.value.toLowerCase();
+                      const listItems = categoryList.querySelectorAll("li");
+
+                      listItems.forEach((item) => {
+                        const text = item.textContent.toLowerCase().trim();
+                        if (text.includes(filter)) {
+                          item.style.display = "";
+                        } else {
+                          item.style.display = "none";
+                        }
+                      });
+                    }
+
+                    // Handle item selection
+                    categoryList.addEventListener("click", function (event) {
+                      if (event.target.tagName === "LI") {
+                        searchInput.value = event.target.textContent.trim(); // Trim when setting value
+                        dropdown.classList.add("hidden");
+                      }
+                    });
+                  </script>
+                </div>
+              </div>
+
+              <div class="">
+                <label
+                  for="shortDescription"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Short Description <span class="text-red-600">*</span></label
+                >
+                <textarea
+                  id="shortDescription"
+                  name="shortDescription"
+                  rows="2"
+                  class="block p-2 py-[6px] w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Write your thoughts here..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="">
+                <label
+                  for="article"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Article <span class="text-red-600">*</span></label
+                >
+                <div
+                  id="article-editor"
+                  class="h-[150px] overflow-auto border"
+                ></div>
+                <script>
+                  const toolbarOptions = [
+                    [{ size: ["small", false, "large", "huge"] }],
+                    [{ header: [1, 2, 3, 4, 5, 6, false] }],
+                    ["bold", "italic", "underline", "strike"],
+                    ["blockquote", "code-block"],
+                    ["link", "image"],
+                    [
+                      { list: "ordered" },
+                      { list: "bullet" },
+                      { list: "check" },
+                    ],
+                    [{ script: "sub" }, { script: "super" }],
+                    [{ indent: "-1" }, { indent: "+1" }],
+                    [{ direction: "rtl" }],
+                    [{ color: [] }, { background: [] }],
+                    [{ font: [] }],
+                    [{ align: [] }],
+                    ["clean"],
+                  ];
+
+                  const options = {
+                    modules: {
+                      toolbar: {
+                        container: toolbarOptions,
+                      },
+                    },
+                    placeholder: "Article",
+                    theme: "snow",
+                  };
+
+                  const quill = new Quill("#article-editor", options);
+                </script>
+              </div>
+
+              <div class="">
+                <div class="flex items-center">
+                  <input
+                    id="seo-checkbox"
+                    name="seo-checkbox"
+                    type="checkbox"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                  <label
+                    for="seo-checkbox"
+                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >SEO</label
+                  >
+                </div>
+              </div>
+
+              <div
+                class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8"
+                id="seo"
+                style="display: none"
+              >
+                <div>
+                  <label
+                    for="metaTitle"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Meta Title <span class="text-red-600">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="metaTitle"
+                    name="metaTitle"
+                    class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Enter meta title"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="metaTag"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Meta Tag <span class="text-red-600">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="metaTag"
+                    name="metaTag"
+                    class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Enter meta tag"
+                  />
+                </div>
+
+                <div class="col-span-1 md:col-span-2">
+                  <label
+                    for="metaDescription"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Meta Description <span class="text-red-600">*</span></label
+                  >
+                  <textarea
+                    id="metaDescription"
+                    rows="2"
+                    name="metaDescription"
+                    class="block p-2 py-[6px] w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Write meta description..."
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              const seoCheckbox = document.getElementById("seo-checkbox");
+              const metaFieldsSection = document.getElementById("seo");
+              const articleForm = document.getElementById("articleForm");
+
+              const saveButton = document.getElementById("save");
+              // const saveAndCreateButton =
+              //   document.getElementById("saveAndCreate");
+              // const messageArea = document.getElementById("messageArea"); // Get the message area
+
+              // Function to toggle the visibility of meta fields
+              function toggleMetaFields() {
+                if (seoCheckbox.checked) {
+                  metaFieldsSection.style.display = "grid";
+                } else {
+                  metaFieldsSection.style.display = "none";
+                }
+              }
+
+              // Event listener for checkbox changes
+              seoCheckbox.addEventListener("change", toggleMetaFields);
+
+              // Handle form submission on Save button click
+              articleForm.addEventListener("submit", (e) => {
+                e.preventDefault(); // Prevent default button action
+
+                // Retrieve values
+                const articleTitle = document
+                  .getElementById("articleTitle")
+                  .value.trim();
+                const category = document
+                  .getElementById("articleCategory")
+                  .value.trim();
+                const shortDescription = document
+                  .getElementById("shortDescription")
+                  .value.trim();
+                const articleContent = quill.root.innerHTML; // Get content from Quill editor
+                const metaTitle = seoCheckbox.checked
+                  ? document.getElementById("metaTitle").value.trim()
+                  : null;
+                const metaTag = seoCheckbox.checked
+                  ? document.getElementById("metaTag").value.trim()
+                  : null;
+                const metaDescription = seoCheckbox.checked
+                  ? document.getElementById("metaDescription").value.trim()
+                  : null;
+
+                // Basic validation
+                if (
+                  !articleTitle ||
+                  !category ||
+                  !shortDescription ||
+                  !articleContent
+                ) {
+                  // showMessage("Please fill in all required fields.");
+                  return;
+                }
+
+                if (seoCheckbox.checked) {
+                  if (!metaTitle || !metaTag || !metaDescription) {
+                    // showMessage("Please fill in all SEO fields.");
+                    console.log("Please fill in all SEO fields.");
+                    return;
+                  }
+                }
+
+                // If validation passes, proceed with form submission (e.g., via AJAX)
+                console.log({
+                  articleTitle,
+                  category,
+                  shortDescription,
+                  articleContent,
+                  metaTitle,
+                  metaTag,
+                  metaDescription,
+                });
+
+                // showMessage("Form submitted successfully!", false); // Show success message
+                // Optionally, reset the form
+                articleForm.reset();
+                quill.setContents([]); // Clear the Quill editor content
+                metaFieldsSection.style.display = "none"; // Hide SEO fields if checkbox is unchecked
+              });
+
+              // Handle Save and Create button functionality (if needed)
+              saveAndCreateButton.addEventListener("click", (e) => {
+                e.preventDefault();
+                // You can implement similar logic as above for this button, or create additional functionality if required.
+                console.log("Save and Create button clicked");
+              });
+            </script>
+          </form>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+  </body>
+</html>

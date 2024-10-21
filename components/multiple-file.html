@@ -1,0 +1,181 @@
+<div class="mb-4 lg:mb-8">
+  <label
+    for="email"
+    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+    >File Multi</label
+  >
+  <div
+    id="uploadBoxMultiple"
+    class="w-full h-auto border-2 border-dashed border-gray-300 rounded-lg flex flex-wrap items-center gap-4 p-2 bg-gray-50"
+    tabindex="0"
+    role="button"
+    aria-label="Upload images"
+  >
+    <!-- Add Image button inside upload box -->
+    <div
+      id="addImageButton"
+      class="w-32 h-32 border-2 border-dashed border-gray-300 flex flex-col items-center justify-center cursor-pointer overflow-hidden bg-white group rounded-lg"
+      tabindex="0"
+      role="button"
+      aria-label="Add more images"
+    >
+      <svg
+        class="mx-auto h-8 w-8 text-gray-400 group-hover:text-gray-500"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        id="uploadIconMultiple"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+        ></path>
+      </svg>
+      <p class="mt-2 text-xs text-gray-600" id="uploadTextMultiple">
+        Upload image
+      </p>
+    </div>
+
+    <!-- Images container for displaying previews side by side -->
+    <div id="imagesContainer" class="flex flex-wrap gap-4"></div>
+  </div>
+
+  <!-- Hidden file input for multiple image uploads -->
+  <input
+    type="file"
+    id="fileInputMultiple"
+    class="hidden"
+    accept="image/*"
+    aria-hidden="true"
+    multiple
+  />
+
+  <!-- Full preview modal -->
+  <div
+    id="fullPreviewMultiple"
+    class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50"
+  >
+    <img
+      id="fullPreviewImageMultiple"
+      class="max-w-full max-h-full object-contain"
+      alt="Full size preview"
+    />
+    <button
+      id="closePreviewMultiple"
+      class="absolute top-4 right-4 text-white text-2xl"
+      aria-label="Close preview"
+    >
+      &times;
+    </button>
+  </div>
+</div>
+
+<script>
+  const uploadBoxMultiple = document.getElementById("uploadBoxMultiple");
+  const fileInputMultiple = document.getElementById("fileInputMultiple");
+  const addImageButton = document.getElementById("addImageButton");
+  const imagesContainer = document.getElementById("imagesContainer");
+
+  const fullPreviewMultiple = document.getElementById("fullPreviewMultiple");
+  const fullPreviewImageMultiple = document.getElementById(
+    "fullPreviewImageMultiple"
+  );
+  const closePreviewMultiple = document.getElementById("closePreviewMultiple");
+
+  // Trigger the file input when the "Add Image" button is clicked
+  addImageButton.addEventListener("click", () => {
+    fileInputMultiple.click();
+  });
+
+  fileInputMultiple.addEventListener("change", handleMultipleFileUpload);
+
+  closePreviewMultiple.addEventListener("click", hideFullPreviewMultiple);
+
+  function handleMultipleFileUpload(e) {
+    const files = e.target.files;
+    if (files.length > 0) {
+      Array.from(files).forEach((file) => {
+        if (file && file.type.startsWith("image/")) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            createImagePreview(e.target.result);
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+    }
+    // Reset the file input to allow selecting the same image again
+    fileInputMultiple.value = "";
+  }
+
+  // Create image preview with delete and preview functionality
+  function createImagePreview(imageSrc) {
+    const imageWrapper = document.createElement("div");
+    imageWrapper.classList.add("relative", "w-32", "h-32", "group");
+
+    const img = document.createElement("img");
+    img.src = imageSrc;
+    img.alt = "Uploaded preview";
+    img.classList.add(
+      "w-full",
+      "h-full",
+      "object-contain",
+      "rounded-lg",
+      "border-2",
+      "border-gray-300",
+      "p-1"
+    );
+
+    const overlay = document.createElement("div");
+    overlay.classList.add(
+      "absolute",
+      "inset-0",
+      "bg-black",
+      "bg-opacity-50",
+      "flex",
+      "items-center",
+      "justify-center",
+      "opacity-0",
+      "group-hover:opacity-100",
+      "transition-opacity",
+      "rounded-lg"
+    );
+
+    const deleteButton = document.createElement("button");
+    deleteButton.innerHTML = `<p class="text-xs font-semibold">Delete</p>`;
+    deleteButton.classList.add(
+      "bg-red-500",
+      "text-white",
+      "rounded-full",
+      "p-2",
+      "py-1",
+      "mx-2",
+      "hover:bg-red-600",
+      "focus:outline-none",
+      "focus:ring-2",
+      "focus:ring-red-400"
+    );
+    deleteButton.addEventListener("click", () => {
+      imageWrapper.remove(); // Remove the image container on delete
+    });
+
+    overlay.appendChild(deleteButton);
+
+    imageWrapper.appendChild(img);
+    imageWrapper.appendChild(overlay);
+    imagesContainer.appendChild(imageWrapper);
+  }
+
+  // Optional: Full preview functionality for multiple images
+  function showFullPreviewMultiple(imageSrc) {
+    fullPreviewImageMultiple.src = imageSrc;
+    fullPreviewMultiple.classList.remove("hidden");
+  }
+
+  function hideFullPreviewMultiple() {
+    fullPreviewMultiple.classList.add("hidden");
+  }
+</script>

@@ -1,0 +1,217 @@
+<div
+  class="flex flex-col lg:flex-row gap-8 lg:gap-0 items-center justify-between mb-10"
+>
+  <div class="flex item-center gap-4">
+    <div class="text-2xl font-semibold flex items-center gap-2 justify-center">
+      <span>Blog</span><span>|</span>
+      <span class="text-gray-500"> Article</span>
+    </div>
+
+    <button
+      class="rounded-full p-1 flex items-center"
+      onclick="window.location.href='create-article.html'"
+    >
+      <img src="/asset/icon/plus-circle-svgrepo-com.svg" alt="" class="w-7" />
+    </button>
+  </div>
+
+  <div class="flex items-center gap-2">
+    <div class="">
+      <div class="relative">
+        <div
+          class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+        >
+          <img
+            src="/asset//icon//search-5-svgrepo-com.svg"
+            alt=""
+            class="w-6"
+          />
+        </div>
+        <input
+          type="text"
+          id="input-group-1"
+          class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Search"
+        />
+        <button
+          id="dropdownMenuIconHorizontalButton"
+          data-dropdown-toggle="dropdownFilterHorizontal"
+          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-r-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600 border border-gray-300 inset-y-0 absolute end-0 flex items-center px-3"
+          type="button"
+          data-dropdown-ignore-click-outside-class="datepicker"
+          data-dropdown-offset-skidding="-150"
+        >
+          <img src="/asset/icon//filter-svgrepo-com.svg" alt="" class="w-5" />
+        </button>
+
+        <div
+          id="dropdownFilterHorizontal"
+          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg border shadow-md dark:bg-gray-700 dark:divide-gray-600"
+          style="width: 30rem"
+        >
+          <div class="p-5 flex flex-col item-center justify-center gap-8">
+            <span class="text-center font-medium">Advanced Search</span>
+            <div class="" aria-labelledby="dateRangeButton">
+              <div
+                date-rangepicker
+                datepicker-autohide
+                class="flex items-center gap-2"
+              >
+                <div class="relative w-full">
+                  <div
+                    class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    name="start"
+                    type="text"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Start date"
+                  />
+                </div>
+                <!-- <span class="mx-2 text-gray-500 dark:text-gray-400"
+                          >to</span
+                        > -->
+                <div class="relative w-full">
+                  <div
+                    class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    name="end"
+                    type="text"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="End date"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5 flex justify-end item-center gap-2">
+            <button
+              type="button"
+              id="filter-reset"
+              class="py-2 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              Reset
+            </button>
+            <button
+              type="button"
+              id="filter-cancel"
+              class="py-2 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              id="filter-search"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      id="dropdownMenuIconHorizontalButton"
+      data-dropdown-toggle="dropdownDotsHorizontal"
+      class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600 border border-gray-300"
+      type="button"
+      data-dropdown-offset-skidding="-50"
+    >
+      <svg
+        class="w-6 h-6"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 16 3"
+      >
+        <path
+          d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
+        />
+      </svg>
+    </button>
+
+    <!-- Dropdown menu -->
+    <div
+      id="dropdownDotsHorizontal"
+      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-md w-32 dark:bg-gray-700 dark:divide-gray-600 border"
+    >
+      <ul
+        class="p-2 text-sm text-gray-700 dark:text-gray-200"
+        aria-labelledby="dropdownMenuIconHorizontalButton"
+      >
+        <li
+          class="flex items-center hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer rounded-md px-1"
+        >
+          <img src="/asset/icon/view-svgrepo-com (1).svg" class="w-6" alt="" />
+          <a href="#" class="block px-4 py-2">View</a>
+        </li>
+        <li
+          class="flex items-center hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer rounded-md px-1"
+        >
+          <img
+            src="/asset/icon/import-content-svgrepo-com.svg"
+            class="w-5"
+            alt=""
+          />
+          <a href="#" class="block px-4 py-2">Import</a>
+        </li>
+        <li
+          class="flex items-center hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer rounded-md px-1"
+        >
+          <img src="/asset/icon/pdf-file-svgrepo-com.svg" class="w-5" alt="" />
+          <a href="#" class="block px-4 py-2">PDF</a>
+        </li>
+        <li
+          class="flex items-center hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer rounded-md px-1"
+        >
+          <img
+            src="/asset/icon/excel-file-svgrepo-com.svg"
+            class="w-5"
+            alt=""
+          />
+          <a href="#" class="block px-4 py-2">EXCEL</a>
+        </li>
+        <li
+          class="flex items-center hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer rounded-md px-1"
+        >
+          <img src="/asset/icon/csv-svgrepo-com.svg" class="w-5" alt="" />
+          <a href="#" class="block px-4 py-2">CSV</a>
+        </li>
+      </ul>
+      <!-- <div class="py-2">
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >Separated link</a
+                >
+              </div> -->
+    </div>
+  </div>
+</div>

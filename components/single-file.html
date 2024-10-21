@@ -1,0 +1,148 @@
+<div class="mb-4 lg:mb-8">
+  <label
+    for="email"
+    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+    >File Single</label
+  >
+  <div
+    id="uploadBox"
+    class="w-full h-32 border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center cursor-pointer overflow-hidden bg-gray-50 relative group"
+    tabindex="0"
+    role="button"
+    aria-label="Upload image"
+  >
+    <input
+      type="file"
+      id="fileInput"
+      class="hidden"
+      accept="image/*"
+      aria-hidden="true"
+    />
+    <div id="placeholder" class="text-center">
+      <svg
+        class="mx-auto h-12 w-12 text-gray-400 group-hover:text-gray-500"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        id="uploadIcon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+        ></path>
+      </svg>
+      <p class="mt-2 text-sm text-gray-600" id="uploadText">
+        Click to upload image
+      </p>
+    </div>
+    <div id="imageContainer" class="w-full h-full py-2 hidden group">
+      <img
+        id="preview"
+        class="w-full h-full object-contain"
+        alt="Uploaded preview"
+      />
+      <div
+        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+      >
+        <!-- <button
+            id="previewButton"
+            class="bg-white text-gray-800 rounded-full p-2 py-1 mx-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            aria-label="Preview image"
+            type="button"
+          >
+            <p class="text-xs font-semibold">Preview</p>
+          </button> -->
+        <button
+          id="deleteButton"
+          class="bg-red-500 text-white rounded-full p-2 py-1 mx-2 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400"
+          aria-label="Delete image"
+          type="button"
+        >
+          <p class="text-xs font-semibold">Delete</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="fullPreview"
+    class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden"
+  >
+    <img
+      id="fullPreviewImage"
+      class="max-w-full max-h-full object-contain"
+      alt="Full size preview"
+    />
+    <button
+      id="closePreview"
+      class="absolute top-4 right-4 text-white text-2xl"
+      aria-label="Close preview"
+    >
+      &times;
+    </button>
+  </div>
+</div>
+
+<script>
+  const uploadBox = document.getElementById("uploadBox");
+  const fileInput = document.getElementById("fileInput");
+  const placeholder = document.getElementById("placeholder");
+  const uploadText = document.getElementById("uploadText");
+  const uploadIcon = document.getElementById("uploadIcon");
+
+  const imageContainer = document.getElementById("imageContainer");
+  const preview = document.getElementById("preview");
+  const previewButton = document.getElementById("previewButton");
+  const deleteButton = document.getElementById("deleteButton");
+
+  uploadBox.addEventListener("click", (e) => {
+    if (
+      e.target === uploadBox ||
+      e.target === placeholder ||
+      e.target === uploadText ||
+      e.target === uploadIcon
+    ) {
+      fileInput.click();
+    }
+  });
+
+  uploadBox.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      fileInput.click();
+    }
+  });
+
+  fileInput.addEventListener("change", handleFileUpload);
+  deleteButton.addEventListener("click", deleteImage);
+
+  function handleFileUpload(e) {
+    const file = e.target.files[0];
+    if (file && file.type.startsWith("image/")) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        preview.src = e.target.result;
+        showImage();
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  function showImage() {
+    placeholder.classList.add("hidden");
+    imageContainer.classList.remove("hidden");
+    uploadBox.setAttribute("aria-label", "Image uploaded");
+  }
+
+  function deleteImage(e) {
+    e.stopPropagation();
+    fileInput.value = "";
+    preview.src = "";
+    placeholder.classList.remove("hidden");
+    imageContainer.classList.add("hidden");
+    uploadBox.setAttribute("aria-label", "Upload image");
+  }
+</script>

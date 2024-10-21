@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- <script src="tailwind.config.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Include Select2 CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Include Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <title>Ecommerce Blade Template</title>
+  </head>
+  <body>
+    <nav
+      class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+    >
+      <div class="px-3 py-3 lg:px-5 lg:pl-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center justify-start rtl:justify-end">
+            <button
+              data-drawer-target="logo-sidebar"
+              data-drawer-toggle="logo-sidebar"
+              aria-controls="logo-sidebar"
+              type="button"
+              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            >
+              <span class="sr-only">Open sidebar</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+                ></path>
+              </svg>
+            </button>
+            <a href="https://flowbite.com" class="flex ms-2 md:me-24">
+              <!-- <img
+                src="https://flowbite.com/docs/images/logo.svg"
+                class="h-8 me-3"
+                alt="VitasoftsolutionsLogo"
+              /> -->
+              <span
+                class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"
+                >Vitasoft Solution</span
+              >
+            </a>
+          </div>
+          <div class="flex items-center">
+            <div class="flex items-center ms-3">
+              <div>
+                <button
+                  type="button"
+                  class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                  aria-expanded="false"
+                  data-dropdown-toggle="dropdown-user"
+                  data-dropdown-offset-skidding="-100"
+                >
+                  <span class="sr-only">Open user menu</span>
+                  <img
+                    class="w-8 h-8 rounded-full"
+                    src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                    alt="user photo"
+                  />
+                </button>
+              </div>
+              <div
+                class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600 dropdown-menu"
+                id="dropdown-user"
+              >
+                <div class="px-5 py-3" role="none">
+                  <p class="text-lg text-gray-900 dark:text-white" role="none">
+                    Vitasoft Solution Admin
+                  </p>
+                  <p
+                    class="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
+                    role="none"
+                  >
+                    vitasoftsolutions@gmail.com
+                  </p>
+                </div>
+                <ul class="py-1 px-4" role="none">
+                  <li
+                    class="flex items-center text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                  >
+                    <img
+                      src="/asset/icon/dashboard-1-svgrepo-com.svg"
+                      alt=""
+                      class="w-5"
+                    />
+                    <a href="#" class="block p-2 text-sm" role="menuitem"
+                      >Dashboard</a
+                    >
+                  </li>
+                  <li
+                    class="flex items-center text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                  >
+                    <img
+                      src="/asset/icon/setting-config-svgrepo-com.svg"
+                      alt=""
+                      class="w-5"
+                    />
+                    <a href="#" class="block p-2 text-sm" role="menuitem"
+                      >General Settings</a
+                    >
+                  </li>
+                  <li
+                    class="flex items-center text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                  >
+                    <img
+                      src="/asset/icon/user-svgrepo-com.svg"
+                      alt=""
+                      class="w-5"
+                    />
+                    <a href="#" class="block p-2 text-sm" role="menuitem"
+                      >Admin Profile</a
+                    >
+                  </li>
+                  <li
+                    class="flex items-center text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                  >
+                    <img
+                      src="/asset/icon/password-svgrepo-com.svg"
+                      alt=""
+                      class="w-5"
+                    />
+                    <a href="#" class="block p-2 text-sm" role="menuitem"
+                      >Password Update</a
+                    >
+                  </li>
+                  <li
+                    class="flex items-center text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                  >
+                    <img
+                      src="/asset/icon/sign-out-2-svgrepo-com.svg"
+                      alt=""
+                      class="w-5"
+                    />
+                    <a href="#" class="block p-2 text-sm" role="menuitem"
+                      >Sign out</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <aside
+      id="logo-sidebar"
+      class="fixed top-0 sm:translate-x-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+        <ul class="space-y-2 font-medium" id="sidebar-menu"></ul>
+        <ul
+          class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"
+          id="sidebar-extra"
+        ></ul>
+        <div
+          id="dropdown-cta"
+          class="p-4 mt-6 rounded-lg bg-blue-50 dark:bg-blue-900"
+          role="alert"
+        >
+          <div class="flex items-center mb-3">
+            <span
+              class="bg-orange-100 text-orange-800 text-sm font-semibold me-2 px-2.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-900"
+              >Beta</span
+            >
+            <button
+              type="button"
+              class="ms-auto -mx-1.5 -my-1.5 bg-blue-50 inline-flex justify-center items-center w-6 h-6 text-blue-900 rounded-lg focus:ring-2 focus:ring-blue-400 p-1 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-400 dark:hover:bg-blue-800"
+              data-dismiss-target="#dropdown-cta"
+              aria-label="Close"
+            >
+              <span class="sr-only">Close</span>
+              <svg
+                class="w-2.5 h-2.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+            </button>
+          </div>
+          <p class="mb-3 text-sm text-blue-800 dark:text-blue-400">
+            Preview the new ecommerce dashboard navigation! You can now see /
+            add your comapany cta here
+          </p>
+          <a
+            class="text-sm text-blue-800 underline font-medium hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
+            href="#"
+            >Add new cta</a
+          >
+        </div>
+      </div>
+    </aside>
+
+    <!-- general settings -->
+    <div class="p-4 ml-0 sm:ml-64">
+      <div class="p-4 rounded-lg dark:border-gray-700 mt-14">
+        <div class="text-3xl w-full text-center lg:text-start">
+          Create Article
+        </div>
+        <div
+          class="flex flex-col lg:flex-row gap-8 lg:gap-0 items-center justify-between my-5"
+        >
+          <nav class="flex" aria-label="Breadcrumb">
+            <ol
+              class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse"
+            >
+              <li class="inline-flex items-center">
+                <a
+                  href="/"
+                  class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                >
+                  <svg
+                    class="w-3 h-3 me-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"
+                    />
+                  </svg>
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <svg
+                    class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 6 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 9 4-4-4-4"
+                    />
+                  </svg>
+                  <a
+                    href="/blog/article.html"
+                    class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white"
+                    >Article</a
+                  >
+                </div>
+              </li>
+              <li aria-current="page">
+                <div class="flex items-center">
+                  <svg
+                    class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 6 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 9 4-4-4-4"
+                    />
+                  </svg>
+                  <span
+                    class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400"
+                    >Article Create</span
+                  >
+                </div>
+              </li>
+            </ol>
+          </nav>
+          <div
+            class="flex justify-center lg:justify-end items-center gap-2 w-full"
+          >
+            <button
+              type="submit"
+              class="hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 border hover:text-white text-xs md:text-sm"
+            >
+              Go Back
+            </button>
+            <button
+              type="submit"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-xs md:text-sm"
+            >
+              Save
+            </button>
+            <button
+              type="submit"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-3 md:px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-xs md:text-sm"
+            >
+              Save & Create
+            </button>
+          </div>
+        </div>
+
+        <section class="mt-10 relative">
+          <form class="w-full lg:w-[80%] xl:w-[60%] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8">
+              <div class="">
+                <label
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Article Title <span class="text-red-600">*</span></label
+                >
+
+                <input
+                  type="text"
+                  id="small-input"
+                  class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="john.doe@company.com"
+                  required
+                />
+              </div>
+              <div class="relative">
+                <label
+                  for="country-search"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Select Category <span class="text-red-600">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="country-search"
+                  placeholder="Search for a category"
+                  class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  onfocus="showDropdown()"
+                  autocomplete="off"
+                />
+                <div
+                  id="dropdown"
+                  class="absolute z-10 hidden w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg text-sm"
+                >
+                  <ul id="country-list" class="max-h-60 overflow-auto">
+                    <li
+                      class="cursor-pointer px-4 py-2 text-left hover:bg-blue-500 hover:text-white"
+                      data-value="US"
+                    >
+                      United States
+                    </li>
+                    <li
+                      class="cursor-pointer px-4 py-2 hover:bg-blue-500 hover:text-white"
+                      data-value="CA"
+                    >
+                      Canada
+                    </li>
+                    <li
+                      class="cursor-pointer px-4 py-2 hover:bg-blue-500 hover:text-white"
+                      data-value="FR"
+                    >
+                      France
+                    </li>
+                    <li
+                      class="cursor-pointer px-4 py-2 hover:bg-blue-500 hover:text-white"
+                      data-value="DE"
+                    >
+                      Germany
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-8">
+              <label
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Short Description <span class="text-red-600">*</span></label
+              >
+
+              <textarea
+                id="message"
+                rows="2"
+                class="block p-2 py-[6px] w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Write your thoughts here..."
+              ></textarea>
+            </div>
+
+            <div class="mb-8">
+              <label
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Article <span class="text-red-600">*</span></label
+              >
+
+              <div
+                id="article-editor"
+                class="h-[150px] overflow-auto border"
+              ></div>
+              <script>
+                const toolbarOptions = [
+                  [{ size: ["small", false, "large", "huge"] }], // custom dropdown
+                  [{ header: [1, 2, 3, 4, 5, 6, false] }],
+                  ["bold", "italic", "underline", "strike"], // toggled buttons
+                  ["blockquote", "code-block"],
+                  ["link", "image"],
+
+                  [{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
+                  [{ script: "sub" }, { script: "super" }], // superscript/subscript
+                  [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+                  [{ direction: "rtl" }], // text direction
+
+                  [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+                  [{ font: [] }],
+                  [{ align: [] }],
+
+                  ["clean"], // remove formatting button
+                ];
+
+                const options = {
+                  //   debug: "info",
+                  modules: {
+                    toolbar: {
+                      container: toolbarOptions, // Selector for toolbar container
+                    },
+                  },
+                  placeholder: "Article",
+                  theme: "snow",
+                };
+
+                const quill = new Quill("#article-editor", options);
+              </script>
+            </div>
+            <div class="mb-8">
+              <div class="flex items-center">
+                <input
+                  id="seo-checkbox"
+                  type="checkbox"
+                  value=""
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  for="seo-checkbox"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >SEO</label
+                >
+              </div>
+            </div>
+
+            <div
+              class="hidden grid grid-cols-1 gap-4 mb-8 md:grid-cols-2 md:gap-8"
+              id="seo"
+            >
+              <div>
+                <label
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Meta Title <span class="text-red-600">*</span></label
+                >
+
+                <input
+                  type="text"
+                  id="small-input"
+                  class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="john.doe@company.com"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Meta Tag <span class="text-red-600">*</span></label
+                >
+
+                <input
+                  type="text"
+                  id="small-input"
+                  class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="john.doe@company.com"
+                  required
+                />
+              </div>
+
+              <div class="col-span-1 md:col-span-2">
+                <label
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Meta Description <span class="text-red-600">*</span></label
+                >
+
+                <textarea
+                  id="message"
+                  rows="2"
+                  class="block p-2 py-[6px] w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Write meta description.."
+                ></textarea>
+              </div>
+            </div>
+
+            <script>
+              const seoCheckbox = document.getElementById("seo-checkbox");
+              const metaFieldsSection = document.getElementById("seo");
+
+              console.log(seoCheckbox);
+
+              // Function to toggle the visibility of meta fields
+              function toggleMetaFields() {
+                if (seoCheckbox.checked) {
+                  metaFieldsSection.classList.remove("hidden");
+                } else {
+                  metaFieldsSection.classList.add("hidden");
+                }
+              }
+
+              // Event listener for checkbox changes
+              seoCheckbox.addEventListener("change", toggleMetaFields);
+            </script>
+
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8"
+            >
+              <div class="">
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Email address</label
+                >
+
+                <input
+                  type="text"
+                  id="small-input"
+                  class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="john.doe@company.com"
+                  required
+                />
+              </div>
+              <div class="">
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Email address</label
+                >
+                <input
+                  type="text"
+                  id="small-input"
+                  class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="john.doe@company.com"
+                  required
+                />
+              </div>
+
+              <div class="relative">
+                <label
+                  for="country-search"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Select country
+                </label>
+                <input
+                  type="text"
+                  id="country-search"
+                  placeholder="Search for a country..."
+                  class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  onfocus="showDropdown()"
+                  autocomplete="off"
+                />
+                <div
+                  id="dropdown"
+                  class="absolute z-10 hidden w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg text-sm"
+                >
+                  <ul id="country-list" class="max-h-60 overflow-auto">
+                    <li
+                      class="cursor-pointer px-4 py-2 text-left hover:bg-blue-500 hover:text-white"
+                      data-value="US"
+                    >
+                      United States
+                    </li>
+                    <li
+                      class="cursor-pointer px-4 py-2 hover:bg-blue-500 hover:text-white"
+                      data-value="CA"
+                    >
+                      Canada
+                    </li>
+                    <li
+                      class="cursor-pointer px-4 py-2 hover:bg-blue-500 hover:text-white"
+                      data-value="FR"
+                    >
+                      France
+                    </li>
+                    <li
+                      class="cursor-pointer px-4 py-2 hover:bg-blue-500 hover:text-white"
+                      data-value="DE"
+                    >
+                      Germany
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4 lg:mb-8">
+              <label
+                for="email"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >File Single</label
+              >
+              <div
+                id="uploadBox"
+                class="w-full h-32 border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center cursor-pointer overflow-hidden bg-gray-50 relative group"
+                tabindex="0"
+                role="button"
+                aria-label="Upload image"
+              >
+                <input
+                  type="file"
+                  id="fileInput"
+                  class="hidden"
+                  accept="image/*"
+                  aria-hidden="true"
+                />
+                <div id="placeholder" class="text-center">
+                  <svg
+                    class="mx-auto h-12 w-12 text-gray-400 group-hover:text-gray-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="uploadIcon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                    ></path>
+                  </svg>
+                  <p class="mt-2 text-sm text-gray-600" id="uploadText">
+                    Click to upload image
+                  </p>
+                </div>
+                <div
+                  id="imageContainer"
+                  class="w-full h-full py-2 hidden group"
+                >
+                  <img
+                    id="preview"
+                    class="w-full h-full object-contain"
+                    alt="Uploaded preview"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <button
+                      id="previewButton"
+                      class="bg-white text-gray-800 rounded-full p-2 py-1 mx-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                      aria-label="Preview image"
+                      type="button"
+                    >
+                      <p class="text-xs font-semibold">Preview</p>
+                    </button>
+                    <button
+                      id="deleteButton"
+                      class="bg-red-500 text-white rounded-full p-2 py-1 mx-2 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400"
+                      aria-label="Delete image"
+                      type="button"
+                    >
+                      <p class="text-xs font-semibold">Delete</p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="fullPreview"
+                class="hidden bg-black bg-opacity-75 rounded-lg flex items-center justify-center"
+              >
+                <img
+                  id="fullPreviewImage"
+                  class="max-w-full max-h-full p-10 object-contain hidden"
+                  alt="Full size preview"
+                />
+                <button
+                  id="closePreview"
+                  class="absolute text-white top-4 right-4 text-2xl hidden"
+                  aria-label="Close preview"
+                  type="button"
+                >
+                  <img
+                    src="/asset/icon/close-circle-svgrepo-com.svg"
+                    class="w-6 bg-white rounded-full"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="mb-4 lg:mb-8">
+              <label
+                for="email"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >File Multi</label
+              >
+              <div
+                id="uploadBoxMultiple"
+                class="w-full h-auto border-2 border-dashed border-gray-300 rounded-lg flex flex-wrap items-center gap-4 p-2 bg-gray-50"
+                tabindex="0"
+                role="button"
+                aria-label="Upload images"
+              >
+                <!-- Add Image button inside upload box -->
+                <div
+                  id="addImageButton"
+                  class="w-32 h-32 border-2 border-dashed border-gray-300 flex flex-col items-center justify-center cursor-pointer overflow-hidden bg-white group rounded-lg"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Add more images"
+                >
+                  <svg
+                    class="mx-auto h-8 w-8 text-gray-400 group-hover:text-gray-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="uploadIconMultiple"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                    ></path>
+                  </svg>
+                  <p class="mt-2 text-xs text-gray-600" id="uploadTextMultiple">
+                    Upload image
+                  </p>
+                </div>
+
+                <div id="imagesContainer" class="flex flex-wrap gap-4"></div>
+              </div>
+
+              <input
+                type="file"
+                id="fileInputMultiple"
+                class="hidden"
+                accept="image/*"
+                aria-hidden="true"
+                multiple
+              />
+
+              <!-- Full preview modal -->
+              <div
+                id="fullPreviewMultiple"
+                class="hidden bg-black bg-opacity-75 rounded-lg flex items-center justify-center"
+              >
+                <img
+                  id="fullPreviewImageMultiple"
+                  class="max-w-full max-h-full object-contain p-10 hidden"
+                  alt="Full size preview"
+                />
+                <button
+                  id="closePreviewMultiple"
+                  class="absolute text-white top-4 right-4 text-2xl"
+                  aria-label="Close preview"
+                  type="button"
+                >
+                  <img
+                    src="/asset/icon/close-circle-svgrepo-com.svg"
+                    class="w-6 bg-white rounded-full"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+  </body>
+</html>

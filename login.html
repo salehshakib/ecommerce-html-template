@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="grid grid-cols-1 md:grid-cols-2 min-h-screen">
+      <div
+        class="p-5 md:p-10 lg:p-20 xl:px-40 flex justify-center flex-col gap-6"
+      >
+        <span class="text-3xl font-semibold">Welcome back</span>
+        <span>
+          <form class="space-y-4 md:space-y-6" action="#">
+            <div>
+              <label
+                for="email"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Email</label
+              >
+              <!-- <input
+                type="email"
+                name="email"
+                id="email"
+                class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="name@gmail.com"
+                required=""
+              /> -->
+              <div class="relative mb-6">
+                <div
+                  class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 16"
+                  >
+                    <path
+                      d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+                    />
+                    <path
+                      d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="email"
+                  id="input-group-1"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Enter Your Email"
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                for="password"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Password</label
+              >
+              <div class="relative mb-6">
+                <div
+                  class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <img
+                    src="/asset/icon/lock-svgrepo-com (1).svg"
+                    class="w-5"
+                    alt=""
+                  />
+                </div>
+                <input
+                  type="password"
+                  id="password"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Enter Your Password"
+                  required=""
+                />
+                <button
+                  type="button"
+                  id="toggle-password"
+                  class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white"
+                >
+                  <img
+                    id="toggle-icon"
+                    src="/asset/icon/eye-svgrepo-com.svg"
+                    class="w-4"
+                    alt="Show Password"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <script>
+              const togglePasswordButton =
+                document.getElementById("toggle-password");
+              const passwordInput = document.getElementById("password");
+              const toggleIcon = document.getElementById("toggle-icon");
+
+              togglePasswordButton.addEventListener("click", function () {
+                // Toggle the type attribute
+                const isPasswordHidden =
+                  passwordInput.getAttribute("type") === "password";
+                passwordInput.setAttribute(
+                  "type",
+                  isPasswordHidden ? "text" : "password"
+                );
+
+                // Toggle the eye icon based on the visibility
+                if (isPasswordHidden) {
+                  toggleIcon.src = "/asset/icon/eye-slash-svgrepo-com.svg"; // Path to your 'hide' icon
+                  toggleIcon.alt = "Hide Password";
+                } else {
+                  toggleIcon.src = "/asset/icon/eye-svgrepo-com.svg"; // Path to your 'show' icon
+                  toggleIcon.alt = "Show Password";
+                }
+              });
+            </script>
+
+            <div class="flex items-center justify-between">
+              <div class="flex items-start">
+                <div class="flex items-center h-6">
+                  <input
+                    id="remember"
+                    aria-describedby="remember"
+                    type="checkbox"
+                    class="w-5 h-5 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
+                    required
+                  />
+                </div>
+                <div class="ml-3">
+                  <label for="remember" class="text-gray-500 dark:text-gray-300"
+                    >Remember me</label
+                  >
+                </div>
+              </div>
+              <a
+                href="#"
+                class="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                >Forgot password?</a
+              >
+            </div>
+            <button
+              type="submit"
+              class="w-full text-white bg-[#980098] focus:ring-4 focus:outline-none focus:ring-[#980098] font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-[#980098] dark:focus:ring-[#980098]"
+            >
+              Sign in
+            </button>
+            <!-- <p
+              class="text-sm font-light font-medium text-gray-600 dark:text-gray-400"
+            >
+              Don’t have an account?
+              <a
+                class="font-medium text-[#980098] hover:underline dark:text-primary-500"
+              >
+                Sign up now!</a
+              >
+            </p> -->
+          </form>
+        </span>
+      </div>
+      <div
+        class="bg-[#980098] text-white p-5 md:p-10 lg:p-20 flex justify-center flex-col gap-2"
+      >
+        <span class="text-2xl lg:text-3xl font-semibold">
+          Vitasoft Solutions
+        </span>
+
+        <span class="text-[2rem] lg:text-[2.5rem] xl:text-[3.5rem] font-bold"
+          >Explore the world’s leading ecommerce and design solutions.</span
+        >
+
+        <span class="text-sm lg:text-xl mt-5"
+          >Millions of designers and agencies around the world showcase their
+          portfolio work on Vitasoftsolutions- the home to the world’s best
+          design and creative professionals.</span
+        >
+
+        <div class="text-white flex items-center gap-4 mt-4 py-2">
+          <div class="flex items-center gap-2">
+            <div class="flex relative">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Customer 1"
+                class="rounded-full w-12 h-12 p-1 border-2 border-white"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Customer 2"
+                class="rounded-full w-12 h-12 p-1 border-2 border-white absolute top-0 left-[35px] bg-[#980098] z-20"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Customer 2"
+                class="rounded-full w-12 h-12 p-1 border-2 border-white absolute top-0 left-[70px] bg-[#980098] z-20"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Customer 2"
+                class="rounded-full w-12 h-12 p-1 border-2 border-white absolute top-0 left-[105px] bg-[#980098] z-20"
+              />
+            </div>
+          </div>
+          <hr class="h-7 bg-white border-white w-[2px] ml-28" />
+          <span class="text-lg font-bold">Over 15.7k Happy Customers</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
