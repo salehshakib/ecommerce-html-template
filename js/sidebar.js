@@ -10,31 +10,31 @@ const sidebarItems = [
     children: [
       {
         label: "All Users",
-        href: "/all-users.html",
+        href: "/manage-users/all-users.html",
       },
       {
         label: "Active Users",
-        href: "/active-users.html",
+        href: "/manage-users/active-users.html",
       },
       {
         label: "Banned Users",
-        href: "/banned-users.html",
+        href: "/manage-users/banned-users.html",
       },
       {
         label: "Email Verified",
-        href: "/email-verified.html",
+        href: "/manage-users/email-verified.html",
       },
       {
         label: "Email Unverified",
-        href: "/email-unverified.html",
+        href: "/manage-users/email-unverified.html",
       },
       {
         label: "KYC Verified",
-        href: "/kyc-verified.html",
+        href: "/manage-users/kyc-verified.html",
       },
       {
         label: "KYC Unverified",
-        href: "/kyc-unverified.html",
+        href: "/manage-users/kyc-unverified.html",
       },
     ],
   },
@@ -155,11 +155,15 @@ const systemItems = [
     icon: "/asset/icon/support-svgrepo-com.svg",
   },
 ];
+const currentPath = window.location.pathname;
+
+const section = currentPath.split("/")[1]; // 'manage-users'
+const activeItem = currentPath.split("/")[2]; // 'all-users'
+
+console.log(activeItem);
 
 const sidebarMenu = document.getElementById("sidebar-menu");
 const sidebarExtra = document.getElementById("sidebar-extra");
-
-const currentPath = window.location.pathname;
 
 console.log(currentPath);
 
@@ -244,6 +248,16 @@ sidebarItems.forEach((item) => {
       subListItem.appendChild(subLink);
       dropdownMenu.appendChild(subListItem);
     });
+
+    if (
+      item.label
+        .trim()
+        .replace(" ", "")
+        .toLowerCase()
+        .includes(section.trim().replace("-", "").toLowerCase())
+    ) {
+      dropdownMenu.classList.remove("hidden"); // Show the dropdown menu
+    }
 
     button.onclick = () => {
       dropdownMenu.classList.toggle("hidden");
@@ -371,6 +385,11 @@ systemItems.forEach((item) => {
       subListItem.appendChild(subLink);
       dropdownMenu.appendChild(subListItem);
     });
+
+    console.log(item.label);
+    if (item.label.toLowerCase().includes(section.toLowerCase())) {
+      dropdownMenu.classList.remove("hidden"); // Show the dropdown menu
+    }
 
     button.onclick = () => {
       dropdownMenu.classList.toggle("hidden");

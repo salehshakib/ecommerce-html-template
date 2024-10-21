@@ -334,30 +334,16 @@
           </div>
 
           <div class="w-full lg:w-[80%] xl:w-[60%] mx-auto divide-y">
-            <div class="grid grid-cols-4 gap-2 p-5 text-sm lg:text-base">
-              <div class="">Hello</div>
-              <div class="col-span-3 text-gray-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestiae tempora optio iste nostrum. Distinctio, tenetur
-                voluptatum! Voluptas qui incidunt sed doloribus quam laudantium
-                officia ut, deserunt voluptatibus nam sit nihil.
-              </div>
+            <div class="grid grid-cols-4 gap-2 p-5 text-sm lg:text-base mt-20">
+              <div class="">Article Title</div>
+              <div class="col-span-3 text-gray-600">Lorem ipsum</div>
             </div>
             <div class="grid grid-cols-4 gap-2 p-5 text-sm lg:text-base">
-              <div class="">Hello</div>
-              <div class="col-span-3 text-gray-600">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Eligendi exercitationem assumenda reiciendis, eaque modi eveniet
-                nostrum saepe, molestias iusto autem impedit totam voluptates
-                consequuntur, soluta nemo explicabo repudiandae? Nam, vero.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt alias, aliquam voluptas commodi quo ab accusantium, cum
-                labore expedita nisi doloribus nam distinctio suscipit quas
-                architecto in, iste eius animi.
-              </div>
+              <div class="">Category</div>
+              <div class="col-span-3 text-gray-600">Lorem ipsum</div>
             </div>
             <div class="grid grid-cols-4 gap-2 p-5 text-sm lg:text-base">
-              <div class="">Hello</div>
+              <div class="">Description</div>
               <div class="col-span-3 text-gray-600">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
                 distinctio pariatur impedit, doloremque expedita excepturi
@@ -368,6 +354,138 @@
                 ex in a deserunt at blanditiis, temporibus tempore iste quas
                 numquam eius! Libero.
               </div>
+            </div>
+            <div class="grid grid-cols-4 gap-2 p-5 text-sm lg:text-base">
+              <div class="">Attachment</div>
+              <div
+                class="col-span-3 text-gray-600 relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 items-center"
+              >
+                <div class="border rounded-md w-full">
+                  <img
+                    src="https://picsum.photos/600"
+                    alt=""
+                    class="w-full h-36"
+                  />
+                  <div class="text-center w-full py-2 text-base font-semibold">
+                    Logo
+                  </div>
+                  <div class="text-center pb-2">Product-1.jpeg</div>
+                </div>
+                <div class="border rounded-md w-full">
+                  <img
+                    src="https://picsum.photos/600"
+                    alt=""
+                    class="w-full h-36"
+                  />
+                  <div class="text-center w-full py-2 text-base font-semibold">
+                    Logo
+                  </div>
+                  <div class="text-center pb-2">Product-1.jpeg</div>
+                </div>
+                <div class="border rounded-md w-full">
+                  <img
+                    src="https://picsum.photos/600"
+                    alt=""
+                    class="w-full h-36"
+                  />
+                  <div class="text-center w-full py-2 text-base font-semibold">
+                    Logo
+                  </div>
+                  <div class="text-center pb-2">Product-1.jpeg</div>
+                </div>
+                <!-- <img src="https://picsum.photos/600" alt="" />
+                <img src="https://picsum.photos/600" alt="" /> -->
+                <!-- <div id="hoverImageContainer" class="w-full h-full group">
+                  <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <button
+                      id="hoverPreviewButton"
+                      class="bg-white text-gray-800 rounded-full p-2 py-1 mx-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                      aria-label="Preview image"
+                      type="button"
+                    >
+                      <p class="text-xs font-semibold">Preview</p>
+                    </button>
+                  </div>
+                </div> -->
+              </div>
+              >
+                <div class="border rounded-md w-full">
+                  <img
+                    src="https://picsum.photos/600"
+                    alt=""
+                    class="w-full h-36"
+                  />
+                  <div class="text-center w-full py-2 text-base font-semibold">
+                    Logo
+                  </div>
+                  <div class="text-center pb-2">Product-1.jpeg</div>
+                </div>
+                <!-- <img src="https://picsum.photos/600" alt="" />
+                <img src="https://picsum.photos/600" alt="" /> -->
+                <!-- <div id="hoverImageContainer" class="w-full h-full group">
+                  <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <button
+                      id="hoverPreviewButton"
+                      class="bg-white text-gray-800 rounded-full p-2 py-1 mx-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                      aria-label="Preview image"
+                      type="button"
+                    >
+                      <p class="text-xs font-semibold">Preview</p>
+                    </button>
+                  </div>
+                </div> -->
+              </div>
+
+              <div
+                id="fullImagePreviewContainer"
+                class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden"
+              >
+                <img
+                  id="fullImagePreview"
+                  class="max-w-full max-h-full object-contain"
+                  src="https://picsum.photos/600"
+                  alt="Full size preview"
+                />
+                <button
+                  id="closeFullPreviewButton"
+                  class="absolute top-4 right-4 text-white text-2xl"
+                  aria-label="Close preview"
+                >
+                  &times;
+                </button>
+              </div>
+
+              <script>
+                const hoverPreviewButton =
+                  document.getElementById("hoverPreviewButton");
+                const fullImagePreviewContainer = document.getElementById(
+                  "fullImagePreviewContainer"
+                );
+                const closeFullPreviewButton = document.getElementById(
+                  "closeFullPreviewButton"
+                );
+
+                // Show the full-size image when the "Preview" button is clicked
+                hoverPreviewButton.addEventListener("click", () => {
+                  fullImagePreviewContainer.classList.remove("hidden");
+                });
+
+                // Close the full-size preview when the close button is clicked
+                closeFullPreviewButton.addEventListener("click", () => {
+                  fullImagePreviewContainer.classList.add("hidden");
+                });
+
+                // Optional: Close the preview if you click anywhere outside the image
+                fullImagePreviewContainer.addEventListener("click", (e) => {
+                  if (e.target === fullImagePreviewContainer) {
+                    fullImagePreviewContainer.classList.add("hidden");
+                  }
+                });
+              </script>
             </div>
           </div>
         </section>
