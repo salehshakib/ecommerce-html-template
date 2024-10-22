@@ -625,15 +625,6 @@
             </li>
           </ul>
 
-          <script>
-            const buttons = document.querySelectorAll("button");
-            buttons.forEach((button) => {
-              button.onclick = () => {
-                const dropdownMenu = button.nextElementSibling;
-                dropdownMenu.classList.toggle("hidden");
-              };
-            });
-          </script>
           <div
             id="dropdown-cta"
             class="p-4 mt-6 rounded-lg bg-blue-50 dark:bg-blue-900"
@@ -948,6 +939,16 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const buttons = document.querySelectorAll("aside button");
+      buttons.forEach((button) => {
+        button.onclick = () => {
+          const dropdownMenu = button.nextElementSibling;
+          dropdownMenu.classList.toggle("hidden");
+        };
+      });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="../asset/js/loader.js"></script>
