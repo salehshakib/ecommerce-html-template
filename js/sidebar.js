@@ -162,6 +162,7 @@ const activeItem = currentPath.split("/")[2]; // 'all-users'
 
 console.log(currentPath);
 console.log(section);
+console.log(activeItem);
 
 const sidebarMenu = document.getElementById("sidebar-menu");
 const sidebarExtra = document.getElementById("sidebar-extra");
@@ -242,9 +243,16 @@ sidebarItems.forEach((item) => {
         "lg:text-base"
       );
 
-      if (
-        subItem?.label?.toLowerCase() ===
+      console.log(
         activeItem?.replace(".html", "")?.replace("-", " ")?.toLowerCase()
+      );
+      if (
+        // subItem?.label?.toLowerCase() ===
+        activeItem
+          ?.replace(".html", "")
+          ?.replace("-", " ")
+          ?.toLowerCase()
+          .includes(subItem.label.toLowerCase())
       ) {
         subLink.classList.add("bg-gray-100");
       }

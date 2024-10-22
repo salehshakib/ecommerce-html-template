@@ -153,7 +153,10 @@
                         alt=""
                         class="w-5"
                       />
-                      <a href="#" class="block p-2 text-sm" role="menuitem"
+                      <a
+                        href="/login.html"
+                        class="block p-2 text-sm"
+                        role="menuitem"
                         >Sign out</a
                       >
                     </li>
@@ -349,49 +352,207 @@
               <div class="grid grid-cols-4 gap-2 p-5 text-sm lg:text-base">
                 <div class="">Attachment</div>
                 <div
-                  class="col-span-3 text-gray-600 relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 items-center"
+                  class="col-span-3 text-gray-600 relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 items-center"
                 >
-                  <div class="border rounded-md w-full">
-                    <img
-                      src="https://picsum.photos/600"
-                      alt=""
-                      class="w-full h-36"
-                    />
-                    <div
-                      class="text-center w-full py-2 text-base font-semibold"
-                    >
-                      Logo
+                  <!-- First Image -->
+                  <div class="border w-full">
+                    <div class="w-full mx-auto">
+                      <div class="relative group">
+                        <img
+                          src="https://picsum.photos/600"
+                          alt="Product image 1"
+                          class="w-full h-[11rem]"
+                        />
+                        <button
+                          class="previewButton absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                          data-index="0"
+                        >
+                          Preview
+                        </button>
+                      </div>
+                      <div class="my-3 text-center">
+                        <h3 class="text-lg font-semibold">Logo</h3>
+                        <p class="text-sm text-gray-500">Product-1.jpeg</p>
+                      </div>
                     </div>
-                    <div class="text-center pb-2">Product-1.jpeg</div>
                   </div>
-                  <div class="border rounded-md w-full">
-                    <img
-                      src="https://picsum.photos/600"
-                      alt=""
-                      class="w-full h-36"
-                    />
-                    <div
-                      class="text-center w-full py-2 text-base font-semibold"
-                    >
-                      Logo
+
+                  <!-- Second Image -->
+                  <div class="border w-full">
+                    <div class="w-full mx-auto">
+                      <div class="relative group">
+                        <img
+                          src="https://picsum.photos/600?random=2"
+                          alt="Product image 2"
+                          class="w-full h-[11rem]"
+                        />
+                        <button
+                          class="previewButton absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                          data-index="1"
+                        >
+                          Preview
+                        </button>
+                      </div>
+                      <div class="my-3 text-center">
+                        <h3 class="text-lg font-semibold">Logo</h3>
+                        <p class="text-sm text-gray-500">Product-2.jpeg</p>
+                      </div>
                     </div>
-                    <div class="text-center pb-2">Product-1.jpeg</div>
                   </div>
-                  <div class="border rounded-md w-full">
-                    <img
-                      src="https://picsum.photos/600"
-                      alt=""
-                      class="w-full h-36"
-                    />
+                </div>
+
+                <!-- Modal -->
+                <div
+                  id="previewModal"
+                  class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+                >
+                  <div class="relative max-w-4xl max-h-[90vh] overflow-hidden">
                     <div
-                      class="text-center w-full py-2 text-base font-semibold"
+                      id="imageSlider"
+                      class="flex transition-transform duration-300 ease-in-out"
                     >
-                      Logo
+                      <img
+                        src="https://picsum.photos/600"
+                        alt="Product preview 1"
+                        class="w-full h-auto rounded-lg"
+                      />
+                      <img
+                        src="https://picsum.photos/600?random=2"
+                        alt="Product preview 2"
+                        class="w-full h-auto rounded-lg"
+                      />
                     </div>
-                    <div class="text-center pb-2">Product-1.jpeg</div>
+                    <button
+                      id="prevButton"
+                      class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-75"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                      </svg>
+                    </button>
+                    <button
+                      id="nextButton"
+                      class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-75"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </button>
+                    <button
+                      id="closeButton"
+                      class="absolute top-2 right-2 text-white hover:text-gray-300"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </div>
+
+              <!-- Styles for image slider -->
+              <style>
+                #imageSlider img {
+                  min-width: 100%;
+                  max-width: 100%;
+                }
+              </style>
+
+              <script>
+                const previewButtons =
+                  document.querySelectorAll(".previewButton");
+                const previewModal = document.getElementById("previewModal");
+                const closeButton = document.getElementById("closeButton");
+                const imageSlider = document.getElementById("imageSlider");
+                const prevButton = document.getElementById("prevButton");
+                const nextButton = document.getElementById("nextButton");
+
+                let currentIndex = 0;
+                const totalImages = imageSlider.children.length;
+
+                function updateSliderPosition() {
+                  imageSlider.style.transform = `translateX(-${
+                    currentIndex * 100
+                  }%)`;
+                }
+
+                // Add click event listener to each preview button
+                previewButtons.forEach((button) => {
+                  button.addEventListener("click", () => {
+                    previewModal.classList.remove("hidden");
+                    currentIndex = parseInt(button.getAttribute("data-index")); // Set index based on clicked button
+                    updateSliderPosition();
+                  });
+                });
+
+                // Close modal when close button is clicked
+                closeButton.addEventListener("click", () => {
+                  previewModal.classList.add("hidden");
+                });
+
+                // Handle previous button click
+                prevButton.addEventListener("click", () => {
+                  currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                  updateSliderPosition();
+                });
+
+                // Handle next button click
+                nextButton.addEventListener("click", () => {
+                  currentIndex = (currentIndex + 1) % totalImages;
+                  updateSliderPosition();
+                });
+
+                // Close modal by clicking outside modal content
+                previewModal.addEventListener("click", (event) => {
+                  if (event.target === previewModal) {
+                    previewModal.classList.add("hidden");
+                  }
+                });
+
+                // Keyboard navigation
+                document.addEventListener("keydown", (event) => {
+                  if (!previewModal.classList.contains("hidden")) {
+                    if (event.key === "ArrowLeft") {
+                      prevButton.click();
+                    } else if (event.key === "ArrowRight") {
+                      nextButton.click();
+                    } else if (event.key === "Escape") {
+                      closeButton.click();
+                    }
+                  }
+                });
+              </script>
             </div>
           </section>
         </div>

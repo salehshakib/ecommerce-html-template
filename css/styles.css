@@ -30,3 +30,8 @@
   opacity: 0; /* Only the content is hidden, not the loader */
   transition: opacity 0.3s ease;
 }
+
+/* #imageSlider img {
+  min-width: 100%; 
+  max-width: 100%;
+} */

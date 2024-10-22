@@ -150,7 +150,10 @@
                         alt=""
                         class="w-5"
                       />
-                      <a href="#" class="block p-2 text-sm" role="menuitem"
+                      <a
+                        href="/login.html"
+                        class="block p-2 text-sm"
+                        role="menuitem"
                         >Sign out</a
                       >
                     </li>
@@ -503,6 +506,7 @@
                             >
                           </div>
                         </th>
+                        <th scope="col" class="px-4 py-3 text-center">Image</th>
                         <th scope="col" class="px-4 py-3">Article Name</th>
                         <th scope="col" class="px-4 py-3">Category</th>
                         <th scope="col" class="px-4 py-3">SEO</th>
@@ -520,7 +524,7 @@
                       <tr
                         class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700"
                       >
-                        <td class="w-4 px-4 py-3">
+                        <td class="w-4 px-4">
                           <div class="flex items-center">
                             <input
                               id="checkbox-table-search-1"
@@ -533,25 +537,32 @@
                             >
                           </div>
                         </td>
-                        <th
+
+                        <td
                           scope="row"
-                          class="flex items-center px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                          class="flex items-center justify-center h-full font-medium text-gray-900 whitespace-nowrap dark:text-white"
                         >
                           <img
                             src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                             alt="iMac Front Image"
-                            class="w-auto h-8 mr-3"
+                            class="w-auto h-8"
                           />
-                          Apple iMac 27&#34;
-                        </th>
-                        <td class="px-4 py-2">
+                          <!-- Apple iMac 27&#34; -->
+                        </td>
+                        <td class="px-4">
                           <span
-                            class="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300"
+                            class="bg-primary-100 text-black text-sm font-medium rounded dark:bg-primary-900 dark:text-primary-300"
+                            >Apple iMac 27&#34;</span
+                          >
+                        </td>
+                        <td class="px-4">
+                          <span
+                            class="bg-primary-100 text-primary-800 text-xs font-medium px-2 rounded dark:bg-primary-900 dark:text-primary-300"
                             >Desktop PC</span
                           >
                         </td>
                         <td
-                          class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                          class="px-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                         >
                           <div class="flex items-center">
                             <div
@@ -561,7 +572,7 @@
                           </div>
                         </td>
                         <td
-                          class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white cursor-pointer text-xs"
+                          class="px-4 font-medium text-gray-900 whitespace-nowrap dark:text-white cursor-pointer text-xs"
                           data-modal-target="default-modal"
                           data-modal-toggle="default-modal"
                         >
@@ -572,12 +583,12 @@
                         </td>
 
                         <td
-                          class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                          class="px-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                         >
                           Just Now
                         </td>
 
-                        <td class="px-4 py-3 flex items-center justify-center">
+                        <td class="px-4 flex items-center justify-center">
                           <button
                             id="dropdownLeftButton"
                             data-dropdown-toggle="dropdownLeft"
