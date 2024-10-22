@@ -23,10 +23,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- Include Select2 CSS -->
-    <link href="../asset/css/select2.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Include Select2 JS -->
-    <script src="../asset/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
     <title>Ecommerce Blade Template</title>
   </head>
@@ -752,7 +755,7 @@
                     <label
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       for="articleTitle"
-                      >Article Title <span class="text-red-600">*</span></label
+                      >First Name <span class="text-red-600">*</span></label
                     >
                     <input
                       type="text"
@@ -763,22 +766,167 @@
                       required
                     />
                   </div>
-                  <div class="relative">
+                  <div>
+                    <label
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      for="articleTitle"
+                      >Last Name<span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="articleTitle"
+                      name="articleTitle"
+                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Enter the article title"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      for="articleTitle"
+                      >Email<span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="email"
+                      id="articleTitle"
+                      name="articleTitle"
+                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Enter the article title"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      for="articleTitle"
+                      >Phone Number<span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="tel"
+                      id="articleTitle"
+                      name="articleTitle"
+                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Enter the article title"
+                      required
+                    />
+                  </div>
+                  <!-- <div class="relative">
                     <label
                       for="articleCategory"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                       Select Category <span class="text-red-600">*</span>
                     </label>
-
-                    <select
-                      class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      name="state"
+                    <input
+                      type="text"
+                      id="articleCategory"
+                      placeholder="Search for a category"
+                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      onfocus="showDropdown()"
+                      autocomplete="off"
+                      required
+                    />
+                    <div
+                      id="dropdown"
+                      class="absolute z-10 hidden w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg text-sm"
                     >
-                      <option value="AL">Alabama</option>
-                      ...
-                      <option value="WY">Wyoming</option>
-                    </select>
+                      <ul id="category-list" class="max-h-60 overflow-auto">
+                        <li
+                          class="cursor-pointer px-4 py-2 text-left hover:bg-blue-500 hover:text-white"
+                          data-value="US"
+                        >
+                          United States
+                        </li>
+                        <li
+                          class="cursor-pointer px-4 py-2 hover:bg-blue-500 hover:text-white"
+                          data-value="CA"
+                        >
+                          Canada
+                        </li>
+                        <li
+                          class="cursor-pointer px-4 py-2 hover:bg-blue-500 hover:text-white"
+                          data-value="FR"
+                        >
+                          France
+                        </li>
+                        <li
+                          class="cursor-pointer px-4 py-2 hover:bg-blue-500 hover:text-white"
+                          data-value="DE"
+                        >
+                          Germany
+                        </li>
+                        <li
+                          id="no-options"
+                          class="cursor-default px-4 py-2 text-gray-500 hidden"
+                        >
+                          No options available
+                        </li>
+                      </ul>
+                    </div>
+                  </div> -->
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                  <div>
+                    <label
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      for="articleTitle"
+                      >City<span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="articleTitle"
+                      name="articleTitle"
+                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Enter the article title"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      for="articleTitle"
+                      >State<span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="articleTitle"
+                      name="articleTitle"
+                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Enter the article title"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      for="articleTitle"
+                      >Zip<span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="articleTitle"
+                      name="articleTitle"
+                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Enter the article title"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      for="articleTitle"
+                      >Country<span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="tel"
+                      id="articleTitle"
+                      name="articleTitle"
+                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Enter the article title"
+                      required
+                    />
                   </div>
                 </div>
 
@@ -786,8 +934,7 @@
                   <label
                     for="shortDescription"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >Short Description
-                    <span class="text-red-600">*</span></label
+                    >Address <span class="text-red-600">*</span></label
                   >
                   <textarea
                     id="shortDescription"
@@ -799,178 +946,54 @@
                   ></textarea>
                 </div>
 
-                <div class="">
-                  <label
-                    for="article"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >Article <span class="text-red-600">*</span></label
-                  >
+                <div class="grid grid-cols-2 lg:grid-cols-4 rounded-md">
                   <div
-                    id="article-editor"
-                    class="h-[150px] overflow-auto border"
-                  ></div>
-                </div>
-
-                <div class="">
-                  <label
-                    for="email"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >Attachment</label
+                    class="flex items-center justify-between border p-5 rounded-l-md"
                   >
-                  <div
-                    id="uploadBox"
-                    class="w-full h-32 border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center cursor-pointer overflow-hidden bg-gray-50 relative group"
-                    tabindex="0"
-                    role="button"
-                    aria-label="Upload image"
-                  >
-                    <input
-                      type="file"
-                      id="fileInput"
-                      class="hidden"
-                      accept="image/*"
-                      aria-hidden="true"
-                    />
-                    <div id="placeholder" class="text-center">
-                      <svg
-                        class="mx-auto h-12 w-12 text-gray-400 group-hover:text-gray-500"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        id="uploadIcon"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                        ></path>
-                      </svg>
-                      <p class="mt-2 text-sm text-gray-600" id="uploadText">
-                        Click to upload image
-                      </p>
+                    <div class="font-medium col-span-1 lg:col-span-2">
+                      Email Verification
                     </div>
-                    <div
-                      id="imageContainer"
-                      class="w-full h-full py-2 hidden group"
-                    >
-                      <img
-                        id="preview"
-                        class="w-full h-full object-contain"
-                        alt="Uploaded preview"
-                      />
-                      <div
-                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-                      >
-                        <button
-                          id="previewButton"
-                          class="bg-white text-gray-800 rounded-full p-2 py-1 mx-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
-                          aria-label="Preview image"
-                          type="button"
-                        >
-                          <p class="text-xs font-semibold">Preview</p>
-                        </button>
-                        <button
-                          id="deleteButton"
-                          class="bg-red-500 text-white rounded-full p-2 py-1 mx-2 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400"
-                          aria-label="Delete image"
-                          type="button"
-                        >
-                          <p class="text-xs font-semibold">Delete</p>
-                        </button>
-                      </div>
+                    <div class="col-span-3 lg:col-span-2 text-gray-600">
+                      <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider"></span>
+                      </label>
                     </div>
                   </div>
-
+                  <div class="flex items-center justify-between border p-5">
+                    <div class="font-medium col-span-1 lg:col-span-2">
+                      Mobile Verification
+                    </div>
+                    <div class="col-span-3 lg:col-span-2 text-gray-600">
+                      <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between border p-5">
+                    <div class="font-medium col-span-1 lg:col-span-2">
+                      2FA Verification
+                    </div>
+                    <div class="col-span-3 lg:col-span-2 text-gray-600">
+                      <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+                  </div>
                   <div
-                    id="fullPreview"
-                    class="hidden bg-black bg-opacity-75 rounded-lg flex items-center justify-center"
+                    class="flex items-center justify-between border p-5 rounded-r-md"
                   >
-                    <img
-                      id="fullPreviewImage"
-                      class="max-w-full max-h-full p-10 object-contain hidden"
-                      alt="Full size preview"
-                    />
-                    <button
-                      id="closePreview"
-                      class="absolute text-white top-4 right-4 text-2xl hidden"
-                      aria-label="Close preview"
-                      type="button"
-                    >
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/close-circle-svgrepo-com.svg"
-                        class="w-6 bg-white rounded-full"
-                        alt=""
-                      />
-                    </button>
-                  </div>
-                </div>
-
-                <div class="">
-                  <div class="flex items-center">
-                    <input
-                      id="seo-checkbox"
-                      name="seo-checkbox"
-                      type="checkbox"
-                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                    />
-                    <label
-                      for="seo-checkbox"
-                      class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                      >SEO</label
-                    >
-                  </div>
-                </div>
-
-                <div
-                  class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8"
-                  id="seo"
-                  style="display: none"
-                >
-                  <div>
-                    <label
-                      for="metaTitle"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Meta Title <span class="text-red-600">*</span></label
-                    >
-                    <input
-                      type="text"
-                      id="metaTitle"
-                      name="metaTitle"
-                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Enter meta title"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      for="metaTag"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Meta Tag <span class="text-red-600">*</span></label
-                    >
-                    <input
-                      type="text"
-                      id="metaTag"
-                      name="metaTag"
-                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Enter meta tag"
-                    />
-                  </div>
-
-                  <div class="col-span-1 md:col-span-2">
-                    <label
-                      for="metaDescription"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Meta Description
-                      <span class="text-red-600">*</span></label
-                    >
-                    <textarea
-                      id="metaDescription"
-                      rows="2"
-                      name="metaDescription"
-                      class="block p-2 py-1 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Write meta description..."
-                    ></textarea>
+                    <div class="font-medium col-span-1 lg:col-span-2">
+                      KYC Verification
+                    </div>
+                    <div class="col-span-3 lg:col-span-2 text-gray-600">
+                      <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider"></span>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -990,6 +1013,90 @@
       });
     </script>
 
+    <script>
+      const searchInput = document.getElementById("articleCategory");
+      const dropdown = document.getElementById("dropdown");
+      const categoryList = document.getElementById("category-list");
+      const noOptions = document.getElementById("no-options");
+
+      // Show dropdown when input is focused
+      function showDropdown() {
+        dropdown.classList.remove("hidden");
+        filterCountries();
+      }
+
+      // Hide dropdown when clicking outside
+      document.addEventListener("click", function (event) {
+        if (
+          !searchInput.contains(event.target) &&
+          !dropdown.contains(event.target)
+        ) {
+          dropdown.classList.add("hidden");
+        }
+      });
+
+      // Filter countries based on input
+      searchInput.addEventListener("input", filterCountries);
+
+      function filterCountries() {
+        const filter = searchInput.value.toLowerCase();
+        const listItems = categoryList.querySelectorAll("li:not(#no-options)");
+        let anyVisible = false;
+
+        listItems.forEach((item) => {
+          const text = item.textContent.toLowerCase().trim();
+          if (text.includes(filter)) {
+            item.style.display = "";
+            anyVisible = true;
+          } else {
+            item.style.display = "none";
+          }
+        });
+
+        // Show "No options available" if none match
+        if (!anyVisible) {
+          noOptions.classList.remove("hidden");
+        } else {
+          noOptions.classList.add("hidden");
+        }
+      }
+
+      // Handle item selection
+      categoryList.addEventListener("click", function (event) {
+        if (event.target.tagName === "LI" && event.target.id !== "no-options") {
+          searchInput.value = event.target.textContent.trim(); // Trim when setting value
+          dropdown.classList.add("hidden");
+        }
+      });
+
+      const toolbarOptions = [
+        [{ size: ["small", false, "large", "huge"] }],
+        [{ header: [1, 2, 3, 4, 5, 6, false] }],
+        ["bold", "italic", "underline", "strike"],
+        ["blockquote", "code-block"],
+        ["link", "image"],
+        [{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
+        [{ script: "sub" }, { script: "super" }],
+        [{ indent: "-1" }, { indent: "+1" }],
+        [{ direction: "rtl" }],
+        [{ color: [] }, { background: [] }],
+        [{ font: [] }],
+        [{ align: [] }],
+        ["clean"],
+      ];
+
+      const options = {
+        modules: {
+          toolbar: {
+            container: toolbarOptions,
+          },
+        },
+        placeholder: "Article",
+        theme: "snow",
+      };
+
+      const quill = new Quill("#article-editor", options);
+    </script>
     <script>
       const seoCheckbox = document.getElementById("seo-checkbox");
       const metaFieldsSection = document.getElementById("seo");
@@ -1082,8 +1189,6 @@
       // });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-    <script src="../asset/js/select2.js"></script>
-    <script src="../asset/js/loader.js"></script>
-    <script src="../asset/js/quill-text-editor.js"></script>
+    <script src="../asset/js/main.js"></script>
   </body>
 </html>

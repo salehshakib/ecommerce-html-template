@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Email Verified Users</title>
+    <title>Active Users</title>
   </head>
   <body>
     <div id="loader">
@@ -45,16 +45,15 @@
                   ></path>
                 </svg>
               </button>
-              <a href="https://flowbite.com" class="flex ms-2 md:me-24">
-                <!-- <img
-                  src="https://flowbite.com/docs/images/logo.svg"
-                  class="h-8 me-3"
-                  alt="VitasoftsolutionsLogo"
-                /> -->
-                <span
-                  class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"
-                  >Vitasoft Solution</span
-                >
+              <a
+                href="https://vitasoftsolutions.com/about-us"
+                class="flex ms-2 md:me-24"
+              >
+                <img
+                  src="https://vitasoftsolutions.com/_next/static/media/logo.4101948a.png"
+                  alt=""
+                  class="h-8"
+                />
               </a>
             </div>
             <div class="flex items-center">
@@ -171,11 +170,402 @@
         aria-label="Sidebar"
       >
         <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
-          <ul class="space-y-2 font-medium" id="sidebar-menu"></ul>
+          <ul class="space-y-2 font-medium" id="sidebar-menu">
+            <li>
+              <a
+                href="../index.html"
+                class="flex items-center gap-2 p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/dashboard-1-svgrepo-com.svg"
+                  alt="Dashboard Icon"
+                  class="w-6 mr-2"
+                />
+                <span class="text-sm lg:text-base">Dashboard</span>
+              </a>
+            </li>
+
+            <!-- Manage Users -->
+            <li>
+              <button
+                class="flex items-center justify-between w-full p-2 text-sm text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 lg:text-base"
+              >
+                <div class="flex items-center justify-center gap-2">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/users-svgrepo-com.svg"
+                    alt="Manage Users Icon"
+                    class="w-6 mr-2"
+                  />
+                  <span>Manage Users</span>
+                </div>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/dropdown-arrow-svgrepo-com.svg"
+                  alt="Dropdown Icon"
+                  class="w-6"
+                />
+              </button>
+              <ul class="hidden py-2 space-y-2">
+                <li>
+                  <a
+                    href="all-users.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >All Users</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="active-users.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >Active Users</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="manage-users/banned-users.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >Banned Users</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="email-verified.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >Email Verified</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="email-unverified.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >Email Unverified</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="kyc-verified.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >KYC Verified</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="kyc-unverified.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >KYC Unverified</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Blog -->
+            <li>
+              <button
+                class="flex items-center justify-between w-full p-2 text-sm text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 lg:text-base"
+              >
+                <div class="flex items-center justify-center gap-2">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/blog-writing-svgrepo-com.svg"
+                    alt="Blog Icon"
+                    class="w-6 mr-2"
+                  />
+                  <span>Blog</span>
+                </div>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/dropdown-arrow-svgrepo-com.svg"
+                  alt="Dropdown Icon"
+                  class="w-6"
+                />
+              </button>
+              <ul class="hidden py-2 space-y-2">
+                <li>
+                  <a
+                    href="../blog/article.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >Article</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../blog/category.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >Category</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Email Manager -->
+            <li>
+              <button
+                class="flex items-center justify-between w-full p-2 text-sm text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 lg:text-base"
+              >
+                <div class="flex items-center justify-center gap-2">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/email-svgrepo-com.svg"
+                    alt="Email Manager Icon"
+                    class="w-6 mr-2"
+                  />
+                  <span>Email Manager</span>
+                </div>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/dropdown-arrow-svgrepo-com.svg"
+                  alt="Dropdown Icon"
+                  class="w-6"
+                />
+              </button>
+              <ul class="hidden py-2 space-y-2">
+                <li>
+                  <a
+                    href="../email-manager/email-template.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >Email Template</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../email-manager/email-configuration.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >Email Configuration</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- SMS Manager -->
+            <li>
+              <button
+                class="flex items-center justify-between w-full p-2 text-sm text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 lg:text-base"
+              >
+                <div class="flex items-center justify-center gap-2">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/sms-organizer-svgrepo-com.svg"
+                    alt="SMS Manager Icon"
+                    class="w-6 mr-2"
+                  />
+                  <span>SMS Manager</span>
+                </div>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/dropdown-arrow-svgrepo-com.svg"
+                  alt="Dropdown Icon"
+                  class="w-6"
+                />
+              </button>
+              <ul class="hidden py-2 space-y-2">
+                <li>
+                  <a
+                    href="../sms-manager/template.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >SMS Template</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../sms-manager/configuration.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >SMS Configuration</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Notification -->
+            <li>
+              <button
+                class="flex items-center justify-between w-full p-2 text-sm text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 lg:text-base"
+              >
+                <div class="flex items-center justify-center gap-2">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/message-circle-check-svgrepo-com.svg"
+                    alt="Notification Icon"
+                    class="w-6 mr-2"
+                  />
+                  <span>Notification</span>
+                </div>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/dropdown-arrow-svgrepo-com.svg"
+                  alt="Dropdown Icon"
+                  class="w-6"
+                />
+              </button>
+              <ul class="hidden py-2 space-y-2">
+                <li>
+                  <a
+                    href="../notification/email.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >Send Via Email</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../notification/sms.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >Send Via SMS</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Payment Gateway -->
+            <li>
+              <button
+                class="flex items-center justify-between w-full p-2 text-sm text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 lg:text-base"
+              >
+                <div class="flex items-center justify-center gap-2">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/payment-method-svgrepo-com.svg"
+                    alt="Payment Gateway Icon"
+                    class="w-6 mr-2"
+                  />
+                  <span>Payment Gateway</span>
+                </div>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/dropdown-arrow-svgrepo-com.svg"
+                  alt="Dropdown Icon"
+                  class="w-6"
+                />
+              </button>
+              <ul class="hidden py-2 space-y-2">
+                <li>
+                  <a
+                    href="../payement-gateway/manual.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >Manual</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../payement-gateway/automatic.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >Automatic</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- General Settings -->
+            <li>
+              <a
+                href="general-settings.html"
+                class="flex items-center p-2 gap-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/setting-config-svgrepo-com.svg"
+                  alt="General Settings Icon"
+                  class="w-6 mr-2"
+                />
+                <span class="text-sm lg:text-base">General Settings</span>
+              </a>
+            </li>
+
+            <!-- Others -->
+            <li>
+              <button
+                class="flex items-center justify-between w-full p-2 text-sm text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 lg:text-base"
+              >
+                <div class="flex items-center justify-center gap-2">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/link-svgrepo-com.svg"
+                    alt="Others Icon"
+                    class="w-6 mr-2"
+                  />
+                  <span>Others</span>
+                </div>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/dropdown-arrow-svgrepo-com.svg"
+                  alt="Dropdown Icon"
+                  class="w-6"
+                />
+              </button>
+              <ul class="hidden py-2 space-y-2">
+                <li>
+                  <a
+                    href="../others/faq.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >FAQ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../others/privacy-policy.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../others/terms-conditions.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >Terms & Conditions</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
           <ul
             class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"
             id="sidebar-extra"
-          ></ul>
+          >
+            <li>
+              <a
+                href="../system/system-information.html"
+                class="flex items-center p-2 gap-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/information-svgrepo-com.svg"
+                  alt="System Information Icon"
+                  class="w-6 mr-2"
+                />
+                <span class="text-sm lg:text-base">System Information</span>
+              </a>
+            </li>
+
+            <!-- Backup -->
+            <li>
+              <a
+                href="../system/backup.html"
+                class="flex items-center p-2 gap-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/cloud-wired-svgrepo-com.svg"
+                  alt="Backup Icon"
+                  class="w-6 mr-2"
+                />
+                <span class="text-sm lg:text-base">Backup</span>
+              </a>
+            </li>
+
+            <!-- Cache Clean -->
+            <li>
+              <a
+                href="../system/cache-clean.html"
+                class="flex items-center p-2 gap-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/broom-svgrepo-com.svg"
+                  alt="Cache Clean Icon"
+                  class="w-6 mr-2"
+                />
+                <span class="text-sm lg:text-base">Cache Clean</span>
+              </a>
+            </li>
+
+            <!-- Support -->
+            <li>
+              <a
+                href="../system/support.html"
+                class="flex items-center p-2 gap-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/support-svgrepo-com.svg"
+                  alt="Support Icon"
+                  class="w-6 mr-2"
+                />
+                <span class="text-sm lg:text-base">Support</span>
+              </a>
+            </li>
+          </ul>
+
           <div
             id="dropdown-cta"
             class="p-4 mt-6 rounded-lg bg-blue-50 dark:bg-blue-900"
@@ -223,7 +613,7 @@
         </div>
       </aside>
 
-      <!-- email verified -->
+      <!-- active users -->
       <div class="p-4 ml-0 sm:ml-64">
         <div class="p-4 rounded-lg dark:border-gray-700 mt-14">
           <div
@@ -235,19 +625,19 @@
                 class="text-2xl font-semibold flex items-center gap-2 justify-center"
               >
                 <span>Manage Users</span><span>|</span>
-                <span class="text-gray-500">Email Verified Users</span>
+                <span class="text-gray-500">Active Users</span>
               </div>
 
               <!-- <button
-                class="rounded-full p-1 flex items-center"
-                onclick="window.location.href='create-article.html'"
-              >
-                <img
-                  src="/https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/plus-circle-svgrepo-com.svg"
-                  alt=""
-                  class="w-7"
-                />
-              </button> -->
+              class="rounded-full p-1 flex items-center"
+              onclick="window.location.href='create-article.html'"
+            >
+              <img
+                src="/https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/plus-circle-svgrepo-com.svg"
+                alt=""
+                class="w-7"
+              />
+            </button> -->
             </div>
 
             <div class="flex items-center gap-2">
@@ -324,8 +714,8 @@
                             />
                           </div>
                           <!-- <span class="mx-2 text-gray-500 dark:text-gray-400"
-                            >to</span
-                          > -->
+                          >to</span
+                        > -->
                           <div class="relative w-full">
                             <div
                               class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
@@ -461,12 +851,12 @@
                   </li>
                 </ul>
                 <!-- <div class="py-2">
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                    >Separated link</a
-                  >
-                </div> -->
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >Separated link</a
+                >
+              </div> -->
               </div>
             </div>
           </div>
@@ -514,8 +904,8 @@
                         <th scope="col" class="px-4 py-3">Status</th>
                         <th scope="col" class="px-4 py-3">Created At</th>
                         <!-- <th scope="col" class="px-4 py-3">Sales</th>
-                        <th scope="col" class="px-4 py-3">Revenue</th>
-                        <th scope="col" class="px-4 py-3">Last Update</th> -->
+                      <th scope="col" class="px-4 py-3">Revenue</th>
+                      <th scope="col" class="px-4 py-3">Last Update</th> -->
                         <th scope="col" class="px-4 py-3 text-center">
                           Action
                         </th>
@@ -778,25 +1168,25 @@
                           </div>
                           <!-- Modal body -->
                           <!-- <div class="p-4 md:p-5 space-y-4">
-                            <p
-                              class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                            >
-                              With less than a month to go before the European
-                              Union enacts new consumer privacy laws for its
-                              citizens, companies around the world are updating
-                              their terms of service agreements to comply.
-                            </p>
-                            <p
-                              class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                            >
-                              The European Union’s General Data Protection
-                              Regulation (G.D.P.R.) goes into effect on May 25 and
-                              is meant to ensure a common set of data rights in
-                              the European Union. It requires organizations to
-                              notify users as soon as possible of high-risk data
-                              breaches that could personally affect them.
-                            </p>
-                          </div> -->
+                          <p
+                            class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                          >
+                            With less than a month to go before the European
+                            Union enacts new consumer privacy laws for its
+                            citizens, companies around the world are updating
+                            their terms of service agreements to comply.
+                          </p>
+                          <p
+                            class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                          >
+                            The European Union’s General Data Protection
+                            Regulation (G.D.P.R.) goes into effect on May 25 and
+                            is meant to ensure a common set of data rights in
+                            the European Union. It requires organizations to
+                            notify users as soon as possible of high-risk data
+                            breaches that could personally affect them.
+                          </p>
+                        </div> -->
                           <!-- Modal footer -->
                           <div
                             class="flex items-center justify-end gap-2 p-4 md:p-5 border-gray-200 rounded-b dark:border-gray-600"
@@ -924,7 +1314,18 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const buttons = document.querySelectorAll("button");
+      buttons.forEach((button) => {
+        button.onclick = () => {
+          const dropdownMenu = button.nextElementSibling;
+          dropdownMenu.classList.toggle("hidden");
+        };
+      });
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="../asset/js/loader.js"></script>
   </body>
 </html>
