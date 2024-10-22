@@ -160,12 +160,11 @@ const currentPath = window.location.pathname;
 const section = currentPath.split("/")[1]; // 'manage-users'
 const activeItem = currentPath.split("/")[2]; // 'all-users'
 
-console.log(activeItem);
+console.log(currentPath);
+console.log(section);
 
 const sidebarMenu = document.getElementById("sidebar-menu");
 const sidebarExtra = document.getElementById("sidebar-extra");
-
-console.log(currentPath);
 
 sidebarItems.forEach((item) => {
   const listItem = document.createElement("li");
@@ -228,20 +227,27 @@ sidebarItems.forEach((item) => {
         "items-center",
         "w-full",
         "p-2",
+        "pl-14",
         "text-gray-900",
         "transition",
         "duration-75",
         "rounded-lg",
-        "pl-11",
         "group",
         "hover:bg-gray-100",
         "dark:text-white",
         "dark:hover:bg-gray-700",
         "cursor-pointer",
-        "ms-5",
+        "mx-auto",
         "text-sm",
         "lg:text-base"
       );
+
+      if (
+        subItem?.label?.toLowerCase() ===
+        activeItem?.replace(".html", "")?.replace("-", " ")?.toLowerCase()
+      ) {
+        subLink.classList.add("bg-gray-100");
+      }
 
       subLink.href = subItem.href;
 
@@ -250,11 +256,8 @@ sidebarItems.forEach((item) => {
     });
 
     if (
-      item.label
-        .trim()
-        .replace(" ", "")
-        .toLowerCase()
-        .includes(section.trim().replace("-", "").toLowerCase())
+      item.label.trim().replace(" ", "").toLowerCase() ===
+      section.trim().replace("-", "").toLowerCase()
     ) {
       dropdownMenu.classList.remove("hidden"); // Show the dropdown menu
     }
@@ -295,8 +298,25 @@ sidebarItems.forEach((item) => {
       "hover:bg-gray-100",
       "dark:hover:bg-gray-700",
       "group",
-      "cursor-pointer"
+      "cursor-pointer",
+      "text-sm",
+      "lg:text-base"
     );
+
+    if (
+      item.label?.toLowerCase() ===
+      section?.replace(".html", "")?.replace("-", " ")?.toLowerCase()
+    ) {
+      link.classList.add("bg-gray-200");
+    }
+
+    if (
+      section?.replace(".html", "")?.replace("-", " ")?.toLowerCase() ===
+        "index" &&
+      item.label?.toLowerCase() === "dashboard"
+    ) {
+      link.classList.add("bg-gray-200");
+    }
 
     link.href = item.href;
 

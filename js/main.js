@@ -16,7 +16,7 @@ Promise.all([
   loadScript("/js/quill-text-editor.js"),
   loadScript("/js/single-file-uploader.js"),
   loadScript("/js/multi-file-uploader.js"),
-  // loadScript("/js/search-select.js"),
+  loadScript("/js/loader.js"),
   // loadScript("/js/search-select.js"),
 ])
   .then(() => {
