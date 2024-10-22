@@ -234,15 +234,15 @@
       </div>
     </aside>
 
-    <!-- general settings -->
+    <!-- create-article -->
     <div class="p-4 ml-0 sm:ml-64">
       <div class="p-4 rounded-lg dark:border-gray-700 mt-14">
-        <div class="text-3xl w-full text-center lg:text-start">
+        <div class="text-3xl w-full text-center lg:text-start font-bold">
           Create Article
         </div>
 
         <section class="mt-10 relative">
-          <form id="articleForm" class="">
+          <form id="articleForm" class="pb-32">
             <div
               class="flex flex-col lg:flex-row gap-8 lg:gap-0 items-center justify-between mb-10"
             >
@@ -482,6 +482,51 @@
 
               <div class="">
                 <label
+                  for="article"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Article <span class="text-red-600">*</span></label
+                >
+                <div
+                  id="article-editor"
+                  class="h-[150px] overflow-auto border"
+                ></div>
+                <script>
+                  const toolbarOptions = [
+                    [{ size: ["small", false, "large", "huge"] }],
+                    [{ header: [1, 2, 3, 4, 5, 6, false] }],
+                    ["bold", "italic", "underline", "strike"],
+                    ["blockquote", "code-block"],
+                    ["link", "image"],
+                    [
+                      { list: "ordered" },
+                      { list: "bullet" },
+                      { list: "check" },
+                    ],
+                    [{ script: "sub" }, { script: "super" }],
+                    [{ indent: "-1" }, { indent: "+1" }],
+                    [{ direction: "rtl" }],
+                    [{ color: [] }, { background: [] }],
+                    [{ font: [] }],
+                    [{ align: [] }],
+                    ["clean"],
+                  ];
+
+                  const options = {
+                    modules: {
+                      toolbar: {
+                        container: toolbarOptions,
+                      },
+                    },
+                    placeholder: "Article",
+                    theme: "snow",
+                  };
+
+                  const quill = new Quill("#article-editor", options);
+                </script>
+              </div>
+
+              <div class="">
+                <label
                   for="email"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >Attachment</label
@@ -574,51 +619,6 @@
                     />
                   </button>
                 </div>
-              </div>
-
-              <div class="">
-                <label
-                  for="article"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >Article <span class="text-red-600">*</span></label
-                >
-                <div
-                  id="article-editor"
-                  class="h-[150px] overflow-auto border"
-                ></div>
-                <script>
-                  const toolbarOptions = [
-                    [{ size: ["small", false, "large", "huge"] }],
-                    [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                    ["bold", "italic", "underline", "strike"],
-                    ["blockquote", "code-block"],
-                    ["link", "image"],
-                    [
-                      { list: "ordered" },
-                      { list: "bullet" },
-                      { list: "check" },
-                    ],
-                    [{ script: "sub" }, { script: "super" }],
-                    [{ indent: "-1" }, { indent: "+1" }],
-                    [{ direction: "rtl" }],
-                    [{ color: [] }, { background: [] }],
-                    [{ font: [] }],
-                    [{ align: [] }],
-                    ["clean"],
-                  ];
-
-                  const options = {
-                    modules: {
-                      toolbar: {
-                        container: toolbarOptions,
-                      },
-                    },
-                    placeholder: "Article",
-                    theme: "snow",
-                  };
-
-                  const quill = new Quill("#article-editor", options);
-                </script>
               </div>
 
               <div class="">

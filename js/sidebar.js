@@ -58,11 +58,11 @@ const sidebarItems = [
     children: [
       {
         label: "Email Template",
-        href: "/email-manager/template.html",
+        href: "/email-manager/email-template.html",
       },
       {
         label: "Email Configuration",
-        href: "/email-manager/configuration.html",
+        href: "/email-manager/email-configuration.html",
       },
     ],
   },
