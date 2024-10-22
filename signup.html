@@ -148,28 +148,6 @@
               </div>
             </div>
 
-            <script>
-              const togglePasswordButton =
-                document.getElementById("toggle-password");
-              const passwordInput = document.getElementById("input-group-1");
-              const toggleIcon = document.getElementById("toggle-icon");
-
-              togglePasswordButton.addEventListener("click", function () {
-                // Toggle the type attribute
-                const type =
-                  passwordInput.getAttribute("type") === "password"
-                    ? "text"
-                    : "password";
-                passwordInput.setAttribute("type", type);
-
-                // Toggle the eye icon
-                if (type === "password") {
-                  toggleIcon.innerHTML = `<path id="eye-path" d="M10 3C5.58 3 2.01 6.58 1 10c1.01 3.42 4.58 7 9 7s8-3.58 9-7c-1-3.42-4.58-7-9-7zm0 12c-2.67 0-5-1.33-6.54-3.5C4.99 10.33 7.33 9 10 9s5 1.33 6.54 3.5C15 13.67 12.67 15 10 15zm0-6c-1.67 0-3 1.33-3 3s1.33 3 3 3 3-1.33 3-3-1.33-3-3-3z" />`;
-                } else {
-                  toggleIcon.innerHTML = `<path id="eye-path" d="M10 3C5.58 3 2.01 6.58 1 10c1.01 3.42 4.58 7 9 7s8-3.58 9-7c-1-3.42-4.58-7-9-7zm0 12c-2.67 0-5-1.33-6.54-3.5C4.99 10.33 7.33 9 10 9s5 1.33 6.54 3.5C15 13.67 12.67 15 10 15zm0-6c-1.67 0-3 1.33-3 3s1.33 3 3 3 3-1.33 3-3-1.33-3-3-3z" fill="none" stroke="currentColor" stroke-width="2" />`;
-                }
-              });
-            </script>
             <div class="flex items-center justify-between">
               <div class="flex items-start">
                 <div class="flex items-center h-6">
@@ -214,5 +192,7 @@
         </span>
       </div>
     </div>
+    <script src="asset/js/loader.js"></script>
+    <script src="asset/js/toggle-password.js"></script>
   </body>
 </html>

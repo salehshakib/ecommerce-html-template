@@ -174,25 +174,10 @@
       >
         <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
           <ul class="space-y-2 font-medium" id="sidebar-menu">
-            <!-- <li>
-            <a
-              href="index.html"
-              class="fle items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 group cursor-pointer text-sm lg:text-base"
-            >
-              <div class="flex items-center justify-center gap-2">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/dashboard-1-svgrepo-com.svg"
-                  alt=""
-                  class="w-6 mr-2"
-                />
-                <span class="text-sm lg:text-base"> Dashboard </span>
-              </div>
-            </a>
-          </li> -->
             <li>
               <a
                 href="../index.html"
-                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+                class="flex items-center gap-2 p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
               >
                 <img
                   src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/dashboard-1-svgrepo-com.svg"
@@ -464,7 +449,7 @@
             <li>
               <a
                 href="general-settings.html"
-                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+                class="flex items-center gap-2 p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
               >
                 <img
                   src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/setting-config-svgrepo-com.svg"
@@ -520,15 +505,6 @@
             </li>
           </ul>
 
-          <script>
-            const buttons = document.querySelectorAll("button");
-            buttons.forEach((button) => {
-              button.onclick = () => {
-                const dropdownMenu = button.nextElementSibling;
-                dropdownMenu.classList.toggle("hidden");
-              };
-            });
-          </script>
           <ul
             class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"
             id="sidebar-extra"
@@ -536,7 +512,7 @@
             <li>
               <a
                 href="system/system-information.html"
-                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+                class="flex items-center gap-2 p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
               >
                 <img
                   src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/information-svgrepo-com.svg"
@@ -551,7 +527,7 @@
             <li>
               <a
                 href="system/backup.html"
-                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+                class="flex items-center gap-2 p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
               >
                 <img
                   src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/cloud-wired-svgrepo-com.svg"
@@ -566,7 +542,7 @@
             <li>
               <a
                 href="system/cache-clean.html"
-                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+                class="flex items-center gap-2 p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
               >
                 <img
                   src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/broom-svgrepo-com.svg"
@@ -581,7 +557,7 @@
             <li>
               <a
                 href="system/support.html"
-                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+                class="flex items-center gap-2 p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
               >
                 <img
                   src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/support-svgrepo-com.svg"
@@ -629,6 +605,15 @@
               </ul>
             </li>
           </ul>
+          <script>
+            const buttons = document.querySelectorAll("button");
+            buttons.forEach((button) => {
+              button.onclick = () => {
+                const dropdownMenu = button.nextElementSibling;
+                dropdownMenu.classList.toggle("hidden");
+              };
+            });
+          </script>
           <div
             id="dropdown-cta"
             class="p-4 mt-6 rounded-lg bg-blue-50 dark:bg-blue-900"
@@ -1368,6 +1353,7 @@
         </div>
       </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="../asset/js/loader.js"></script>
   </body>

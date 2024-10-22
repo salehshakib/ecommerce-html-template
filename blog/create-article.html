@@ -543,15 +543,6 @@
             </li>
           </ul>
 
-          <script>
-            const buttons = document.querySelectorAll("button");
-            buttons.forEach((button) => {
-              button.onclick = () => {
-                const dropdownMenu = button.nextElementSibling;
-                dropdownMenu.classList.toggle("hidden");
-              };
-            });
-          </script>
           <ul
             class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"
             id="sidebar-extra"
@@ -652,6 +643,17 @@
               </ul>
             </li>
           </ul>
+
+          <script>
+            const buttons = document.querySelectorAll("button");
+            buttons.forEach((button) => {
+              button.onclick = () => {
+                const dropdownMenu = button.nextElementSibling;
+                dropdownMenu.classList.toggle("hidden");
+              };
+            });
+          </script>
+
           <div
             id="dropdown-cta"
             class="p-4 mt-6 rounded-lg bg-blue-50 dark:bg-blue-900"
@@ -883,70 +885,6 @@
                         </li>
                       </ul>
                     </div>
-
-                    <script>
-                      const searchInput =
-                        document.getElementById("articleCategory");
-                      const dropdown = document.getElementById("dropdown");
-                      const categoryList =
-                        document.getElementById("category-list");
-                      const noOptions = document.getElementById("no-options");
-
-                      // Show dropdown when input is focused
-                      function showDropdown() {
-                        dropdown.classList.remove("hidden");
-                        filterCountries();
-                      }
-
-                      // Hide dropdown when clicking outside
-                      document.addEventListener("click", function (event) {
-                        if (
-                          !searchInput.contains(event.target) &&
-                          !dropdown.contains(event.target)
-                        ) {
-                          dropdown.classList.add("hidden");
-                        }
-                      });
-
-                      // Filter countries based on input
-                      searchInput.addEventListener("input", filterCountries);
-
-                      function filterCountries() {
-                        const filter = searchInput.value.toLowerCase();
-                        const listItems = categoryList.querySelectorAll(
-                          "li:not(#no-options)"
-                        );
-                        let anyVisible = false;
-
-                        listItems.forEach((item) => {
-                          const text = item.textContent.toLowerCase().trim();
-                          if (text.includes(filter)) {
-                            item.style.display = "";
-                            anyVisible = true;
-                          } else {
-                            item.style.display = "none";
-                          }
-                        });
-
-                        // Show "No options available" if none match
-                        if (!anyVisible) {
-                          noOptions.classList.remove("hidden");
-                        } else {
-                          noOptions.classList.add("hidden");
-                        }
-                      }
-
-                      // Handle item selection
-                      categoryList.addEventListener("click", function (event) {
-                        if (
-                          event.target.tagName === "LI" &&
-                          event.target.id !== "no-options"
-                        ) {
-                          searchInput.value = event.target.textContent.trim(); // Trim when setting value
-                          dropdown.classList.add("hidden");
-                        }
-                      });
-                    </script>
                   </div>
                 </div>
 
@@ -977,39 +915,6 @@
                     id="article-editor"
                     class="h-[150px] overflow-auto border"
                   ></div>
-                  <script>
-                    const toolbarOptions = [
-                      [{ size: ["small", false, "large", "huge"] }],
-                      [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                      ["bold", "italic", "underline", "strike"],
-                      ["blockquote", "code-block"],
-                      ["link", "image"],
-                      [
-                        { list: "ordered" },
-                        { list: "bullet" },
-                        { list: "check" },
-                      ],
-                      [{ script: "sub" }, { script: "super" }],
-                      [{ indent: "-1" }, { indent: "+1" }],
-                      [{ direction: "rtl" }],
-                      [{ color: [] }, { background: [] }],
-                      [{ font: [] }],
-                      [{ align: [] }],
-                      ["clean"],
-                    ];
-
-                    const options = {
-                      modules: {
-                        toolbar: {
-                          container: toolbarOptions,
-                        },
-                      },
-                      placeholder: "Article",
-                      theme: "snow",
-                    };
-
-                    const quill = new Quill("#article-editor", options);
-                  </script>
                 </div>
 
                 <div class="">
@@ -1175,103 +1080,186 @@
                   </div>
                 </div>
               </div>
-
-              <script>
-                const seoCheckbox = document.getElementById("seo-checkbox");
-                const metaFieldsSection = document.getElementById("seo");
-                const articleForm = document.getElementById("articleForm");
-
-                const saveButton = document.getElementById("save");
-                // const saveAndCreateButton =
-                //   document.getElementById("saveAndCreate");
-                // const messageArea = document.getElementById("messageArea"); // Get the message area
-
-                // Function to toggle the visibility of meta fields
-                function toggleMetaFields() {
-                  if (seoCheckbox.checked) {
-                    metaFieldsSection.style.display = "grid";
-                  } else {
-                    metaFieldsSection.style.display = "none";
-                  }
-                }
-
-                // Event listener for checkbox changes
-                seoCheckbox.addEventListener("change", toggleMetaFields);
-
-                // Handle form submission on Save button click
-                articleForm.addEventListener("submit", (e) => {
-                  e.preventDefault(); // Prevent default button action
-
-                  // Retrieve values
-                  const articleTitle = document
-                    .getElementById("articleTitle")
-                    .value.trim();
-                  const category = document
-                    .getElementById("articleCategory")
-                    .value.trim();
-                  const shortDescription = document
-                    .getElementById("shortDescription")
-                    .value.trim();
-                  const articleContent = quill.root.innerHTML; // Get content from Quill editor
-                  const metaTitle = seoCheckbox.checked
-                    ? document.getElementById("metaTitle").value.trim()
-                    : null;
-                  const metaTag = seoCheckbox.checked
-                    ? document.getElementById("metaTag").value.trim()
-                    : null;
-                  const metaDescription = seoCheckbox.checked
-                    ? document.getElementById("metaDescription").value.trim()
-                    : null;
-
-                  // Basic validation
-                  if (
-                    !articleTitle ||
-                    !category ||
-                    !shortDescription ||
-                    !articleContent
-                  ) {
-                    // showMessage("Please fill in all required fields.");
-                    return;
-                  }
-
-                  if (seoCheckbox.checked) {
-                    if (!metaTitle || !metaTag || !metaDescription) {
-                      // showMessage("Please fill in all SEO fields.");
-                      console.log("Please fill in all SEO fields.");
-                      return;
-                    }
-                  }
-
-                  // If validation passes, proceed with form submission (e.g., via AJAX)
-                  console.log({
-                    articleTitle,
-                    category,
-                    shortDescription,
-                    articleContent,
-                    metaTitle,
-                    metaTag,
-                    metaDescription,
-                  });
-
-                  // showMessage("Form submitted successfully!", false); // Show success message
-                  // Optionally, reset the form
-                  articleForm.reset();
-                  quill.setContents([]); // Clear the Quill editor content
-                  metaFieldsSection.style.display = "none"; // Hide SEO fields if checkbox is unchecked
-                });
-
-                // Handle Save and Create button functionality (if needed)
-                // saveAndCreateButton.addEventListener("click", (e) => {
-                //   e.preventDefault();
-                //   // You can implement similar logic as above for this button, or create additional functionality if required.
-                //   console.log("Save and Create button clicked");
-                // });
-              </script>
             </form>
           </section>
         </div>
       </div>
     </div>
+    <script>
+      const searchInput = document.getElementById("articleCategory");
+      const dropdown = document.getElementById("dropdown");
+      const categoryList = document.getElementById("category-list");
+      const noOptions = document.getElementById("no-options");
+
+      // Show dropdown when input is focused
+      function showDropdown() {
+        dropdown.classList.remove("hidden");
+        filterCountries();
+      }
+
+      // Hide dropdown when clicking outside
+      document.addEventListener("click", function (event) {
+        if (
+          !searchInput.contains(event.target) &&
+          !dropdown.contains(event.target)
+        ) {
+          dropdown.classList.add("hidden");
+        }
+      });
+
+      // Filter countries based on input
+      searchInput.addEventListener("input", filterCountries);
+
+      function filterCountries() {
+        const filter = searchInput.value.toLowerCase();
+        const listItems = categoryList.querySelectorAll("li:not(#no-options)");
+        let anyVisible = false;
+
+        listItems.forEach((item) => {
+          const text = item.textContent.toLowerCase().trim();
+          if (text.includes(filter)) {
+            item.style.display = "";
+            anyVisible = true;
+          } else {
+            item.style.display = "none";
+          }
+        });
+
+        // Show "No options available" if none match
+        if (!anyVisible) {
+          noOptions.classList.remove("hidden");
+        } else {
+          noOptions.classList.add("hidden");
+        }
+      }
+
+      // Handle item selection
+      categoryList.addEventListener("click", function (event) {
+        if (event.target.tagName === "LI" && event.target.id !== "no-options") {
+          searchInput.value = event.target.textContent.trim(); // Trim when setting value
+          dropdown.classList.add("hidden");
+        }
+      });
+
+      const toolbarOptions = [
+        [{ size: ["small", false, "large", "huge"] }],
+        [{ header: [1, 2, 3, 4, 5, 6, false] }],
+        ["bold", "italic", "underline", "strike"],
+        ["blockquote", "code-block"],
+        ["link", "image"],
+        [{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
+        [{ script: "sub" }, { script: "super" }],
+        [{ indent: "-1" }, { indent: "+1" }],
+        [{ direction: "rtl" }],
+        [{ color: [] }, { background: [] }],
+        [{ font: [] }],
+        [{ align: [] }],
+        ["clean"],
+      ];
+
+      const options = {
+        modules: {
+          toolbar: {
+            container: toolbarOptions,
+          },
+        },
+        placeholder: "Article",
+        theme: "snow",
+      };
+
+      const quill = new Quill("#article-editor", options);
+    </script>
+    <script>
+      const seoCheckbox = document.getElementById("seo-checkbox");
+      const metaFieldsSection = document.getElementById("seo");
+      const articleForm = document.getElementById("articleForm");
+
+      const saveButton = document.getElementById("save");
+      // const saveAndCreateButton =
+      //   document.getElementById("saveAndCreate");
+      // const messageArea = document.getElementById("messageArea"); // Get the message area
+
+      // Function to toggle the visibility of meta fields
+      function toggleMetaFields() {
+        if (seoCheckbox.checked) {
+          metaFieldsSection.style.display = "grid";
+        } else {
+          metaFieldsSection.style.display = "none";
+        }
+      }
+
+      // Event listener for checkbox changes
+      seoCheckbox.addEventListener("change", toggleMetaFields);
+
+      // Handle form submission on Save button click
+      articleForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Prevent default button action
+
+        // Retrieve values
+        const articleTitle = document
+          .getElementById("articleTitle")
+          .value.trim();
+        const category = document
+          .getElementById("articleCategory")
+          .value.trim();
+        const shortDescription = document
+          .getElementById("shortDescription")
+          .value.trim();
+        const articleContent = quill.root.innerHTML; // Get content from Quill editor
+        const metaTitle = seoCheckbox.checked
+          ? document.getElementById("metaTitle").value.trim()
+          : null;
+        const metaTag = seoCheckbox.checked
+          ? document.getElementById("metaTag").value.trim()
+          : null;
+        const metaDescription = seoCheckbox.checked
+          ? document.getElementById("metaDescription").value.trim()
+          : null;
+
+        // Basic validation
+        if (
+          !articleTitle ||
+          !category ||
+          !shortDescription ||
+          !articleContent
+        ) {
+          // showMessage("Please fill in all required fields.");
+          return;
+        }
+
+        if (seoCheckbox.checked) {
+          if (!metaTitle || !metaTag || !metaDescription) {
+            // showMessage("Please fill in all SEO fields.");
+            console.log("Please fill in all SEO fields.");
+            return;
+          }
+        }
+
+        // If validation passes, proceed with form submission (e.g., via AJAX)
+        console.log({
+          articleTitle,
+          category,
+          shortDescription,
+          articleContent,
+          metaTitle,
+          metaTag,
+          metaDescription,
+        });
+
+        // showMessage("Form submitted successfully!", false); // Show success message
+        // Optionally, reset the form
+        articleForm.reset();
+        quill.setContents([]); // Clear the Quill editor content
+        metaFieldsSection.style.display = "none"; // Hide SEO fields if checkbox is unchecked
+      });
+
+      // Handle Save and Create button functionality (if needed)
+      // saveAndCreateButton.addEventListener("click", (e) => {
+      //   e.preventDefault();
+      //   // You can implement similar logic as above for this button, or create additional functionality if required.
+      //   console.log("Save and Create button clicked");
+      // });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="../asset/js/main.js"></script>
   </body>
