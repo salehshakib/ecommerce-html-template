@@ -12,7 +12,27 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Ecommerce Blade Template</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+
+    <title>Dashboard</title>
   </head>
   <body>
     <div id="loader">
@@ -658,287 +678,803 @@
       </aside>
 
       <!-- dashboard -->
-      <div class="p-4 ml-0 sm:ml-64">
-        <div
-          class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14"
-        >
-          <div class="grid grid-cols-3 gap-4 mb-4">
+      <div class="p-4 ml-0 sm:ml-64 bg-gray-50 dark:bg-gray-800">
+        <div class="mt-14 text-2xl font-semibold">Dashboard</div>
+        <div class="mt-8">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4"
+          >
             <div
-              class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800"
+              class="flex items-center justify-between h-28 p-4 rounded-md bg-white shadow-md border border-[#4634FF]"
             >
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
+              <div class="flex items-center gap-4">
+                <div class="p-4 rounded-md bg-[#DAD6FF]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#4634FF"
+                    class="size-7"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
+                    />
+                  </svg>
+                </div>
+
+                <div class="flex flex-col gap-1 font-semibold text-sm">
+                  <div>Total Users</div>
+                  <div class="text-3xl font-bold">182</div>
+                </div>
+              </div>
+              <div>
                 <svg
-                  class="w-3.5 h-3.5"
-                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
-                  viewBox="0 0 18 18"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5"
                 >
                   <path
-                    stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
                   />
                 </svg>
-              </p>
+              </div>
             </div>
             <div
-              class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800"
+              class="flex items-center justify-between h-28 p-4 rounded-md bg-white shadow-md border border-[#28C76F]"
             >
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
+              <div class="flex items-center gap-4">
+                <div class="p-4 rounded-md bg-[#D4F4E2]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#28C76F"
+                    class="size-7"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
+                    />
+                  </svg>
+                </div>
+
+                <div class="flex flex-col gap-1 font-semibold text-sm">
+                  <div>Active Users</div>
+                  <div class="text-3xl font-bold">182</div>
+                </div>
+              </div>
+              <div>
                 <svg
-                  class="w-3.5 h-3.5"
-                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
-                  viewBox="0 0 18 18"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5"
                 >
                   <path
-                    stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
                   />
                 </svg>
-              </p>
+              </div>
             </div>
             <div
-              class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800"
+              class="flex items-center justify-between h-28 p-4 rounded-md bg-white shadow-md border border-[#EB2222]"
             >
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
+              <div class="flex items-center gap-4">
+                <div class="p-4 rounded-md bg-[#FBD3D3]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#EB2222"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                    />
+                  </svg>
+                </div>
+
+                <div class="flex flex-col gap-1 font-semibold text-sm">
+                  <div>Email Unverified Users</div>
+                  <div class="text-3xl font-bold">182</div>
+                </div>
+              </div>
+              <div>
                 <svg
-                  class="w-3.5 h-3.5"
-                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
-                  viewBox="0 0 18 18"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5"
                 >
                   <path
-                    stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
                   />
                 </svg>
-              </p>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between h-28 p-4 rounded-md bg-white shadow-md border border-[#FF9F43]"
+            >
+              <div class="flex items-center gap-4">
+                <div class="p-4 rounded-md bg-[#FFECD9]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#FF9F43"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                    />
+                  </svg>
+                </div>
+
+                <div class="flex flex-col gap-1 font-semibold text-sm">
+                  <div>Mobile Unverified Users</div>
+                  <div class="text-3xl font-bold">182</div>
+                </div>
+              </div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+            <div class="p-4 bg-white rounded-md shadow-sm">
+              <span class="text-lg font-semibold">Deposits</span>
+              <div class="grid grid-cols-1 md:grid-cols-2">
+                <div
+                  class="flex items-center justify-between h-28 border-r-0 md:border-r border-b p-4"
+                >
+                  <div class="flex items-center gap-4">
+                    <div class="p-4 rounded-md bg-[#D4F4E2]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#28C76F"
+                        class="size-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"
+                        />
+                      </svg>
+                    </div>
+
+                    <div class="flex flex-col gap-1 font-medium">
+                      <div>$23,233.00 USD</div>
+                      <div class="font-normal text-gray-500">
+                        Total Deposited
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between h-28 border-b p-4"
+                >
+                  <div class="flex items-center gap-4">
+                    <div class="p-4 rounded-md bg-[#F9E6D3]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#FF9F43"
+                        class="size-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </div>
+
+                    <div class="flex flex-col gap-1 font-medium">
+                      <div>$23,233.00 USD</div>
+                      <div class="font-normal text-gray-500">
+                        Total Deposited
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between h-28 border-r border-b md:border-b-0 p-4"
+                >
+                  <div class="flex items-center gap-4">
+                    <div class="p-4 rounded-md bg-[#FBD3D3]">
+                      <svg
+                        id="Road_Sign_Banned_Alternate_24"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <rect
+                          width="20"
+                          height="20"
+                          stroke="none"
+                          fill="#EC2929"
+                          opacity="0"
+                        />
+
+                        <g transform="matrix(0.83 0 0 0.83 12 12)">
+                          <path
+                            style="
+                              stroke: none;
+                              stroke-width: 1;
+                              stroke-dasharray: none;
+                              stroke-linecap: butt;
+                              stroke-dashoffset: 0;
+                              stroke-linejoin: miter;
+                              stroke-miterlimit: 4;
+                              fill: #ec2929;
+                              fill-rule: nonzero;
+                              opacity: 1;
+                            "
+                            transform=" translate(-12, -12)"
+                            d="M 24 12 C 24 5.372583002030479 18.627416997969522 0 12 0 C 5.372583002030478 0 0 5.372583002030477 0 11.999999999999998 C 0 18.62741699796952 5.372583002030478 24 12 24 C 18.627416997969522 24 24 18.627416997969522 24 12 Z M 12 2 C 17.522847498307932 2 22 6.477152501692064 22 11.999999999999998 C 22.002820428323922 14.209465830954953 21.26719496520189 16.35650665633504 19.91 18.1 C 19.86715056719616 18.157642454272352 19.801579142655914 18.19407102346138 19.73 18.200000000000003 C 19.65980961362364 18.203300150560374 19.591272098781378 18.178049487197434 19.54 18.130000000000003 L 5.87 4.46 C 5.8219505128025695 4.4087279012186205 5.796699849439631 4.340190386376358 5.8 4.27 C 5.805928976538624 4.198420857344086 5.842357545727648 4.132849432803843 5.8999999999999995 4.09 C 7.643493343664962 2.7328050347981074 9.790534169045044 1.9971795716760798 11.999999999999998 2 Z M 12 22 C 6.477152501692066 22 2 17.522847498307932 2 12 C 1.9971795716760803 9.79053416904505 2.7328050347981083 7.643493343664963 4.089999999999997 5.900000000000002 C 4.132849432803843 5.842357545727649 4.198420857344086 5.805928976538625 4.27 5.800000000000001 C 4.340190386376358 5.796699849439632 4.4087279012186205 5.82195051280257 4.46 5.870000000000001 L 18.13 19.54 C 18.17804948719743 19.591272098781378 18.20330015056037 19.65980961362364 18.2 19.73 C 18.194071023461376 19.801579142655914 18.15764245427235 19.86715056719616 18.099999999999998 19.91 C 16.356506656335036 21.26719496520189 14.20946583095495 22.00282042832392 12 22 Z"
+                            stroke-linecap="round"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+
+                    <div class="flex flex-col gap-1 font-medium">
+                      <div>$23,233.00 USD</div>
+                      <div class="font-normal text-gray-500">
+                        Total Deposited
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between h-28 p-4">
+                  <div class="flex items-center gap-4">
+                    <div class="p-4 rounded-md bg-[#DAD6FF]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#5342FE"
+                        class="size-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="m8.99 14.993 6-6m6 3.001c0 1.268-.63 2.39-1.593 3.069a3.746 3.746 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043 3.745 3.745 0 0 1-3.068 1.593c-1.268 0-2.39-.63-3.068-1.593a3.745 3.745 0 0 1-3.296-1.043 3.746 3.746 0 0 1-1.043-3.297 3.746 3.746 0 0 1-1.593-3.068c0-1.268.63-2.39 1.593-3.068a3.746 3.746 0 0 1 1.043-3.297 3.745 3.745 0 0 1 3.296-1.042 3.745 3.745 0 0 1 3.068-1.594c1.268 0 2.39.63 3.068 1.593a3.745 3.745 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.297 3.746 3.746 0 0 1 1.593 3.068ZM9.74 9.743h.008v.007H9.74v-.007Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm4.125 4.5h.008v.008h-.008v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                        />
+                      </svg>
+                    </div>
+
+                    <div class="flex flex-col gap-1 font-medium">
+                      <div>$23,233.00 USD</div>
+                      <div class="font-normal text-gray-500">
+                        Total Deposited
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-white rounded-md shadow-sm">
+              <span class="text-lg font-semibold">Withdrawls</span>
+              <div class="grid grid-cols-1 md:grid-cols-2">
+                <div
+                  class="flex items-center justify-between h-28 border-r-0 md:border-r border-b p-4"
+                >
+                  <div class="flex items-center gap-4">
+                    <div class="p-4 rounded-md bg-[#D4F4E2]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#28C76F"
+                        class="size-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"
+                        />
+                      </svg>
+                    </div>
+
+                    <div class="flex flex-col gap-1 font-medium">
+                      <div>$23,233.00 USD</div>
+                      <div class="font-normal text-gray-500">
+                        Total Withdrawn
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between h-28 border-b p-4"
+                >
+                  <div class="flex items-center gap-4">
+                    <div class="p-4 rounded-md bg-[#F9E6D3]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#FF9F43"
+                        class="size-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </div>
+
+                    <div class="flex flex-col gap-1 font-medium">
+                      <div>$23,233.00 USD</div>
+                      <div class="font-normal text-gray-500">
+                        Pending Withdraw
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between h-28 border-r border-b md:border-b-0 p-4"
+                >
+                  <div class="flex items-center gap-4">
+                    <div class="p-4 rounded-md bg-[#FBD3D3]">
+                      <svg
+                        id="Road_Sign_Banned_Alternate_24"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <rect
+                          width="20"
+                          height="20"
+                          stroke="none"
+                          fill="#EC2929"
+                          opacity="0"
+                        />
+
+                        <g transform="matrix(0.83 0 0 0.83 12 12)">
+                          <path
+                            style="
+                              stroke: none;
+                              stroke-width: 1;
+                              stroke-dasharray: none;
+                              stroke-linecap: butt;
+                              stroke-dashoffset: 0;
+                              stroke-linejoin: miter;
+                              stroke-miterlimit: 4;
+                              fill: #ec2929;
+                              fill-rule: nonzero;
+                              opacity: 1;
+                            "
+                            transform=" translate(-12, -12)"
+                            d="M 24 12 C 24 5.372583002030479 18.627416997969522 0 12 0 C 5.372583002030478 0 0 5.372583002030477 0 11.999999999999998 C 0 18.62741699796952 5.372583002030478 24 12 24 C 18.627416997969522 24 24 18.627416997969522 24 12 Z M 12 2 C 17.522847498307932 2 22 6.477152501692064 22 11.999999999999998 C 22.002820428323922 14.209465830954953 21.26719496520189 16.35650665633504 19.91 18.1 C 19.86715056719616 18.157642454272352 19.801579142655914 18.19407102346138 19.73 18.200000000000003 C 19.65980961362364 18.203300150560374 19.591272098781378 18.178049487197434 19.54 18.130000000000003 L 5.87 4.46 C 5.8219505128025695 4.4087279012186205 5.796699849439631 4.340190386376358 5.8 4.27 C 5.805928976538624 4.198420857344086 5.842357545727648 4.132849432803843 5.8999999999999995 4.09 C 7.643493343664962 2.7328050347981074 9.790534169045044 1.9971795716760798 11.999999999999998 2 Z M 12 22 C 6.477152501692066 22 2 17.522847498307932 2 12 C 1.9971795716760803 9.79053416904505 2.7328050347981083 7.643493343664963 4.089999999999997 5.900000000000002 C 4.132849432803843 5.842357545727649 4.198420857344086 5.805928976538625 4.27 5.800000000000001 C 4.340190386376358 5.796699849439632 4.4087279012186205 5.82195051280257 4.46 5.870000000000001 L 18.13 19.54 C 18.17804948719743 19.591272098781378 18.20330015056037 19.65980961362364 18.2 19.73 C 18.194071023461376 19.801579142655914 18.15764245427235 19.86715056719616 18.099999999999998 19.91 C 16.356506656335036 21.26719496520189 14.20946583095495 22.00282042832392 12 22 Z"
+                            stroke-linecap="round"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+
+                    <div class="flex flex-col gap-1 font-medium">
+                      <div>$23,233.00 USD</div>
+                      <div class="font-normal text-gray-500">
+                        Rejected Withdrawls
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between h-28 p-4">
+                  <div class="flex items-center gap-4">
+                    <div class="p-4 rounded-md bg-[#DAD6FF]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#5342FE"
+                        class="size-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="m8.99 14.993 6-6m6 3.001c0 1.268-.63 2.39-1.593 3.069a3.746 3.746 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043 3.745 3.745 0 0 1-3.068 1.593c-1.268 0-2.39-.63-3.068-1.593a3.745 3.745 0 0 1-3.296-1.043 3.746 3.746 0 0 1-1.043-3.297 3.746 3.746 0 0 1-1.593-3.068c0-1.268.63-2.39 1.593-3.068a3.746 3.746 0 0 1 1.043-3.297 3.745 3.745 0 0 1 3.296-1.042 3.745 3.745 0 0 1 3.068-1.594c1.268 0 2.39.63 3.068 1.593a3.745 3.745 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.297 3.746 3.746 0 0 1 1.593 3.068ZM9.74 9.743h.008v.007H9.74v-.007Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm4.125 4.5h.008v.008h-.008v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                        />
+                      </svg>
+                    </div>
+
+                    <div class="flex flex-col gap-1 font-medium">
+                      <div>$23,233.00 USD</div>
+                      <div class="font-normal text-gray-500">
+                        Withdrawal Charge
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div
-            class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 my-8"
           >
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
+            <div
+              class="p-5 rounded-md flex justify-between items-center bg-[#C8C3FB] shadow-md"
+            >
+              <div class="flex flex-col gap-2 text-[#3F5469]">
+                <span class="font-medium">Total Investments</span>
+                <span class="text-2xl font-bold text-[#5645FE]"
+                  >$ 0.00 USD</span
+                >
+              </div>
               <svg
-                class="w-3.5 h-3.5"
-                aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                viewBox="0 0 18 18"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#5645FE"
+                class="size-10"
               >
                 <path
-                  stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 1v16M1 9h16"
+                  d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"
                 />
               </svg>
-            </p>
-          </div>
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <div
-              class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
-            >
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  class="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
             </div>
             <div
-              class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
+              class="p-5 rounded-md flex justify-between items-center bg-[#BBD4DB] shadow-md"
             >
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  class="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
+              <div class="flex flex-col gap-2 text-[#3F5469]">
+                <span class="font-medium">Transactions</span>
+                <span class="text-2xl font-bold text-[#127681]"
+                  >$ 0.00 USD</span
                 >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
-            </div>
-            <div
-              class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
-            >
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  class="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
-            </div>
-            <div
-              class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
-            >
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  class="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
-            </div>
-          </div>
-          <div
-            class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800"
-          >
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
+              </div>
               <svg
-                class="w-3.5 h-3.5"
-                aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                viewBox="0 0 18 18"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#127681"
+                class="size-10"
               >
                 <path
-                  stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 1v16M1 9h16"
+                  d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"
                 />
               </svg>
-            </p>
+            </div>
+            <div
+              class="p-5 rounded-md flex justify-between items-center bg-[#CDC1E2] shadow-md"
+            >
+              <div class="flex flex-col gap-2 text-[#3F5469]">
+                <span class="font-medium">Running Interests</span>
+                <span class="text-2xl font-bold text-[#5C2A9D]"
+                  >$ 0.00 USD</span
+                >
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#5C2A9D"
+                class="size-10"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"
+                />
+              </svg>
+            </div>
+            <div
+              class="p-5 rounded-md flex justify-between items-center bg-[#F0C9D3] shadow-md"
+            >
+              <div class="flex flex-col gap-2 text-[#3F5469]">
+                <span class="font-medium">Closed Investments</span>
+                <span class="text-2xl font-bold text-[#E84A5F]"
+                  >$ 0.00 USD</span
+                >
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#E84A5F"
+                class="size-10"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </div>
           </div>
-          <div class="grid grid-cols-2 gap-4">
-            <div
-              class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
-            >
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  class="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-8">
+            <div class="p-4 bg-white rounded-md shadow-sm">
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-semibold"
+                  >Deposit & Withdraw Report</span
                 >
-                  <path
+
+                <div
+                  id="reportrange"
+                  class="flex items-center gap-2 justify-between bg-white cursor-pointer px-1 py-2 w-auto border"
+                >
+                  &nbsp; <span></span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+
+                  <i class="fa fa-caret-down"></i>
+                </div>
+              </div>
+
+              <div class="mt-14">
+                <canvas id="depositWithdrawChart"></canvas>
+              </div>
             </div>
-            <div
-              class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
-            >
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  class="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
+            <div class="p-4 bg-white rounded-md shadow-sm">
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-semibold">Transaction Report</span>
+
+                <div
+                  id="reportrange"
+                  class="flex items-center gap-2 justify-between bg-white cursor-pointer px-1 py-2 w-auto border"
                 >
-                  <path
+                  &nbsp; <span></span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+
+                  <i class="fa fa-caret-down"></i>
+                </div>
+              </div>
+
+              <div class="mt-14">
+                <canvas id="transactionChart"></canvas>
+              </div>
             </div>
-            <div
-              class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
-            >
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  class="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-20 mt-8"
+          >
+            <div class="p-4 bg-white rounded-lg shadow-sm">
+              <span class="text-2xl font-bold"
+                >Login By Browser (Last 30 Days)</span
+              >
+              <div class="w-full h-[28rem] mt-10">
+                <canvas id="browserLoginChart"></canvas>
+              </div>
             </div>
-            <div
-              class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
-            >
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  class="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
+            <div class="p-4 bg-white rounded-lg shadow-sm">
+              <span class="text-2xl font-bold">Login By OS (Last 30 Days)</span>
+              <div class="w-full h-[28rem] mt-10">
+                <canvas id="osLoginChart"></canvas>
+              </div>
+            </div>
+            <div class="p-4 bg-white rounded-lg shadow-sm">
+              <span class="text-2xl font-bold"
+                >Login By Country (Last 30 Days)</span
+              >
+              <div class="w-full h-[28rem] mt-10">
+                <canvas id="countryLoginChart"></canvas>
+              </div>
             </div>
           </div>
         </div>
@@ -956,5 +1492,8 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="asset/js/loader.js"></script>
+    <script src="asset/js/doughnut-cahrt.js"></script>
+    <script src="asset/js/date-filter.js"></script>
+    <script src="asset/js/bar-chart.js"></script>
   </body>
 </html>

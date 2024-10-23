@@ -636,7 +636,7 @@
       <div class="p-4 ml-0 sm:ml-64">
         <div class="p-4 rounded-lg dark:border-gray-700 mt-14">
           <div class="text-3xl w-full text-center lg:text-start font-bold">
-            Email Configuration
+            SMS Configuration
           </div>
 
           <section class="mt-10 relative">
@@ -736,7 +736,7 @@
                         </svg>
                         <span
                           class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400"
-                          >Email Configuration</span
+                          >SMS Configuration</span
                         >
                       </div>
                     </li>
@@ -771,35 +771,18 @@
 
               <div class="w-full lg:w-[80%] xl:w-[60%] mx-auto space-y-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-                  <div class="relative">
-                    <label
-                      for="articleCategory"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Protocol <span class="text-red-600">*</span>
-                    </label>
-
-                    <select
-                      class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      name="state"
-                    >
-                      <option value="smtp">SMTP</option>
-                      <option value="WY" disabled>Wyoming</option>
-                    </select>
-                  </div>
-
                   <div>
                     <label
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       for="articleTitle"
-                      >Host<span class="text-red-600">*</span></label
+                      >Api Key<span class="text-red-600">*</span></label
                     >
                     <input
                       type="text"
                       id="articleTitle"
                       name="articleTitle"
                       class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Enter host"
+                      placeholder="Enter aoi key"
                       required
                     />
                   </div>
@@ -807,108 +790,14 @@
                     <label
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       for="articleTitle"
-                      >Port<span class="text-red-600">*</span></label
+                      >Provider link<span class="text-red-600">*</span></label
                     >
                     <input
                       type="text"
                       id="articleTitle"
                       name="articleTitle"
                       class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Enter port"
-                      required
-                    />
-                  </div>
-
-                  <div class="relative">
-                    <label
-                      for="emailEncrtyption"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Email Encryption <span class="text-red-600">*</span>
-                    </label>
-
-                    <select
-                      class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      name="state"
-                    >
-                      <option value="smtp">TLC</option>
-                      <option value="ssl" disabled>SSL</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      for="articleTitle"
-                      >Username<span class="text-red-600">*</span></label
-                    >
-                    <input
-                      type="text"
-                      id="articleTitle"
-                      name="articleTitle"
-                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Enter username"
-                      required
-                    />
-                  </div>
-
-                  <div class="relative mb-6">
-                    <label
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      for="articleTitle"
-                      >Password<span class="text-red-600">*</span></label
-                    >
-                    <input
-                      type="password"
-                      id="password"
-                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Enter password"
-                      required=""
-                    />
-                    <button
-                      type="button"
-                      id="toggle-password"
-                      class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white mt-7"
-                    >
-                      <img
-                        id="toggle-icon"
-                        src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/eye-svgrepo-com.svg"
-                        class="w-4"
-                        alt="Show Password"
-                      />
-                    </button>
-                  </div>
-
-                  <div>
-                    <label
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      for="articleTitle"
-                      >Email address (From)<span class="text-red-600"
-                        >*</span
-                      ></label
-                    >
-                    <input
-                      type="text"
-                      id="articleTitle"
-                      name="articleTitle"
-                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Enter email address"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      for="articleTitle"
-                      >Name (From)<span class="text-red-600">*</span></label
-                    >
-                    <input
-                      type="text"
-                      id="articleTitle"
-                      name="articleTitle"
-                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Enter name"
+                      placeholder="Enter provider link"
                       required
                     />
                   </div>
