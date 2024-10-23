@@ -636,7 +636,7 @@
       <div class="p-4 ml-0 sm:ml-64">
         <div class="p-4 rounded-lg dark:border-gray-700 mt-14">
           <div class="text-3xl w-full text-center lg:text-start font-bold">
-            Create SMS Template
+            Send Notification Email
           </div>
 
           <section class="mt-10 relative">
@@ -690,7 +690,7 @@
                         <a
                           href="article.html"
                           class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white"
-                          >SMS Template</a
+                          >Notification</a
                         >
                       </div>
                     </li>
@@ -713,7 +713,7 @@
                         </svg>
                         <span
                           class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400"
-                          >SMS Template Create</span
+                          >Via Email</span
                         >
                       </div>
                     </li>
@@ -722,62 +722,50 @@
                 <div
                   class="flex justify-center lg:justify-end items-center gap-2 w-full"
                 >
-                  <button
+                  <!-- <button
                     type="button"
                     class="hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 border hover:text-white text-xs md:text-sm"
                     onclick="window.location.href='email-template.html'"
                   >
                     Go Back
-                  </button>
+                  </button> -->
                   <button
                     type="submit"
                     id="save"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-xs md:text-sm"
                   >
-                    Save
+                    Send
                   </button>
-                  <button
+                  <!-- <button
                     type="submit"
                     id="saveAndCreate"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-3 md:px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-xs md:text-sm"
                   >
                     Save & Create
-                  </button>
+                  </button> -->
                 </div>
               </div>
 
-              <div class="w-full lg:w-[80%] xl:w-[60%] mx-auto space-y-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-                  <div>
-                    <label
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      for="articleTitle"
-                      >Act <span class="text-red-600">*</span></label
-                    >
-                    <input
-                      type="text"
-                      id="articleTitle"
-                      name="articleTitle"
-                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Enter act"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      for="articleTitle"
-                      >Name <span class="text-red-600">*</span></label
-                    >
-                    <input
-                      type="text"
-                      id="articleTitle"
-                      name="articleTitle"
-                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Enter name"
-                      required
-                    />
-                  </div>
+              <div class="w-full lg:w-[50%] mx-auto space-y-8">
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8"
+                ></div>
+
+                <div class="relative">
+                  <label
+                    for="articleCategory"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Billing Send To <span class="text-red-600">*</span>
+                  </label>
+
+                  <select
+                    class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    name="state"
+                  >
+                    <option value="all-users">All Users</option>
+                    <option value="WY">Wyoming</option>
+                  </select>
                 </div>
 
                 <div>
@@ -796,45 +784,64 @@
                   />
                 </div>
 
-                <div>
-                  <label
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    for="articleTitle"
-                    >Short code <span class="text-red-600">*</span></label
-                  >
-                  <div id="shortcodeContainer" class="space-y-2">
-                    <div class="flex space-x-2">
-                      <input
-                        type="text"
-                        placeholder="Object name"
-                        class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      />
-                      <input
-                        type="text"
-                        placeholder="Key"
-                        class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      />
-                    </div>
-                  </div>
-                  <button
-                    type="button"
-                    id="addShortcode"
-                    class="mt-4 border border-blue-700 text-blue-700 hover:bg-blue-700 border-dashed text-sm w-full p-1 rounded-md hover:text-white font-medium"
-                  >
-                    + Add Shortcode
-                  </button>
-                </div>
-
                 <div class="">
                   <label
                     for="article"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >Body <span class="text-red-600">*</span></label
+                    >Message <span class="text-red-600">*</span></label
                   >
                   <div
                     id="article-editor"
                     class="h-[150px] overflow-auto border"
                   ></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                  <div>
+                    <label
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      for="articleTitle"
+                      >Start From <span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="articleTitle"
+                      name="articleTitle"
+                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Enter subject"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      for="articleTitle"
+                      >Per Batch <span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="articleTitle"
+                      name="articleTitle"
+                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Enter how many user "
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      for="articleTitle"
+                      >Cooling Period <span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="articleTitle"
+                      name="articleTitle"
+                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Enter waiting time"
+                      required
+                    />
+                  </div>
                 </div>
               </div>
             </form>
