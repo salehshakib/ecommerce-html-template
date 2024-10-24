@@ -30,4 +30,16 @@ const options = {
 
 new Quill("#article-editor", options);
 
-new Quill("#description-editor", options);
+var quill = new Quill("#sitemap-editor", {
+  modules: {
+    syntax: true,
+    toolbar: ["code-block"], // Enables syntax highlighting
+  },
+  placeholder: "Write something",
+  theme: "snow",
+});
+hljs.highlightAll();
+
+quill.format("code-block", true);
+
+// Set the initial format to code-block
