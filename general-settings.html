@@ -3,15 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/css/styles.css"
-    />
+    <link rel="stylesheet" href="asset/css/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script
@@ -31,17 +29,18 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css"
+      rel="stylesheet"
+    />
 
-    <!-- <style>
-      [role="tabpanel"] {
-        display: none;
-      }
-      [role="tabpanel"].active {
-        display: block;
-      }
-    </style> -->
+    <link href="asset/css/select2.min.css" rel="stylesheet" />
 
-    <title>Dashboard</title>
+    <!-- Include Select2 JS -->
+    <script src="asset/js/select2.min.js"></script>
+
+    <title>General Settings</title>
   </head>
   <body>
     <div id="loader">
@@ -1027,538 +1026,1097 @@
             </ul>
 
             <div id="default-tab-content" class="w-full">
-              <div
-                class="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 min-h-[80vh] space-y-6"
-                id="system"
-                role="tabpanel"
-                aria-labelledby="system-tab"
-              >
-                <div class="text-2xl font-semibold">System Settings</div>
-                <div class="flex items-center gap-4">
-                  <div
-                    class="text-lg font-medium text-gray-800 dark:text-white"
-                  >
-                    Comapany Settings
-                  </div>
-                  <hr class="flex-1" />
-                </div>
-
-                <div class="mx-auto">
-                  <div
-                    class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
-                  >
-                    <div>
-                      <label
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        for="articleTitle"
-                        >System Title <span class="text-red-600">*</span></label
-                      >
-                      <input
-                        type="text"
-                        id="articleTitle"
-                        name="articleTitle"
-                        class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Enter the system title"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        for="articleTitle"
-                        >Company Name <span class="text-red-600">*</span></label
-                      >
-                      <input
-                        type="text"
-                        id="articleTitle"
-                        name="articleTitle"
-                        class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Enter the company name"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        for="articleTitle"
-                        >Vat Registration Number
-                        <span class="text-red-600">*</span></label
-                      >
-                      <input
-                        type="text"
-                        id="articleTitle"
-                        name="articleTitle"
-                        class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Enter vat registration number"
-                        required
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="flex items-center gap-4">
-                  <div
-                    class="text-lg font-medium text-gray-800 dark:text-white"
-                  >
-                    Time Settings
-                  </div>
-                  <hr class="flex-1" />
-                </div>
-
-                <div class="mx-auto">
-                  <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                    <div class="relative">
-                      <label
-                        for="articleCategory"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >
-                        Time Zone <span class="text-red-600">*</span>
-                      </label>
-
-                      <select
-                        class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        name="state"
-                      >
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                      </select>
-                    </div>
-                    <div class="relative">
-                      <label
-                        for="articleCategory"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >
-                        Date Format <span class="text-red-600">*</span>
-                      </label>
-
-                      <select
-                        class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        name="state"
-                      >
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex items-center gap-4">
-                  <div
-                    class="text-lg font-medium text-gray-800 dark:text-white"
-                  >
-                    Currency Settings
-                  </div>
-                  <hr class="flex-1" />
-                </div>
-
-                <div class="mx-auto">
-                  <div
-                    class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
-                  >
-                    <div class="relative">
-                      <label
-                        for="articleCategory"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >
-                        Currency <span class="text-red-600">*</span>
-                      </label>
-
-                      <select
-                        class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        name="state"
-                      >
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        for="articleTitle"
-                        >Digits after decimal
-                        <span class="text-red-600">*</span></label
-                      >
-                      <input
-                        type="text"
-                        id="articleTitle"
-                        name="articleTitle"
-                        class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Enter vat registration number"
-                        required
-                      />
-                    </div>
-                    <div class="">
-                      <label
-                        for="articleCategory"
-                        class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"
-                      >
-                        Position <span class="text-red-600">*</span>
-                      </label>
-
-                      <div class="flex items-center gap-4 w-full">
-                        <div class="flex items-center w-full">
-                          <input
-                            id="bordered-radio-1"
-                            type="radio"
-                            value=""
-                            name="bordered-radio"
-                            class="text-blue-600 bg-gray-100 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                          />
-                          <label
-                            for="bordered-radio-1"
-                            class="w-full ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                            >Prefix</label
-                          >
-                        </div>
-                        <div class="flex items-center w-full">
-                          <input
-                            id="bordered-radio-1"
-                            type="radio"
-                            value=""
-                            name="bordered-radio"
-                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                          />
-                          <label
-                            for="bordered-radio-1"
-                            class="w-full ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                            >Suffix</label
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex items-center gap-4">
-                  <div
-                    class="text-lg font-medium text-gray-800 dark:text-white"
-                  >
-                    Stuff Settings
-                  </div>
-                  <hr class="flex-1" />
-                </div>
-
-                <div class="mx-auto">
-                  <div
-                    class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
-                  >
-                    <div class="relative">
-                      <label
-                        for="articleCategory"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >
-                        Invoice format <span class="text-red-600">*</span>
-                      </label>
-
-                      <select
-                        class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        name="state"
-                      >
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                      </select>
-                    </div>
-                    <div class="relative">
-                      <label
-                        for="articleCategory"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >
-                        Staff Access <span class="text-red-600">*</span>
-                      </label>
-
-                      <select
-                        class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        name="state"
-                      >
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                      </select>
-                    </div>
-                    <div class="">
-                      <label
-                        for="articleCategory"
-                        class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"
-                      >
-                        Sale & Quotation without stock
-                        <span class="text-red-600">*</span>
-                      </label>
-
-                      <div class="flex items-center gap-4 w-full">
-                        <div class="flex items-center w-full">
-                          <input
-                            id="sale-and-quotation-radio-1"
-                            type="radio"
-                            value=""
-                            name="sale-and-quotation-radio"
-                            class="text-blue-600 bg-gray-100 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                          />
-                          <label
-                            for="sale-and-quotation-radio-1"
-                            class="w-full ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                            >Yes</label
-                          >
-                        </div>
-                        <div class="flex items-center w-full">
-                          <input
-                            id="sale-and-quotation-radio-1"
-                            type="radio"
-                            value=""
-                            name="sale-and-quotation-radio"
-                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                          />
-                          <label
-                            for="sale-and-quotation-radio-1"
-                            class="w-full ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                            >No</label
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="hidden p-4 rounded-lg bg-gray-100 dark:bg-gray-800 min-h-[80vh] space-y-6"
-                id="asset"
-                role="tabpanel"
-                aria-labelledby="asset-tab"
-              >
-                <div class="text-2xl font-semibold">Asset Settings</div>
+              <form id="system-form" action="">
                 <div
-                  class="flex flex-col lg:flex-row items-center justify-start lg:justify-center lg:gap-8"
+                  class="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 min-h-[80vh] space-y-6"
+                  id="system"
+                  role="tabpanel"
+                  aria-labelledby="system-tab"
                 >
-                  <label
-                    for="email"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white w-full lg:w-32"
-                    >Favicon</label
-                  >
-                  <div
-                    id="uploadBox"
-                    class="w-full h-32 border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center cursor-pointer overflow-hidden bg-gray-50 relative group"
-                    tabindex="0"
-                    role="button"
-                    aria-label="Upload image"
-                  >
-                    <input
-                      type="file"
-                      id="fileInput"
-                      class="hidden"
-                      accept="image/*"
-                      aria-hidden="true"
-                    />
-                    <div id="placeholder" class="text-center">
-                      <svg
-                        class="mx-auto h-12 w-12 text-gray-400 group-hover:text-gray-500"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        id="uploadIcon"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                        ></path>
-                      </svg>
-                      <p class="mt-2 text-sm text-gray-600" id="uploadText">
-                        Click to upload image
-                      </p>
-                    </div>
+                  <div class="text-2xl font-semibold">System Settings</div>
+
+                  <div class="flex items-center gap-4">
                     <div
-                      id="imageContainer"
-                      class="w-full h-full py-2 hidden group"
+                      class="text-lg font-medium text-gray-800 dark:text-white"
                     >
-                      <img
-                        id="preview"
-                        class="w-full h-full object-contain"
-                        alt="Uploaded preview"
-                      />
-                      <div
-                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-                      >
-                        <button
-                          id="previewButton"
-                          class="bg-white text-gray-800 rounded-full p-2 py-1 mx-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
-                          aria-label="Preview image"
-                          type="button"
+                      Comapany Settings
+                    </div>
+                    <hr class="flex-1" />
+                  </div>
+
+                  <div class="mx-auto">
+                    <div
+                      class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+                    >
+                      <div>
+                        <label
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          for="articleTitle"
+                          >System Title
+                          <span class="text-red-600">*</span></label
                         >
-                          <p class="text-xs font-semibold">Preview</p>
-                        </button>
-                        <button
-                          id="deleteButton"
-                          class="bg-red-500 text-white rounded-full p-2 py-1 mx-2 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400"
-                          aria-label="Delete image"
-                          type="button"
+                        <input
+                          type="text"
+                          id="articleTitle"
+                          name="articleTitle"
+                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="Enter the system title"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          for="articleTitle"
+                          >Company Name
+                          <span class="text-red-600">*</span></label
                         >
-                          <p class="text-xs font-semibold">Delete</p>
-                        </button>
+                        <input
+                          type="text"
+                          id="articleTitle"
+                          name="articleTitle"
+                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="Enter the company name"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          for="articleTitle"
+                          >Vat Registration Number
+                          <span class="text-red-600">*</span></label
+                        >
+                        <input
+                          type="text"
+                          id="articleTitle"
+                          name="articleTitle"
+                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="Enter vat registration number"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="text-lg font-medium text-gray-800 dark:text-white"
+                    >
+                      Time Settings
+                    </div>
+                    <hr class="flex-1" />
+                  </div>
+
+                  <div class="mx-auto">
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                      <div class="relative">
+                        <label
+                          for="articleCategory"
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          Time Zone <span class="text-red-600">*</span>
+                        </label>
+
+                        <select
+                          class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          name="state"
+                        >
+                          <option value="AL">Alabama</option>
+                          <option value="WY">Wyoming</option>
+                        </select>
+                      </div>
+                      <div class="relative">
+                        <label
+                          for="articleCategory"
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          Date Format <span class="text-red-600">*</span>
+                        </label>
+
+                        <select
+                          class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          name="state"
+                        >
+                          <option value="AL">Alabama</option>
+                          <option value="WY">Wyoming</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="text-lg font-medium text-gray-800 dark:text-white"
+                    >
+                      Currency Settings
+                    </div>
+                    <hr class="flex-1" />
+                  </div>
+
+                  <div class="mx-auto">
+                    <div
+                      class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+                    >
+                      <div class="relative">
+                        <label
+                          for="articleCategory"
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          Currency <span class="text-red-600">*</span>
+                        </label>
+
+                        <select
+                          class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          name="state"
+                        >
+                          <option value="AL">Alabama</option>
+                          <option value="WY">Wyoming</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          for="articleTitle"
+                          >Digits after decimal
+                          <span class="text-red-600">*</span></label
+                        >
+                        <input
+                          type="text"
+                          id="articleTitle"
+                          name="articleTitle"
+                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="Enter vat registration number"
+                          required
+                        />
+                      </div>
+                      <div class="">
+                        <label
+                          for="articleCategory"
+                          class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          Position <span class="text-red-600">*</span>
+                        </label>
+
+                        <div class="flex items-center gap-4 w-full">
+                          <div class="flex items-center w-full">
+                            <input
+                              id="bordered-radio-1"
+                              type="radio"
+                              value=""
+                              name="bordered-radio"
+                              class="text-blue-600 bg-gray-100 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                            />
+                            <label
+                              for="bordered-radio-1"
+                              class="w-full ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                              >Prefix</label
+                            >
+                          </div>
+                          <div class="flex items-center w-full">
+                            <input
+                              id="bordered-radio-1"
+                              type="radio"
+                              value=""
+                              name="bordered-radio"
+                              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                            />
+                            <label
+                              for="bordered-radio-1"
+                              class="w-full ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                              >Suffix</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="text-lg font-medium text-gray-800 dark:text-white"
+                    >
+                      Stuff Settings
+                    </div>
+                    <hr class="flex-1" />
+                  </div>
+
+                  <div class="mx-auto">
+                    <div
+                      class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+                    >
+                      <div class="relative">
+                        <label
+                          for="articleCategory"
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          Invoice format <span class="text-red-600">*</span>
+                        </label>
+
+                        <select
+                          class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          name="state"
+                        >
+                          <option value="AL">Alabama</option>
+                          <option value="WY">Wyoming</option>
+                        </select>
+                      </div>
+                      <div class="relative">
+                        <label
+                          for="articleCategory"
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          Staff Access <span class="text-red-600">*</span>
+                        </label>
+
+                        <select
+                          class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          name="state"
+                        >
+                          <option value="AL">Alabama</option>
+                          <option value="WY">Wyoming</option>
+                        </select>
+                      </div>
+                      <div class="">
+                        <label
+                          for="articleCategory"
+                          class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          Sale & Quotation without stock
+                          <span class="text-red-600">*</span>
+                        </label>
+
+                        <div class="flex items-center gap-4 w-full">
+                          <div class="flex items-center w-full">
+                            <input
+                              id="sale-and-quotation-radio-1"
+                              type="radio"
+                              value=""
+                              name="sale-and-quotation-radio"
+                              class="text-blue-600 bg-gray-100 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                            />
+                            <label
+                              for="sale-and-quotation-radio-1"
+                              class="w-full ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                              >Yes</label
+                            >
+                          </div>
+                          <div class="flex items-center w-full">
+                            <input
+                              id="sale-and-quotation-radio-1"
+                              type="radio"
+                              value=""
+                              name="sale-and-quotation-radio"
+                              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                            />
+                            <label
+                              for="sale-and-quotation-radio-1"
+                              class="w-full ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                              >No</label
+                            >
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <div
-                    id="fullPreview"
-                    class="hidden bg-black bg-opacity-75 rounded-lg flex items-center justify-center"
-                  >
-                    <img
-                      id="fullPreviewImage"
-                      class="max-w-full max-h-full p-10 object-contain hidden"
-                      alt="Full size preview"
-                    />
+                  <div class="flex justify-end w-full">
                     <button
-                      id="closePreview"
-                      class="absolute text-white top-4 right-4 text-2xl hidden"
-                      aria-label="Close preview"
-                      type="button"
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg p-1 px-4 mt-10"
+                      type="submit"
                     >
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/close-circle-svgrepo-com.svg"
-                        class="w-6 bg-white rounded-full"
-                        alt=""
-                      />
+                      Update
                     </button>
                   </div>
                 </div>
+              </form>
+
+              <form action="" id="asset-form">
                 <div
-                  class="flex flex-col lg:flex-row items-center justify-start lg:justify-center lg:gap-8"
+                  class="hidden p-4 rounded-lg bg-gray-100 dark:bg-gray-800 min-h-[80vh] space-y-6"
+                  id="asset"
+                  role="tabpanel"
+                  aria-labelledby="asset-tab"
                 >
-                  <label
-                    for="email"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white w-full lg:w-32"
-                    >logo</label
-                  >
+                  <div class="text-2xl font-semibold">Asset Settings</div>
                   <div
-                    id="uploadBox"
-                    class="w-full h-32 border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center cursor-pointer overflow-hidden bg-gray-50 relative group"
-                    tabindex="0"
-                    role="button"
-                    aria-label="Upload image"
+                    class="flex flex-col lg:flex-row items-center justify-start lg:justify-center lg:gap-8"
                   >
-                    <input
-                      type="file"
-                      id="fileInput"
-                      class="hidden"
-                      accept="image/*"
-                      aria-hidden="true"
-                    />
-                    <div id="placeholder" class="text-center">
-                      <svg
-                        class="mx-auto h-12 w-12 text-gray-400 group-hover:text-gray-500"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        id="uploadIcon"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                        ></path>
-                      </svg>
-                      <p class="mt-2 text-sm text-gray-600" id="uploadText">
-                        Click to upload image
-                      </p>
-                    </div>
+                    <label
+                      for="email"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white w-full lg:w-32"
+                      >Favicon</label
+                    >
                     <div
-                      id="imageContainer"
-                      class="w-full h-full py-2 hidden group"
+                      id="uploadBox"
+                      class="w-full h-32 border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center cursor-pointer overflow-hidden bg-gray-50 relative group"
+                      tabindex="0"
+                      role="button"
+                      aria-label="Upload image"
+                    >
+                      <input
+                        type="file"
+                        id="fileInput"
+                        class="hidden"
+                        accept="image/*"
+                        aria-hidden="true"
+                      />
+                      <div id="placeholder" class="text-center">
+                        <svg
+                          class="mx-auto h-12 w-12 text-gray-400 group-hover:text-gray-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          id="uploadIcon"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                          ></path>
+                        </svg>
+                        <p class="mt-2 text-sm text-gray-600" id="uploadText">
+                          Click to upload image
+                        </p>
+                      </div>
+                      <div
+                        id="imageContainer"
+                        class="w-full h-full py-2 hidden group"
+                      >
+                        <img
+                          id="preview"
+                          class="w-full h-full object-contain"
+                          alt="Uploaded preview"
+                        />
+                        <div
+                          class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                        >
+                          <button
+                            id="previewButton"
+                            class="bg-white text-gray-800 rounded-full p-2 py-1 mx-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                            aria-label="Preview image"
+                            type="button"
+                          >
+                            <p class="text-xs font-semibold">Preview</p>
+                          </button>
+                          <button
+                            id="deleteButton"
+                            class="bg-red-500 text-white rounded-full p-2 py-1 mx-2 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400"
+                            aria-label="Delete image"
+                            type="button"
+                          >
+                            <p class="text-xs font-semibold">Delete</p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      id="fullPreview"
+                      class="hidden bg-black bg-opacity-75 rounded-lg flex items-center justify-center"
                     >
                       <img
-                        id="preview"
-                        class="w-full h-full object-contain"
-                        alt="Uploaded preview"
+                        id="fullPreviewImage"
+                        class="max-w-full max-h-full p-10 object-contain hidden"
+                        alt="Full size preview"
                       />
-                      <div
-                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                      <button
+                        id="closePreview"
+                        class="absolute text-white top-4 right-4 text-2xl hidden"
+                        aria-label="Close preview"
+                        type="button"
                       >
-                        <button
-                          id="previewButton"
-                          class="bg-white text-gray-800 rounded-full p-2 py-1 mx-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
-                          aria-label="Preview image"
-                          type="button"
+                        <img
+                          src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/close-circle-svgrepo-com.svg"
+                          class="w-6 bg-white rounded-full"
+                          alt=""
+                        />
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-col lg:flex-row items-center justify-start lg:justify-center lg:gap-8"
+                  >
+                    <label
+                      for="email"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white w-full lg:w-32"
+                      >Logo</label
+                    >
+                    <div
+                      id="uploadBoxLogo"
+                      class="w-full h-32 border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center cursor-pointer overflow-hidden bg-gray-50 relative group"
+                      tabindex="0"
+                      role="button"
+                      aria-label="Upload image"
+                    >
+                      <input
+                        type="file"
+                        id="fileInputLogo"
+                        class="hidden"
+                        accept="image/*"
+                        aria-hidden="true"
+                      />
+                      <div id="placeholderLogo" class="text-center">
+                        <svg
+                          class="mx-auto h-12 w-12 text-gray-400 group-hover:text-gray-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          id="uploadIconLogo"
                         >
-                          <p class="text-xs font-semibold">Preview</p>
-                        </button>
-                        <button
-                          id="deleteButton"
-                          class="bg-red-500 text-white rounded-full p-2 py-1 mx-2 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400"
-                          aria-label="Delete image"
-                          type="button"
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                          ></path>
+                        </svg>
+                        <p
+                          class="mt-2 text-sm text-gray-600"
+                          id="uploadTextLogo"
                         >
-                          <p class="text-xs font-semibold">Delete</p>
-                        </button>
+                          Click to upload image
+                        </p>
                       </div>
+                      <div
+                        id="imageContainerLogo"
+                        class="w-full h-full py-2 hidden group"
+                      >
+                        <img
+                          id="previewLogo"
+                          class="w-full h-full object-contain"
+                          alt="Uploaded preview"
+                        />
+                        <div
+                          class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                        >
+                          <button
+                            id="previewButtonLogo"
+                            class="bg-white text-gray-800 rounded-full p-2 py-1 mx-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                            aria-label="Preview image"
+                            type="button"
+                          >
+                            <p class="text-xs font-semibold">Preview</p>
+                          </button>
+                          <button
+                            id="deleteButtonLogo"
+                            class="bg-red-500 text-white rounded-full p-2 py-1 mx-2 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400"
+                            aria-label="Delete image"
+                            type="button"
+                          >
+                            <p class="text-xs font-semibold">Delete</p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      id="fullPreviewLogo"
+                      class="hidden bg-black bg-opacity-75 rounded-lg flex items-center justify-center"
+                    >
+                      <img
+                        id="fullPreviewImageLogo"
+                        class="max-w-full max-h-full p-10 object-contain hidden"
+                        alt="Full size preview"
+                      />
+                      <button
+                        id="closePreviewLogo"
+                        class="absolute text-white top-4 right-4 text-2xl hidden"
+                        aria-label="Close preview"
+                        type="button"
+                      >
+                        <img
+                          src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/close-circle-svgrepo-com.svg"
+                          class="w-6 bg-white rounded-full"
+                          alt=""
+                        />
+                      </button>
                     </div>
                   </div>
 
-                  <div
-                    id="fullPreview"
-                    class="hidden bg-black bg-opacity-75 rounded-lg flex items-center justify-center"
-                  >
-                    <img
-                      id="fullPreviewImage"
-                      class="max-w-full max-h-full p-10 object-contain hidden"
-                      alt="Full size preview"
-                    />
+                  <div class="flex justify-end w-full">
                     <button
-                      id="closePreview"
-                      class="absolute text-white top-4 right-4 text-2xl hidden"
-                      aria-label="Close preview"
-                      type="button"
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg p-1 px-4 mt-10"
+                      type="submit"
                     >
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/close-circle-svgrepo-com.svg"
-                        class="w-6 bg-white rounded-full"
-                        alt=""
-                      />
+                      Update
                     </button>
                   </div>
                 </div>
-              </div>
+              </form>
 
-              <div
-                class="hidden p-4 rounded-lg bg-gray-100 dark:bg-gray-800"
-                id="config"
-                role="tabpanel"
-                aria-labelledby="config-tab"
-              >
-                <p class="text-sm text-gray-500 dark:text-gray-400">
-                  This is some placeholder content for the
-                  <strong class="font-medium text-gray-800 dark:text-white">
-                    Configuration tab's associated content </strong
-                  >.
-                </p>
-              </div>
+              <form action="" id="config-form">
+                <div
+                  class="hidden p-4 rounded-lg bg-gray-100 dark:bg-gray-800"
+                  id="config"
+                  role="tabpanel"
+                  aria-labelledby="config-tab"
+                >
+                  <div class="text-2xl font-semibold">
+                    System Configuration Settings
+                  </div>
 
-              <div
-                class="hidden p-4 rounded-lg bg-gray-100 dark:bg-gray-800"
-                id="maintenance"
-                role="tabpanel"
-                aria-labelledby="maintenance-tab"
-              >
-                <p class="text-sm text-gray-500 dark:text-gray-400">
-                  This is some placeholder content for the
-                  <strong class="font-medium text-gray-800 dark:text-white">
-                    Maintenance Mode tab's associated content </strong
-                  >.
-                </p>
-              </div>
+                  <div
+                    class="w-full border rounded-md border-gray-300 bg-white mt-8"
+                  >
+                    <div
+                      class="p-4 py-3 flex items-center justify-between cursor-pointer hover:bg-gray-200 rounded-t-md border-b gap-4"
+                    >
+                      <div class="flex flex-col gap-2">
+                        <div class="font-semibold">User Registration</div>
+                        <div class="text-sm text-gray-500">
+                          If you disable this module, no one can register on
+                          this system.
+                        </div>
+                      </div>
+                      <div class="col-span-3 lg:col-span-2 text-gray-600">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider"></span>
+                        </label>
+                      </div>
+                    </div>
 
-              <div
-                class="hidden p-4 rounded-lg bg-gray-100 dark:bg-gray-800"
-                id="seo"
-                role="tabpanel"
-                aria-labelledby="seo-tab"
-              >
-                <p class="text-sm text-gray-500 dark:text-gray-400">
-                  This is some placeholder content for the
-                  <strong class="font-medium text-gray-800 dark:text-white">
-                    SEO Configuration tab's associated content </strong
-                  >.
-                </p>
-              </div>
+                    <div
+                      class="p-4 py-3 flex items-center justify-between cursor-pointer hover:bg-gray-200 gap-4 border-b"
+                    >
+                      <div class="flex flex-col gap-2">
+                        <div class="font-semibold">Force SSL</div>
+                        <div class="text-sm text-gray-500">
+                          By enabling
+                          <strong> Force SSL (Secure Sockets Layer) </strong>
+                          the system will force a visitor that he/she must have
+                          to visit in secure mode. Otherwise, the site will be
+                          loaded in secure mode.
+                        </div>
+                      </div>
+                      <div class="col-span-3 lg:col-span-2 text-gray-600">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider"></span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div
+                      class="p-4 py-3 flex items-center justify-between cursor-pointer hover:bg-gray-200 gap-4 border-b"
+                    >
+                      <div class="flex flex-col gap-2">
+                        <div class="font-semibold">Agree Policy</div>
+                        <div class="text-sm text-gray-500">
+                          If you enable this module, that means a user must have
+                          to agree with your system's
+                          <a href="#" class="text-blue-600 underline">
+                            policies
+                          </a>
+                          during registration.
+                        </div>
+                      </div>
+                      <div class="col-span-3 lg:col-span-2 text-gray-600">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div
+                      class="p-4 py-3 flex items-center justify-between cursor-pointer hover:bg-gray-200 gap-4 border-b"
+                    >
+                      <div class="flex flex-col gap-2">
+                        <div class="font-semibold">Force Secure Password</div>
+                        <div class="text-sm text-gray-500">
+                          By enabling this module, a user must set a secure
+                          password while signing up or changing the password.
+                        </div>
+                      </div>
+                      <div class="col-span-3 lg:col-span-2 text-gray-600">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div
+                      class="p-4 py-3 flex items-center justify-between cursor-pointer hover:bg-gray-200 gap-4 border-b"
+                    >
+                      <div class="flex flex-col gap-2">
+                        <div class="font-semibold">KYC Verification</div>
+                        <div class="text-sm text-gray-500">
+                          If you enable
+                          <strong> KYC (Know Your Client) </strong> module,
+                          users must have to submit
+                          <a href="#" class="text-blue-600 underline"
+                            >the required data</a
+                          >. Otherwise, any money out transaction will be
+                          prevented by this system.
+                        </div>
+                      </div>
+                      <div class="col-span-3 lg:col-span-2 text-gray-600">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div
+                      class="p-4 py-3 flex items-center justify-between cursor-pointer hover:bg-gray-200 gap-4 border-b"
+                    >
+                      <div class="flex flex-col gap-2">
+                        <div class="font-semibold">Email Verification</div>
+                        <div class="text-sm text-gray-500">
+                          If you enable <strong>Email Verification</strong>,
+                          users have to verify their email to access the
+                          dashboard. A 6-digit verification code will be sent to
+                          their email to be verified.
+                        </div>
+                        <div class="text-sm text-gray-500 italic">
+                          <strong> Note: </strong> Make sure that the
+                          <strong> Email Notification </strong> module is
+                          enabled
+                        </div>
+                      </div>
+                      <div class="col-span-3 lg:col-span-2 text-gray-600">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div
+                      class="p-4 py-3 flex items-center justify-between cursor-pointer hover:bg-gray-200 gap-4 border-b"
+                    >
+                      <div class="flex flex-col gap-2">
+                        <div class="font-semibold">Email Notification</div>
+                        <div class="text-sm text-gray-500">
+                          If you enable this module, the system will send emails
+                          to users where needed. Otherwise, no email will be
+                          sent
+                        </div>
+                        <div class="text-xs text-red-500">
+                          So be sure before disabling this module that, the
+                          system doesn't need to send any emails.
+                        </div>
+                      </div>
+                      <div class="col-span-3 lg:col-span-2 text-gray-600">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider"></span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div
+                      class="p-4 py-3 flex items-center justify-between cursor-pointer hover:bg-gray-200 gap-4 border-b"
+                    >
+                      <div class="flex flex-col gap-2">
+                        <div class="font-semibold">Mobile Verification</div>
+                        <div class="text-sm text-gray-500">
+                          If you enable <strong> Mobile Verification </strong>,
+                          users have to verify their mobile to access the
+                          dashboard. A 6-digit verification code will be sent to
+                          their mobile to be verified.
+                        </div>
+                        <div class="text-sm text-gray-500 italic">
+                          <strong> Note: </strong> Make sure that the
+                          <strong> SMS Notification </strong> module is enabled
+                        </div>
+                      </div>
+                      <div class="col-span-3 lg:col-span-2 text-gray-600">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider"></span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div
+                      class="p-4 py-3 flex items-center justify-between cursor-pointer hover:bg-gray-200 gap-4 border-b"
+                    >
+                      <div class="flex flex-col gap-2">
+                        <div class="font-semibold">SMS Notification</div>
+                        <div class="text-sm text-gray-500">
+                          If you enable this module, the system will send SMS to
+                          users where needed. Otherwise, no SMS will be sent.
+                        </div>
+                        <div class="text-xs text-red-500">
+                          So be sure before disabling this module that, the
+                          system doesn't need to send any SMS.
+                        </div>
+                      </div>
+                      <div class="col-span-3 lg:col-span-2 text-gray-600">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div
+                      class="p-4 py-3 flex items-center justify-between cursor-pointer hover:bg-gray-200 gap-4 border-b rounded-b-md"
+                    >
+                      <div class="flex flex-col gap-2">
+                        <div class="font-semibold">Language Option</div>
+                        <div class="text-sm text-gray-500">
+                          If you enable this module, users can change the
+                          language according to their needs.
+                        </div>
+                      </div>
+                      <div class="col-span-3 lg:col-span-2 text-gray-600">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex justify-end w-full">
+                    <button
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg p-1 px-4 mt-10"
+                      type="submit"
+                    >
+                      Update
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <form action="" id="maintenance-form">
+                <div
+                  class="hidden p-4 rounded-lg bg-gray-100 dark:bg-gray-800 space-y-8"
+                  id="maintenance"
+                  role="tabpanel"
+                  aria-labelledby="maintenance-tab"
+                >
+                  <div class="text-2xl font-semibold">Maintenance Settings</div>
+
+                  <div
+                    class="py-3 flex items-center justify-between border-b gap-4"
+                  >
+                    <div class="flex flex-col gap-2 pb-3">
+                      <div class="font-semibold">Status</div>
+                    </div>
+                    <div class="col-span-3 lg:col-span-2 text-gray-600">
+                      <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex flex-col lg:flex-row items-center justify-start lg:justify-center lg:gap-8"
+                  >
+                    <label
+                      for="email"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white w-full lg:w-32"
+                      >Image</label
+                    >
+                    <div
+                      id="uploadBoxNew"
+                      class="w-full h-56 border-2 bg-white border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center cursor-pointer overflow-hidden relative group"
+                      tabindex="0"
+                      role="button"
+                      aria-label="Upload image"
+                    >
+                      <input
+                        type="file"
+                        id="fileInputNew"
+                        class="hidden"
+                        accept="image/*"
+                        aria-hidden="true"
+                      />
+                      <div id="placeholderNew" class="text-center">
+                        <svg
+                          class="mx-auto h-12 w-12 text-gray-400 group-hover:text-gray-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          id="uploadIconNew"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                          ></path>
+                        </svg>
+                        <p
+                          class="mt-2 text-sm text-gray-600"
+                          id="uploadTextNew"
+                        >
+                          Click to upload image
+                        </p>
+                      </div>
+                      <div
+                        id="imageContainerNew"
+                        class="w-full h-full py-2 hidden group"
+                      >
+                        <img
+                          id="previewNew"
+                          class="w-full h-full object-contain"
+                          alt="Uploaded preview"
+                        />
+                        <div
+                          class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                        >
+                          <button
+                            id="previewButtonNew"
+                            class="bg-white text-gray-800 rounded-full p-2 py-1 mx-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                            aria-label="Preview image"
+                            type="button"
+                          >
+                            <p class="text-xs font-semibold">Preview</p>
+                          </button>
+                          <button
+                            id="deleteButtonNew"
+                            class="bg-red-500 text-white rounded-full p-2 py-1 mx-2 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400"
+                            aria-label="Delete image"
+                            type="button"
+                          >
+                            <p class="text-xs font-semibold">Delete</p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      id="fullPreviewNew"
+                      class="hidden bg-black bg-opacity-75 rounded-lg flex items-center justify-center"
+                    >
+                      <img
+                        id="fullPreviewImageNew"
+                        class="max-w-full max-h-full p-10 object-contain hidden"
+                        alt="Full size preview"
+                      />
+                      <button
+                        id="closePreviewNew"
+                        class="absolute text-white top-4 right-4 text-2xl hidden"
+                        aria-label="Close preview"
+                        type="button"
+                      >
+                        <img
+                          src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/close-circle-svgrepo-com.svg"
+                          class="w-6 bg-white rounded-full"
+                          alt="Close preview"
+                        />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex flex-col lg:flex-row items-center justify-start lg:justify-center lg:gap-8"
+                  >
+                    <label
+                      for="email"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white w-full lg:w-32"
+                      >Description</label
+                    >
+                    <div class="w-full bg-white">
+                      <div
+                        id="article-editor"
+                        class="h-[200px] w-full overflow-auto border"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-end w-full">
+                    <button
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg p-1 px-4 mt-10"
+                      type="submit"
+                    >
+                      Update
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <form action="" id="seo-form">
+                <div
+                  class="hidden p-4 rounded-lg bg-gray-100 dark:bg-gray-800 space-y-8"
+                  id="seo"
+                  role="tabpanel"
+                  aria-labelledby="seo-tab"
+                >
+                  <div class="text-2xl font-semibold">SEO Settings</div>
+
+                  <div class="">
+                    <label
+                      for="seoImage"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white w-full lg:w-32"
+                      >SEO Image</label
+                    >
+                    <div
+                      id="uploadBoxSEO"
+                      class="w-full h-56 border-2 bg-white border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center cursor-pointer overflow-hidden relative group"
+                      tabindex="0"
+                      role="button"
+                      aria-label="Upload SEO image"
+                    >
+                      <input
+                        type="file"
+                        id="fileInputSEO"
+                        class="hidden"
+                        accept="image/*"
+                        aria-hidden="true"
+                      />
+                      <div id="placeholderSEO" class="text-center">
+                        <svg
+                          class="mx-auto h-12 w-12 text-gray-400 group-hover:text-gray-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          id="uploadIconSEO"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                          ></path>
+                        </svg>
+                        <p
+                          class="mt-2 text-sm text-gray-600"
+                          id="uploadTextSEO"
+                        >
+                          Click to upload SEO image
+                        </p>
+                      </div>
+                      <div
+                        id="imageContainerSEO"
+                        class="w-full h-full py-2 hidden group"
+                      >
+                        <img
+                          id="previewSEO"
+                          class="w-full h-full object-contain"
+                          alt="Uploaded SEO image preview"
+                        />
+                        <div
+                          class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                        >
+                          <button
+                            id="previewButtonSEO"
+                            class="bg-white text-gray-800 rounded-full p-2 py-1 mx-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                            aria-label="Preview SEO image"
+                            type="button"
+                          >
+                            <p class="text-xs font-semibold">Preview</p>
+                          </button>
+                          <button
+                            id="deleteButtonSEO"
+                            class="bg-red-500 text-white rounded-full p-2 py-1 mx-2 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400"
+                            aria-label="Delete SEO image"
+                            type="button"
+                          >
+                            <p class="text-xs font-semibold">Delete</p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      id="fullPreviewSEO"
+                      class="hidden bg-black bg-opacity-75 rounded-lg flex items-center justify-center"
+                    >
+                      <img
+                        id="fullPreviewImageSEO"
+                        class="max-w-full max-h-full p-10 object-contain hidden"
+                        alt="Full size SEO image preview"
+                      />
+                      <button
+                        id="closePreviewSEO"
+                        class="absolute text-white top-4 right-4 text-2xl hidden"
+                        aria-label="Close SEO image preview"
+                        type="button"
+                      >
+                        <img
+                          src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/close-circle-svgrepo-com.svg"
+                          class="w-6 bg-white rounded-full"
+                          alt="Close SEO image preview"
+                        />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="relative">
+                    <label
+                      for="articleCategory"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      Meta Keywords <span class="text-red-600">*</span>
+                    </label>
+
+                    <select
+                      class="js-example-tags block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      class="form-control"
+                      multiple="multiple"
+                      name="state"
+                    >
+                      <option selected="selected">orange</option>
+                      <option>white</option>
+                      <option>purple</option>
+                    </select>
+                  </div>
+
+                  <div class="">
+                    <label
+                      for="shortDescription"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Meta Description
+                      <span class="text-red-600">*</span></label
+                    >
+                    <textarea
+                      id="shortDescription"
+                      name="shortDescription"
+                      rows="2"
+                      class="block p-2 py-1 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Write your thoughts here..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div>
+                    <label
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      for="articleTitle"
+                      >Social Title <span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="articleTitle"
+                      name="articleTitle"
+                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Enter the article title"
+                      required
+                    />
+                  </div>
+
+                  <div class="">
+                    <label
+                      for="shortDescription"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Social Description
+                      <span class="text-red-600">*</span></label
+                    >
+                    <textarea
+                      id="shortDescription"
+                      name="shortDescription"
+                      rows="2"
+                      class="block p-2 py-1 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Write your thoughts here..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="flex justify-end w-full">
+                    <button
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg p-1 px-4 mt-10"
+                      type="submit"
+                    >
+                      Update
+                    </button>
+                  </div>
+                </div>
+              </form>
 
               <div
                 class="hidden p-4 rounded-lg bg-gray-100 dark:bg-gray-800"
@@ -1635,5 +2193,8 @@
     <script src="asset/js/doughnut-cahrt.js"></script>
     <script src="asset/js/date-filter.js"></script>
     <script src="asset/js/bar-chart.js"></script>
+    <script src="asset/js/quill-text-editor.js"></script>
+    <script src="asset/js/single-file-uploader.js"></script>
+    <script src="asset/js/select-tag.js"></script>
   </body>
 </html>

@@ -90,3 +90,22 @@ input:checked + .slider:before {
 .select2-container {
   width: 100% !important;
 }
+
+:root {
+  --var-primary-color: #3499ff;
+  --var-secondary-color: #3498db;
+}
+
+/* button {
+  color: white;
+  border: 1px solid var(--var-primary-color);
+  background-color: var(--var-primary-color);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: var(--var-secondary-color);
+  color: white;
+} */

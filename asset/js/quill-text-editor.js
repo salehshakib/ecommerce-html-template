@@ -28,4 +28,6 @@ const options = {
   theme: "snow",
 };
 
-const quill = new Quill("#article-editor", options);
+new Quill("#article-editor", options);
+
+new Quill("#description-editor", options);
