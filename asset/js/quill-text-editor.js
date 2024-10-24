@@ -28,7 +28,13 @@ const options = {
   theme: "snow",
 };
 
-new Quill("#article-editor", options);
+var articleEditor = new Quill("#article-editor", options);
+
+function getContent() {
+  const content = articleEditor.getContents();
+
+  console.log(content);
+}
 
 var quill = new Quill("#sitemap-editor", {
   modules: {

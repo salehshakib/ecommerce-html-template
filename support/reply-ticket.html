@@ -35,7 +35,7 @@
       <div class="spinner"></div>
     </div>
 
-    <div id="content">
+    <div id="content relative">
       <nav
         class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700"
       >
@@ -636,10 +636,10 @@
       <div class="p-4 ml-0 sm:ml-64">
         <div class="p-4 rounded-lg dark:border-gray-700 mt-14">
           <div class="text-3xl w-full text-center lg:text-start font-bold">
-            Create FAQ
+            Reply Ticket [#232903]
           </div>
 
-          <section class="mt-10 relative">
+          <section class="mt-10">
             <form id="articleForm" class="pb-32">
               <div
                 class="flex flex-col lg:flex-row gap-8 lg:gap-0 items-center justify-between mb-10"
@@ -690,7 +690,7 @@
                         <a
                           href="article.html"
                           class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white"
-                          >Others</a
+                          >All Tickets</a
                         >
                       </div>
                     </li>
@@ -713,7 +713,7 @@
                         </svg>
                         <span
                           class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400"
-                          >Faq Create</span
+                          >Reply [#232903]</span
                         >
                       </div>
                     </li>
@@ -729,72 +729,104 @@
                   >
                     Go Back
                   </a>
-                  <button
-                    type="submit"
+                  <div
+                    onclick="getContent()"
                     id="save"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-xs md:text-sm"
                   >
-                    Save
-                  </button>
-                  <button
-                    type="submit"
-                    id="saveAndCreate"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-3 md:px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-xs md:text-sm"
-                  >
-                    Save & Create
-                  </button>
+                    Reply
+                  </div>
                 </div>
               </div>
 
-              <div class="w-full xl:w-[50%] mx-auto space-y-8">
-                <div class="relative">
-                  <label
-                    for="articleCategory"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Module <span class="text-red-600">*</span>
-                  </label>
+              <div class="text-lg font-semibold mb-10">
+                Subject:
+                <span class="text-gray-500 font-normal"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Provident expedita, necessitatibus optio, mollitia libero ea,
+                  pariatur in iusto nesciunt soluta quos sequi obcaecati
+                  sit</span
+                >
+              </div>
 
-                  <select
-                    class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    name="state"
+              <div
+                class="fixed left-10 right-10 md:left-[18rem] lg:left-[24rem] lg:right-[10rem] bottom-0 bg-white"
+              >
+                <div class="w-full pb-10 mt-10">
+                  <label
+                    for="article"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Reply <span class="text-red-600">*</span></label
                   >
-                    <option value="AL">Alabama</option>
-                    <option value="WY">Wyoming</option>
-                  </select>
+                  <div
+                    id="article-editor"
+                    class="h-[150px] overflow-auto border"
+                  ></div>
                 </div>
+              </div>
 
-                <div>
-                  <label
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    for="articleTitle"
-                    >Name <span class="text-red-600">*</span></label
-                  >
-                  <input
-                    type="text"
-                    id="articleTitle"
-                    name="articleTitle"
-                    class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter the article title"
-                    required
-                  />
+              <div class="w-full xl:w-[50%] mx-auto space-y-8 mb-10"></div>
+
+              <div class="w-full xl:w-[70%] mx-auto space-y-8 z-10 pb-96">
+                <div class="w-full flex justify-start">
+                  <div class="w-full lg:w-[80%] flex">
+                    <div
+                      class="flex flex-col items-center justify-center gap-8"
+                    >
+                      <div class="w-full border rounded-md p-4 flex gap-6">
+                        <div class="w-[30%] flex flex-col items-end gap-3">
+                          <div class="text-xl font-medium">TA-Masterclass</div>
+                          <div class="text-sm text-gray-400">@username</div>
+                          <button
+                            class="bg-red-500 hover:bg-red-600 text-white text-sm px-2 py-1 rounded-md hover:shadow-sm"
+                          >
+                            Delete
+                          </button>
+                        </div>
+                        <hr class="w-[1px] h-full bg-gray-300" />
+                        <div class="w-[70%] flex flex-col items-start gap-3">
+                          <div class="text-xl font-medium">TA-Masterclass</div>
+                          <div class="text-sm text-gray-400">
+                            @username Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Nihil esse assumenda odit fugiat
+                            eaque quidem, dicta iste unde error sapiente at
+                            iusto velit itaque accusantium voluptatibus soluta
+                            voluptates asperiores magni!
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
-                <div class="">
-                  <label
-                    for="shortDescription"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Description <span class="text-red-600">*</span></label
-                  >
-                  <textarea
-                    id="shortDescription"
-                    name="shortDescription"
-                    rows="2"
-                    class="block p-2 py-1 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Write your thoughts here..."
-                    required
-                  ></textarea>
+                <div class="w-ful flex justify-end">
+                  <div class="w-full lg:w-[80%] flex">
+                    <div
+                      class="flex flex-col items-center justify-center gap-8"
+                    >
+                      <div class="w-full border rounded-md p-4 flex gap-6">
+                        <div class="w-[70%] flex flex-col items-end gap-3">
+                          <div class="text-xl font-medium">TA-Masterclass</div>
+                          <div class="text-sm text-gray-400 text-end">
+                            @username Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Nihil esse assumenda odit fugiat
+                            eaque quidem, dicta iste unde error sapiente at
+                            iusto velit itaque accusantium voluptatibus soluta
+                            voluptates asperiores magni!
+                          </div>
+                        </div>
+                        <hr class="w-[1px] h-full bg-gray-300" />
+                        <div class="w-[30%] flex flex-col items-start gap-3">
+                          <div class="text-xl font-medium">TA-Masterclass</div>
+                          <div class="text-sm text-gray-400">@username</div>
+                          <button
+                            class="bg-red-500 hover:bg-red-600 text-white text-sm px-2 py-1 rounded-md hover:shadow-sm"
+                          >
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </form>
@@ -816,6 +848,8 @@
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="../asset/js/select2.js"></script>
     <script src="../asset/js/loader.js"></script>
+    <script src="../asset/js/quill-text-editor.js"></script>
+    <script src="../asset/js/multi-file-uploader.js"></script>
     <script src="../asset/js/quill-text-editor.js"></script>
   </body>
 </html>

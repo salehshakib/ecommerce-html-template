@@ -625,13 +625,13 @@
               <div
                 class="text-2xl font-semibold flex items-center gap-2 justify-center"
               >
-                <span>Others</span><span>|</span>
-                <span class="text-gray-500"> Terms & Conditions</span>
+                <span>Support</span><span>|</span>
+                <span class="text-gray-500"> All Tickets</span>
               </div>
 
               <a
                 class="rounded-full p-1 flex items-center"
-                href="create-terms-conditions.html"
+                href="create-article.html"
               >
                 <img
                   src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/plus-circle-svgrepo-com.svg"
@@ -851,13 +851,6 @@
                     <a href="#" class="block px-4 py-2">CSV</a>
                   </li>
                 </ul>
-                <!-- <div class="py-2">
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                    >Separated link</a
-                  >
-                </div> -->
               </div>
             </div>
           </div>
@@ -887,27 +880,11 @@
                       class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
                     >
                       <tr>
-                        <th scope="col" class="p-4">
-                          <div class="flex items-center">
-                            <input
-                              id="checkbox-all"
-                              type="checkbox"
-                              class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                            />
-                            <label for="checkbox-all" class="sr-only"
-                              >checkbox</label
-                            >
-                          </div>
-                        </th>
-                        <th scope="col" class="px-4 py-3 text-center">Image</th>
-                        <th scope="col" class="px-4 py-3">Article Name</th>
-                        <th scope="col" class="px-4 py-3">Category</th>
-                        <th scope="col" class="px-4 py-3">SEO</th>
+                        <th scope="col" class="px-4 py-3">Subject</th>
+                        <th scope="col" class="px-4 py-3">Submitted by</th>
                         <th scope="col" class="px-4 py-3">Status</th>
-                        <th scope="col" class="px-4 py-3">Created At</th>
-                        <!-- <th scope="col" class="px-4 py-3">Sales</th>
-                        <th scope="col" class="px-4 py-3">Revenue</th>
-                        <th scope="col" class="px-4 py-3">Last Update</th> -->
+                        <th scope="col" class="px-4 py-3">Priority</th>
+                        <th scope="col" class="px-4 py-3">Last Reply</th>
                         <th scope="col" class="px-4 py-3 text-center">
                           Action
                         </th>
@@ -917,31 +894,6 @@
                       <tr
                         class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700"
                       >
-                        <td class="w-4 px-4">
-                          <div class="flex items-center">
-                            <input
-                              id="checkbox-table-search-1"
-                              type="checkbox"
-                              onclick="event.stopPropagation()"
-                              class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                            />
-                            <label for="checkbox-table-search-1" class="sr-only"
-                              >checkbox</label
-                            >
-                          </div>
-                        </td>
-
-                        <td
-                          scope="row"
-                          class="flex items-center justify-center h-full font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                        >
-                          <img
-                            src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
-                            alt="iMac Front Image"
-                            class="w-auto h-8"
-                          />
-                          <!-- Apple iMac 27&#34; -->
-                        </td>
                         <td class="px-4">
                           <span
                             class="bg-primary-100 text-black text-sm font-medium rounded dark:bg-primary-900 dark:text-primary-300"
@@ -955,16 +907,6 @@
                           >
                         </td>
                         <td
-                          class="px-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                        >
-                          <div class="flex items-center">
-                            <div
-                              class="inline-block w-4 h-4 mr-2 bg-red-700 rounded-full"
-                            ></div>
-                            95
-                          </div>
-                        </td>
-                        <td
                           class="px-4 font-medium text-gray-900 whitespace-nowrap dark:text-white cursor-pointer text-xs"
                           data-modal-target="default-modal"
                           data-modal-toggle="default-modal"
@@ -973,6 +915,16 @@
                             class="border border-green-300 tex-xs px-2 rounded-md bg-green-100 text-green-600"
                             >Active</span
                           >
+                        </td>
+                        <td
+                          class="px-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                        >
+                          <div class="flex items-center">
+                            <div
+                              class="inline-block w-4 h-4 mr-2 bg-red-700 rounded-full"
+                            ></div>
+                            95
+                          </div>
                         </td>
 
                         <td
@@ -1015,47 +967,25 @@
                                 class="flex items-center hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer rounded-md px-2"
                               >
                                 <a
-                                  href="article-details.html"
+                                  href="reply-ticket.html"
                                   class="flex items-center gap-2 p-2 w-full"
                                 >
-                                  <img
-                                    src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/details-backup-svgrepo-com.svg"
-                                    class="w-3"
-                                    alt=""
-                                  />
-                                  <span>Show</span>
-                                </a>
-                              </li>
-                              <li
-                                class="flex items-center hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer rounded-md px-2"
-                              >
-                                <a
-                                  href="article-details.html"
-                                  class="flex items-center gap-2 p-2 w-full"
-                                >
-                                  <img
-                                    src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/edit-svgrepo-com.svg"
-                                    class="w-4"
-                                    alt=""
-                                  />
-                                  <span>Edit</span>
-                                </a>
-                              </li>
-                              <li
-                                class="flex items-center hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer rounded-md px-2"
-                                data-modal-target="delete-modal"
-                                data-modal-toggle="delete-modal"
-                              >
-                                <a
-                                  href="#"
-                                  class="flex items-center gap-2 p-2 w-full"
-                                >
-                                  <img
-                                    src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/delete-2-svgrepo-com.svg"
-                                    class="w-4"
-                                    alt=""
-                                  />
-                                  <span>Delete</span>
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="size-4 -ml-1"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                                    />
+                                  </svg>
+
+                                  <span>Reply</span>
                                 </a>
                               </li>
                             </ul>
