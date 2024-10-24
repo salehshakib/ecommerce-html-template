@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../asset/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/css/styles.css"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
       rel="stylesheet"
@@ -23,10 +26,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- Include Select2 CSS -->
-    <link href="../asset/css/select2.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Include Select2 JS -->
-    <script src="../asset/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
     <title>Ecommerce Blade Template</title>
   </head>
@@ -124,18 +130,7 @@
                         >Dashboard</a
                       >
                     </li>
-                    <li
-                      class="flex items-center text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
-                    >
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/setting-config-svgrepo-com.svg"
-                        alt=""
-                        class="w-5"
-                      />
-                      <a href="#" class="block p-2 text-sm" role="menuitem"
-                        >General Settings</a
-                      >
-                    </li>
+
                     <li
                       class="flex items-center text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
                     >
@@ -158,6 +153,21 @@
                       />
                       <a href="#" class="block p-2 text-sm" role="menuitem"
                         >Password Update</a
+                      >
+                    </li>
+                    <li
+                      class="flex items-center text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                    >
+                      <img
+                        src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/setting-config-svgrepo-com.svg"
+                        alt=""
+                        class="w-5"
+                      />
+                      <a
+                        href="general-settings.html"
+                        class="block p-2 text-sm"
+                        role="menuitem"
+                        >General Settings</a
                       >
                     </li>
                     <li
@@ -632,15 +642,15 @@
         </div>
       </aside>
 
-      <!-- create-article -->
+      <!-- create category -->
       <div class="p-4 ml-0 sm:ml-64">
         <div class="p-4 rounded-lg dark:border-gray-700 mt-14">
           <div class="text-3xl w-full text-center lg:text-start font-bold">
-            Send Notification Email
+            Admin Profile
           </div>
 
           <section class="mt-10 relative">
-            <form id="articleForm" class="pb-32">
+            <form id="articleForm" class="">
               <div
                 class="flex flex-col lg:flex-row gap-8 lg:gap-0 items-center justify-between mb-10"
               >
@@ -670,7 +680,7 @@
                         Dashboard
                       </a>
                     </li>
-                    <li>
+                    <!-- <li>
                       <div class="flex items-center">
                         <svg
                           class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
@@ -688,9 +698,32 @@
                           />
                         </svg>
                         <a
-                          href="article.html"
+                          href="category.html"
                           class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white"
-                          >Notification</a
+                          >Admin</a
+                        >
+                      </div>
+                    </li> -->
+                    <li aria-current="page">
+                      <div class="flex items-center">
+                        <svg
+                          class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 6 10"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 9 4-4-4-4"
+                          />
+                        </svg>
+                        <span
+                          class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400"
+                          >Admin</span
                         >
                       </div>
                     </li>
@@ -713,7 +746,7 @@
                         </svg>
                         <span
                           class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400"
-                          >Via Email</span
+                          >Admin Profile</span
                         >
                       </div>
                     </li>
@@ -722,111 +755,45 @@
                 <div
                   class="flex justify-center lg:justify-end items-center gap-2 w-full"
                 >
-                  <button
-                    type="submit"
-                    id="save"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-xs md:text-sm"
+                  <a
+                    type="button"
+                    class="hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 border hover:text-white text-xs md:text-sm"
+                    href="index.html"
                   >
-                    Send
-                  </button>
+                    Go Back
+                  </a>
+                  <a
+                    type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-xs md:text-sm"
+                    href="profile-update.html"
+                  >
+                    Edit
+                  </a>
                 </div>
               </div>
 
-              <div class="w-full lg:w-[50%] mx-auto space-y-8">
-                <div
-                  class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8"
-                ></div>
-
-                <div class="relative">
-                  <label
-                    for="articleCategory"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Billing Send To <span class="text-red-600">*</span>
-                  </label>
-
-                  <select
-                    class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    name="state"
-                  >
-                    <option value="all-users">All Users</option>
-                    <option value="WY">Wyoming</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    for="articleTitle"
-                    >Subject <span class="text-red-600">*</span></label
-                  >
-                  <input
-                    type="text"
-                    id="articleTitle"
-                    name="articleTitle"
-                    class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter subject"
-                    required
+              <div class="w-full md:w-[50%] mx-auto space-y-8">
+                <div class="flex flex-col gap-3 justify-center items-center">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/user-svgrepo-com.svg"
+                    class="size-24 p-1 border border-black rounded-full"
+                    alt=""
                   />
+                  <h1 class="text-2xl font-semibold">Logo</h1>
                 </div>
 
-                <div class="">
-                  <label
-                    for="article"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >Message <span class="text-red-600">*</span></label
-                  >
+                <div class="border rounded-md w-full p-4 divide-y">
                   <div
-                    id="article-editor"
-                    class="h-[150px] overflow-auto border"
-                  ></div>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                  <div>
-                    <label
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      for="articleTitle"
-                      >Start From <span class="text-red-600">*</span></label
-                    >
-                    <input
-                      type="text"
-                      id="articleTitle"
-                      name="articleTitle"
-                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Enter subject"
-                      required
-                    />
+                    class="flex items-center justify-between flex-col lg:flex-row gap-4 text-xl pb-4"
+                  >
+                    <div class="">Name</div>
+                    <div class="text-gray-600">Vitasoft Admin</div>
                   </div>
-                  <div>
-                    <label
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      for="articleTitle"
-                      >Per Batch <span class="text-red-600">*</span></label
-                    >
-                    <input
-                      type="text"
-                      id="articleTitle"
-                      name="articleTitle"
-                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Enter how many user "
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      for="articleTitle"
-                      >Cooling Period <span class="text-red-600">*</span></label
-                    >
-                    <input
-                      type="text"
-                      id="articleTitle"
-                      name="articleTitle"
-                      class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Enter waiting time"
-                      required
-                    />
+                  <div
+                    class="flex items-center justify-between flex-col lg:flex-row gap-4 text-xl pt-4"
+                  >
+                    <div class="">Email</div>
+                    <div class="text-gray-600">vitasoft@gmail.com</div>
                   </div>
                 </div>
               </div>
@@ -837,7 +804,7 @@
     </div>
 
     <script>
-      const buttons = document.querySelectorAll("aside button");
+      const buttons = document.querySelectorAll("button");
       buttons.forEach((button) => {
         button.onclick = () => {
           const dropdownMenu = button.nextElementSibling;
@@ -847,9 +814,6 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-    <script src="../asset/js/select2.js"></script>
     <script src="../asset/js/loader.js"></script>
-    <script src="../asset/js/quill-text-editor.js"></script>
-    <script src="../asset/js/add-shortcode.js"></script>
   </body>
 </html>
