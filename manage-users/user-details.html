@@ -28,7 +28,7 @@
                 data-drawer-toggle="logo-sidebar"
                 aria-controls="logo-sidebar"
                 type="button"
-                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               >
                 <span class="sr-only">Open sidebar</span>
                 <svg
@@ -549,21 +549,6 @@
                 <span class="text-sm lg:text-base">Cache Clean</span>
               </a>
             </li>
-
-            <!-- Support -->
-            <li>
-              <a
-                href="../system/support.html"
-                class="flex items-center p-2 gap-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
-              >
-                <img
-                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/support-svgrepo-com.svg"
-                  alt="Support Icon"
-                  class="w-6 mr-2"
-                />
-                <span class="text-sm lg:text-base">Support</span>
-              </a>
-            </li>
           </ul>
 
           <div
@@ -614,7 +599,7 @@
       </aside>
 
       <!-- user details -->
-      <div class="p-4 ml-0 sm:ml-64">
+      <div class="p-4 ml-0 lg:ml-64">
         <div class="p-4 rounded-lg dark:border-gray-700 mt-14">
           <div class="text-3xl w-full text-center lg:text-start font-bold">
             User Details
@@ -1032,8 +1017,9 @@
                 </div>
                 <div class="col-span-3 lg:col-span-2 text-gray-600">
                   <label class="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" class="toggle" checked />
                     <span class="slider"></span>
+                    <!-- <span class="switch-label"></span> -->
                   </label>
                 </div>
               </div>
@@ -1043,7 +1029,7 @@
                 </div>
                 <div class="col-span-3 lg:col-span-2 text-gray-600">
                   <label class="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" class="toggle" />
                     <span class="slider"></span>
                   </label>
                 </div>
@@ -1054,7 +1040,7 @@
                 </div>
                 <div class="col-span-3 lg:col-span-2 text-gray-600">
                   <label class="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" class="toggle" />
                     <span class="slider"></span>
                   </label>
                 </div>
@@ -1067,7 +1053,7 @@
                 </div>
                 <div class="col-span-3 lg:col-span-2 text-gray-600">
                   <label class="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" class="toggle" />
                     <span class="slider"></span>
                   </label>
                 </div>
@@ -1526,7 +1512,7 @@
           <!-- Modal body -->
           <div class="p-4 md:p-5 space-y-4">
             <div>
-              <span class="text-lg font-medium text-gray-800">
+              <span class="font-medium text-gray-800">
                 If you ban this user he/she won't able to access his/her
                 dashboard.
               </span>
@@ -1571,7 +1557,7 @@
     </div>
 
     <script>
-      const buttons = document.querySelectorAll("button");
+      const buttons = document.querySelectorAll("aside button");
       buttons.forEach((button) => {
         button.onclick = () => {
           const dropdownMenu = button.nextElementSibling;

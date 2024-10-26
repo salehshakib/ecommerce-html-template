@@ -66,7 +66,7 @@
                 data-drawer-toggle="logo-sidebar"
                 aria-controls="logo-sidebar"
                 type="button"
-                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               >
                 <span class="sr-only">Open sidebar</span>
                 <svg
@@ -207,7 +207,7 @@
 
       <aside
         id="logo-sidebar"
-        class="fixed top-0 sm:translate-x-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+        class="fixed top-0 -translate-x-full lg:translate-x-0 left-0 z-40 w-64 h-screen pt-20 transition-transform bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
         aria-label="Sidebar"
       >
         <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
@@ -484,21 +484,66 @@
               </ul>
             </li>
 
-            <!-- General Settings -->
+            <!-- Support Ticket -->
             <li>
-              <a
-                href="general-settings.html"
-                class="flex items-center p-2 gap-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+              <button
+                class="flex items-center justify-between w-full p-2 text-sm text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 lg:text-base"
               >
-                <img
-                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/setting-config-svgrepo-com.svg"
-                  alt="General Settings Icon"
-                  class="w-6 mr-2"
-                />
-                <span class="text-sm lg:text-base">General Settings</span>
-              </a>
-            </li>
+                <div class="flex items-center justify-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 mr-2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z"
+                    />
+                  </svg>
 
+                  <span>Support Ticket</span>
+                </div>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/dropdown-arrow-svgrepo-com.svg"
+                  alt="Dropdown Icon"
+                  class="w-6"
+                />
+              </button>
+              <ul class="hidden py-2 space-y-2">
+                <li>
+                  <a
+                    href="support/pending-ticket.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm lg:text-base"
+                    >Pending Ticket</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="support/closed-ticket.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm lg:text-base"
+                    >Closed Ticket</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="support/answered-ticket.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm lg:text-base"
+                    >Answered Ticket</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="support/all-ticket.html"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm lg:text-base"
+                    >All Ticket</a
+                  >
+                </li>
+              </ul>
+            </li>
             <!-- Others -->
             <li>
               <button
@@ -548,6 +593,20 @@
             class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"
             id="sidebar-extra"
           >
+            <!-- General Settings -->
+            <li>
+              <a
+                href="general-settings.html"
+                class="flex items-center p-2 gap-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/setting-config-svgrepo-com.svg"
+                  alt="General Settings Icon"
+                  class="w-6 mr-2"
+                />
+                <span class="text-sm lg:text-base">General Settings</span>
+              </a>
+            </li>
             <li>
               <a
                 href="system/system-information.html"
@@ -589,21 +648,6 @@
                   class="w-6 mr-2"
                 />
                 <span class="text-sm lg:text-base">Cache Clean</span>
-              </a>
-            </li>
-
-            <!-- Support -->
-            <li>
-              <a
-                href="system/support.html"
-                class="flex items-center p-2 gap-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
-              >
-                <img
-                  src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/support-svgrepo-com.svg"
-                  alt="Support Icon"
-                  class="w-6 mr-2"
-                />
-                <span class="text-sm lg:text-base">Support</span>
               </a>
             </li>
           </ul>
@@ -656,7 +700,7 @@
       </aside>
 
       <!-- dashboard -->
-      <div class="ml-0 sm:ml-64">
+      <div class="ml-0 lg:ml-64">
         <div class="p-4 rounded-lg dark:border-gray-700 mt-14">
           <div class="text-2xl font-semibold space-y-2 mb-8">
             General Settings
@@ -1118,34 +1162,121 @@
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                       <div class="relative">
                         <label
-                          for="articleCategory"
+                          for="timezone"
                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
                           Time Zone <span class="text-red-600">*</span>
                         </label>
 
                         <select
+                          id="timezone"
                           class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                          name="state"
+                          name="timezone"
                         >
-                          <option value="AL">Alabama</option>
-                          <option value="WY">Wyoming</option>
+                          <option value="UTC-12:00">
+                            UTC-12:00 (Baker Island, Howland Island)
+                          </option>
+                          <option value="UTC-11:00">
+                            UTC-11:00 (American Samoa, Niue)
+                          </option>
+                          <option value="UTC-10:00">
+                            UTC-10:00 (Hawaii-Aleutian Standard Time)
+                          </option>
+                          <option value="UTC-09:00">
+                            UTC-09:00 (Alaska Standard Time)
+                          </option>
+                          <option value="UTC-08:00">
+                            UTC-08:00 (Pacific Standard Time)
+                          </option>
+                          <option value="UTC-07:00">
+                            UTC-07:00 (Mountain Standard Time)
+                          </option>
+                          <option value="UTC-06:00">
+                            UTC-06:00 (Central Standard Time)
+                          </option>
+                          <option value="UTC-05:00">
+                            UTC-05:00 (Eastern Standard Time)
+                          </option>
+                          <option value="UTC-04:00">
+                            UTC-04:00 (Atlantic Standard Time)
+                          </option>
+                          <option value="UTC-03:00">
+                            UTC-03:00 (Argentina, Brazil)
+                          </option>
+                          <option value="UTC-02:00">
+                            UTC-02:00 (South Georgia and the South Sandwich
+                            Islands)
+                          </option>
+                          <option value="UTC-01:00">
+                            UTC-01:00 (Azores, Cape Verde)
+                          </option>
+                          <option value="UTC+00:00">
+                            UTC+00:00 (Greenwich Mean Time)
+                          </option>
+                          <option value="UTC+01:00">
+                            UTC+01:00 (Central European Time)
+                          </option>
+                          <option value="UTC+02:00">
+                            UTC+02:00 (Eastern European Time)
+                          </option>
+                          <option value="UTC+03:00">
+                            UTC+03:00 (Moscow, East Africa)
+                          </option>
+                          <option value="UTC+04:00">
+                            UTC+04:00 (Gulf Standard Time, Samara)
+                          </option>
+                          <option value="UTC+05:00">
+                            UTC+05:00 (Pakistan Standard Time, Yekaterinburg)
+                          </option>
+                          <option value="UTC+06:00">
+                            UTC+06:00 (Bangladesh Standard Time, Omsk)
+                          </option>
+                          <option value="UTC+07:00">
+                            UTC+07:00 (Indochina Time, Novosibirsk)
+                          </option>
+                          <option value="UTC+08:00">
+                            UTC+08:00 (China Standard Time, Singapore)
+                          </option>
+                          <option value="UTC+09:00">
+                            UTC+09:00 (Japan Standard Time, Korea Standard Time)
+                          </option>
+                          <option value="UTC+10:00">
+                            UTC+10:00 (Australian Eastern Standard Time)
+                          </option>
+                          <option value="UTC+11:00">
+                            UTC+11:00 (Magadan, Solomon Islands)
+                          </option>
+                          <option value="UTC+12:00">
+                            UTC+12:00 (Fiji, Kamchatka)
+                          </option>
                         </select>
                       </div>
+
                       <div class="relative">
                         <label
-                          for="articleCategory"
+                          for="dateFormat"
                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
                           Date Format <span class="text-red-600">*</span>
                         </label>
 
                         <select
+                          id="dateFormat"
                           class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                          name="state"
+                          name="dateFormat"
                         >
-                          <option value="AL">Alabama</option>
-                          <option value="WY">Wyoming</option>
+                          <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+                          <option value="DD/MM/YYYY">DD/MM/YYYY</option>
+                          <option value="YYYY/MM/DD">YYYY/MM/DD</option>
+                          <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+                          <option value="DD-MM-YYYY">DD-MM-YYYY</option>
+                          <option value="MMM DD, YYYY">
+                            MMM DD, YYYY (e.g., Oct 26, 2024)
+                          </option>
+                          <option value="DD MMMM YYYY">
+                            DD MMMM YYYY (e.g., 26 October 2024)
+                          </option>
+                          <option value="YYYY.MM.DD">YYYY.MM.DD</option>
                         </select>
                       </div>
                     </div>
@@ -1165,20 +1296,57 @@
                     >
                       <div class="relative">
                         <label
-                          for="articleCategory"
+                          for="currency"
                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
                           Currency <span class="text-red-600">*</span>
                         </label>
 
                         <select
+                          id="currency"
                           class="js-example-basic-single block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                          name="state"
+                          name="currency"
                         >
-                          <option value="AL">Alabama</option>
-                          <option value="WY">Wyoming</option>
+                          <option value="USD">
+                            United States Dollar (USD)
+                          </option>
+                          <option value="EUR">Euro (EUR)</option>
+                          <option value="JPY">Japanese Yen (JPY)</option>
+                          <option value="GBP">
+                            British Pound Sterling (GBP)
+                          </option>
+                          <option value="AUD">Australian Dollar (AUD)</option>
+                          <option value="CAD">Canadian Dollar (CAD)</option>
+                          <option value="CHF">Swiss Franc (CHF)</option>
+                          <option value="CNY">Chinese Yuan (CNY)</option>
+                          <option value="SEK">Swedish Krona (SEK)</option>
+                          <option value="NZD">New Zealand Dollar (NZD)</option>
+                          <option value="MXN">Mexican Peso (MXN)</option>
+                          <option value="SGD">Singapore Dollar (SGD)</option>
+                          <option value="HKD">Hong Kong Dollar (HKD)</option>
+                          <option value="NOK">Norwegian Krone (NOK)</option>
+                          <option value="RUB">Russian Ruble (RUB)</option>
+                          <option value="INR">Indian Rupee (INR)</option>
+                          <option value="BDT">Bangladeshi Taka (BDT)</option>
+                          <option value="BRL">Brazilian Real (BRL)</option>
+                          <option value="ZAR">South African Rand (ZAR)</option>
+                          <option value="TRY">Turkish Lira (TRY)</option>
+                          <option value="AED">
+                            United Arab Emirates Dirham (AED)
+                          </option>
+                          <option value="THB">Thai Baht (THB)</option>
+                          <option value="IDR">Indonesian Rupiah (IDR)</option>
+                          <option value="CLP">Chilean Peso (CLP)</option>
+                          <option value="PHP">Philippine Peso (PHP)</option>
+                          <option value="PKR">Pakistani Rupee (PKR)</option>
+                          <option value="HUF">Hungarian Forint (HUF)</option>
+                          <option value="CZK">Czech Koruna (CZK)</option>
+                          <option value="DKK">Danish Krone (DKK)</option>
+                          <option value="ISK">Icelandic Króna (ISK)</option>
+                          <option value="MYR">Malaysian Ringgit (MYR)</option>
                         </select>
                       </div>
+
                       <div>
                         <label
                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -1578,7 +1746,7 @@
                       </div>
                       <div class="col-span-3 lg:col-span-2 text-gray-600">
                         <label class="switch">
-                          <input type="checkbox" />
+                          <input type="checkbox" class="toggle" />
                           <span class="slider"></span>
                         </label>
                       </div>
@@ -1599,7 +1767,7 @@
                       </div>
                       <div class="col-span-3 lg:col-span-2 text-gray-600">
                         <label class="switch">
-                          <input type="checkbox" />
+                          <input type="checkbox" class="toggle" />
                           <span class="slider"></span>
                         </label>
                       </div>
@@ -1621,7 +1789,7 @@
                       </div>
                       <div class="col-span-3 lg:col-span-2 text-gray-600">
                         <label class="switch">
-                          <input type="checkbox" />
+                          <input type="checkbox" class="toggle" />
                           <span class="slider"></span>
                         </label>
                       </div>
@@ -1638,7 +1806,7 @@
                       </div>
                       <div class="col-span-3 lg:col-span-2 text-gray-600">
                         <label class="switch">
-                          <input type="checkbox" />
+                          <input type="checkbox" class="toggle" />
                           <span class="slider"></span>
                         </label>
                       </div>
@@ -1660,7 +1828,7 @@
                       </div>
                       <div class="col-span-3 lg:col-span-2 text-gray-600">
                         <label class="switch">
-                          <input type="checkbox" />
+                          <input type="checkbox" class="toggle" />
                           <span class="slider"></span>
                         </label>
                       </div>
@@ -1684,7 +1852,7 @@
                       </div>
                       <div class="col-span-3 lg:col-span-2 text-gray-600">
                         <label class="switch">
-                          <input type="checkbox" />
+                          <input type="checkbox" class="toggle" />
                           <span class="slider"></span>
                         </label>
                       </div>
@@ -1706,7 +1874,7 @@
                       </div>
                       <div class="col-span-3 lg:col-span-2 text-gray-600">
                         <label class="switch">
-                          <input type="checkbox" />
+                          <input type="checkbox" class="toggle" />
                           <span class="slider"></span>
                         </label>
                       </div>
@@ -1730,7 +1898,7 @@
                       </div>
                       <div class="col-span-3 lg:col-span-2 text-gray-600">
                         <label class="switch">
-                          <input type="checkbox" />
+                          <input type="checkbox" class="toggle" />
                           <span class="slider"></span>
                         </label>
                       </div>
@@ -1752,7 +1920,7 @@
                       </div>
                       <div class="col-span-3 lg:col-span-2 text-gray-600">
                         <label class="switch">
-                          <input type="checkbox" />
+                          <input type="checkbox" class="toggle" />
                           <span class="slider"></span>
                         </label>
                       </div>
@@ -1769,7 +1937,7 @@
                       </div>
                       <div class="col-span-3 lg:col-span-2 text-gray-600">
                         <label class="switch">
-                          <input type="checkbox" />
+                          <input type="checkbox" class="toggle" />
                           <span class="slider"></span>
                         </label>
                       </div>
@@ -1803,7 +1971,7 @@
                     </div>
                     <div class="col-span-3 lg:col-span-2 text-gray-600">
                       <label class="switch">
-                        <input type="checkbox" />
+                        <input type="checkbox" class="toggle" />
                         <span class="slider"></span>
                       </label>
                     </div>
@@ -2924,8 +3092,8 @@
                               </td>
                               <td
                                 class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white cursor-pointer text-xs"
-                                data-modal-target="default-modal"
-                                data-modal-toggle="default-modal"
+                                data-modal-target="extension-status-modal"
+                                data-modal-toggle="extension-status-modal"
                               >
                                 <span
                                   class="border border-green-300 tex-xs px-2 rounded-md bg-green-100 text-green-600"
@@ -3243,7 +3411,7 @@
                           </tbody>
 
                           <div
-                            id="default-modal"
+                            id="extension-status-modal"
                             tabindex="-1"
                             aria-hidden="true"
                             class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
@@ -3265,7 +3433,7 @@
                                   <button
                                     type="button"
                                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                                    data-modal-hide="default-modal"
+                                    data-modal-hide="extension-status-modal"
                                   >
                                     <svg
                                       class="w-3 h-3"
@@ -3290,14 +3458,14 @@
                                   class="flex items-center justify-end gap-2 p-4 md:p-5 border-gray-200 rounded-b dark:border-gray-600"
                                 >
                                   <button
-                                    data-modal-hide="default-modal"
+                                    data-modal-hide="extension-status-modal"
                                     type="button"
                                     class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                                   >
                                     Cancel
                                   </button>
                                   <button
-                                    data-modal-hide="default-modal"
+                                    data-modal-hide="extension-status-modal"
                                     type="button"
                                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                   >
@@ -3336,5 +3504,7 @@
     <script src="asset/js/select-tag.js"></script>
     <script src="asset/js/draggable-table.js"></script>
     <script src="asset/js/copy-clipboard.js"></script>
+    <script src="asset/js/select2.js"></script>
+    <script src="asset/js/select2.min.js"></script>
   </body>
 </html>

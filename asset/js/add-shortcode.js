@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const newShortcode = document.createElement("div");
     newShortcode.className = "flex space-x-2 mt-2";
     newShortcode.innerHTML = `
+    <div class='w-full'>
+    <hr class='w-full my-4 border-black'>
   <div class="flex flex-col gap-2 w-full">
   <div
                       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full"
@@ -176,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
   <button type="button" class="remove-currency text-red-500 font-bold rounded-md hover:bg-red-600 hover:text-white py-1 w-full text-sm border border-red-500">
    - Remove Currency
-  </button></div>
+  </button></div></div>
 `;
     currencyContainer.appendChild(newShortcode);
   });
