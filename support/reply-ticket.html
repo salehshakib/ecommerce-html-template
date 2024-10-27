@@ -620,12 +620,8 @@
       <!-- create-article -->
       <div class="p-4 ml-0 lg:ml-64">
         <div class="p-4 rounded-lg dark:border-gray-700 mt-14">
-          <div class="text-3xl w-full text-center lg:text-start font-bold">
-            Reply Ticket [#232903]
-          </div>
-
-          <section class="mt-10">
-            <form id="articleForm" class="pb-32">
+          <section class="h-[85vh]">
+            <form id="articleForm" class="flex flex-col">
               <div
                 class="flex flex-col lg:flex-row gap-8 lg:gap-0 items-center justify-between mb-10"
               >
@@ -639,13 +635,12 @@
                     <li class="inline-flex items-center">
                       <a
                         href="/"
-                        class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                        class="inline-flex items-center text-sm font-medium text-gray-700 hover-text dark:text-gray-400 dark:hover:text-white"
                       >
                         <svg
-                          class="w-3 h-3 me-2.5"
+                          class="w-3 h-3 me-2.5 primary-fill"
                           aria-hidden="true"
                           xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
                           viewBox="0 0 20 20"
                         >
                           <path
@@ -674,7 +669,7 @@
                         </svg>
                         <a
                           href="article.html"
-                          class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white"
+                          class="ms-1 text-sm font-medium text-gray-700 hover-text md:ms-2 dark:text-gray-400 dark:hover:text-white"
                           >All Tickets</a
                         >
                       </div>
@@ -698,7 +693,7 @@
                         </svg>
                         <span
                           class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400"
-                          >Reply [#232903]</span
+                          >Ticket [#232903]</span
                         >
                       </div>
                     </li>
@@ -724,105 +719,29 @@
                 </div>
               </div>
 
-              <div
-                class="text-lg font-semibold mb-10 border rounded-md w-full xl:w-[70%] mx-auto p-5"
-              >
-                Subject:
-                <span class="text-gray-500 font-normal"
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Provident expedita, necessitatibus optio, mollitia libero ea,
-                  pariatur in iusto nesciunt soluta quos sequi obcaecati
-                  sit</span
-                >
-              </div>
-
-              <div
-                class="fixed left-10 right-10 ml-0 lg:ml-64 bottom-0 bg-white"
-              >
-                <div id="image-preview" class="flex flex-wrap gap-2 mb-2"></div>
-
+              <div class="flex flex-col lg:flex-row gap-2 border rounded-md">
                 <div
-                  id="image-modal"
-                  class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"
+                  class="text-xl font-semibold mb-0 lg:mb-10 w-full mx-auto p-5"
                 >
-                  <div
-                    class="bg-white p-4 rounded-lg max-w-3xl max-h-[90vh] overflow-auto"
-                  >
-                    <img
-                      id="modal-image"
-                      src=""
-                      alt="Preview"
-                      class="max-w-full h-auto"
-                    />
-                    <button
-                      type="button"
-                      id="close-modal"
-                      class="mt-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-                    >
-                      Close
-                    </button>
+                  <div class="text-black text-3xl mb-1">
+                    Support Ticket [#232903]
                   </div>
+                  <span class="text-gray-500 font-normal"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Provident expedita, necessitatibus optio, mollitia libero
+                    ea, pariatur in iusto nesciunt soluta quos sequi obcaecati
+                    sit</span
+                  >
                 </div>
-
-                <input
-                  type="file"
-                  id="file-input"
-                  class="hidden"
-                  accept="image/*"
-                  multiple
-                />
-                <div
-                  class="w-full pb-10 mt-10 flex items-center gap-4 relative"
-                >
+                <div class="lg:w-48 p-5">
                   <button
-                    class="absolute left-4 cursor-pointer"
-                    type="button"
-                    id="image-button"
-                    aria-label="Upload image"
+                    class="bg-red-600 p-2 text-white w-full text-sm rounded-md"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-8 hover:bg-gray-200 p-1 rounded-lg"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-                      />
-                    </svg>
+                    Close Ticket
                   </button>
-
-                  <input
-                    type="text"
-                    class="w-full rounded-full shadow-sm bg-white pl-14"
-                    placeholder="Type your message here..."
-                  />
-
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-10 p-2 rounded-full border bg-black hover:shadow-md text-white cursor-pointer"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
-                    />
-                  </svg>
-
-                  <!-- <div
-                    id="article-editor"
-                    class="h-[80px] overflow-auto border"
-                  ></div> -->
                 </div>
               </div>
+
               <!-- <div
                 class="fixed left-10 right-10 md:left-[18rem] lg:left-[24rem] lg:right-[10rem] bottom-0 bg-white"
               >
@@ -834,11 +753,11 @@
                 </div>
               </div> -->
 
-              <div class="w-full xl:w-[50%] mx-auto space-y-8 mb-10"></div>
-
-              <div class="w-full xl:w-[70%] mx-auto space-y-8 z-10 pb-96">
+              <div
+                class="w-full xl:w-[70%] mx-auto space-y-8 z-10 h-[50vh] overflow-auto mt-10"
+              >
                 <div class="w-full flex justify-start">
-                  <div class="w-full lg:w-[80%] flex">
+                  <div class="w-full xl:w-[90%] flex items-center gap-2">
                     <div
                       class="flex flex-col items-center justify-center gap-8"
                     >
@@ -875,50 +794,240 @@
                             iusto velit itaque accusantium voluptatibus soluta
                             voluptates asperiores magni!
                           </div>
-                          <div class="w-8">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="white"
-                              class="size-6 bg-red-600 hover:bg-red-700 cursor-pointer shadow-md rounded-full p-1"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
-                              />
-                            </svg>
-                          </div>
                         </div>
                       </div>
                     </div>
+
+                    <div
+                      class="w-24 group cursor-pointer"
+                      data-dropdown-toggle="menu-dropdown[1]"
+                    >
+                      <svg
+                        id="Setting_Menu_Horizontal_24"
+                        class=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <rect
+                          width="24"
+                          height="24"
+                          stroke="none"
+                          fill="#000000"
+                          opacity="0"
+                        />
+
+                        <g transform="matrix(1.43 0 0 1.43 12 12)">
+                          <g style="">
+                            <g transform="matrix(1 0 0 1 -4.7 0)">
+                              <path
+                                style="
+                                  stroke: rgb(0, 0, 0);
+                                  stroke-width: 1;
+                                  stroke-dasharray: none;
+                                  stroke-linecap: round;
+                                  stroke-dashoffset: 0;
+                                  stroke-linejoin: round;
+                                  stroke-miterlimit: 4;
+                                  fill: none;
+                                  fill-rule: nonzero;
+                                  opacity: 1;
+                                "
+                                transform=" translate(-2.3, -7)"
+                                d="M 2.30493 8.5 C 3.26493 8.5 3.80493 7.96 3.80493 7 C 3.80493 6.04 3.26493 5.5 2.30493 5.5 C 1.34493 5.5 0.804932 6.04 0.804932 7 C 0.804932 7.96 1.34493 8.5 2.30493 8.5 Z"
+                                stroke-linecap="round"
+                              />
+                            </g>
+                            <g transform="matrix(1 0 0 1 0.02 0)">
+                              <path
+                                style="
+                                  stroke: rgb(0, 0, 0);
+                                  stroke-width: 1;
+                                  stroke-dasharray: none;
+                                  stroke-linecap: round;
+                                  stroke-dashoffset: 0;
+                                  stroke-linejoin: round;
+                                  stroke-miterlimit: 4;
+                                  fill: none;
+                                  fill-rule: nonzero;
+                                  opacity: 1;
+                                "
+                                transform=" translate(-7.02, -7)"
+                                d="M 7.02368 8.5 C 7.98368 8.5 8.52368 7.96 8.52368 7 C 8.52368 6.04 7.98368 5.5 7.02368 5.5 C 6.06368 5.5 5.52368 6.04 5.52368 7 C 5.52368 7.96 6.06368 8.5 7.02368 8.5 Z"
+                                stroke-linecap="round"
+                              />
+                            </g>
+                            <g transform="matrix(1 0 0 1 4.74 0)">
+                              <path
+                                style="
+                                  stroke: rgb(0, 0, 0);
+                                  stroke-width: 1;
+                                  stroke-dasharray: none;
+                                  stroke-linecap: round;
+                                  stroke-dashoffset: 0;
+                                  stroke-linejoin: round;
+                                  stroke-miterlimit: 4;
+                                  fill: none;
+                                  fill-rule: nonzero;
+                                  opacity: 1;
+                                "
+                                transform=" translate(-11.74, -7)"
+                                d="M 11.7424 8.5 C 12.7024 8.5 13.2424 7.96 13.2424 7 C 13.2424 6.04 12.7024 5.5 11.7424 5.5 C 10.7824 5.5 10.2424 6.04 10.2424 7 C 10.2424 7.96 10.7824 8.5 11.7424 8.5 Z"
+                                stroke-linecap="round"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+
+                    <!-- Dropdown menu -->
+                    <div
+                      id="menu-dropdown[1]"
+                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-72 dark:bg-gray-700 dark:divide-gray-600"
+                    >
+                      <ul
+                        class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200"
+                        aria-labelledby="dropdownToggleButton"
+                      >
+                        <li>
+                          <div
+                            class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                          >
+                            User Profile
+                          </div>
+                        </li>
+                        <li>
+                          <div
+                            class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                          >
+                            Delete
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-                <div class="w-ful flex justify-end">
-                  <div class="w-full lg:w-[80%] flex">
+                <div class="w-full flex justify-end">
+                  <div class="w-full xl:w-[90%] flex items-center gap-2">
+                    <div
+                      class="w-24 group cursor-pointer"
+                      data-dropdown-toggle="menu-dropdown"
+                    >
+                      <svg
+                        id="Setting_Menu_Horizontal_24"
+                        class=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <rect
+                          width="24"
+                          height="24"
+                          stroke="none"
+                          fill="#000000"
+                          opacity="0"
+                        />
+
+                        <g transform="matrix(1.43 0 0 1.43 12 12)">
+                          <g style="">
+                            <g transform="matrix(1 0 0 1 -4.7 0)">
+                              <path
+                                style="
+                                  stroke: rgb(0, 0, 0);
+                                  stroke-width: 1;
+                                  stroke-dasharray: none;
+                                  stroke-linecap: round;
+                                  stroke-dashoffset: 0;
+                                  stroke-linejoin: round;
+                                  stroke-miterlimit: 4;
+                                  fill: none;
+                                  fill-rule: nonzero;
+                                  opacity: 1;
+                                "
+                                transform=" translate(-2.3, -7)"
+                                d="M 2.30493 8.5 C 3.26493 8.5 3.80493 7.96 3.80493 7 C 3.80493 6.04 3.26493 5.5 2.30493 5.5 C 1.34493 5.5 0.804932 6.04 0.804932 7 C 0.804932 7.96 1.34493 8.5 2.30493 8.5 Z"
+                                stroke-linecap="round"
+                              />
+                            </g>
+                            <g transform="matrix(1 0 0 1 0.02 0)">
+                              <path
+                                style="
+                                  stroke: rgb(0, 0, 0);
+                                  stroke-width: 1;
+                                  stroke-dasharray: none;
+                                  stroke-linecap: round;
+                                  stroke-dashoffset: 0;
+                                  stroke-linejoin: round;
+                                  stroke-miterlimit: 4;
+                                  fill: none;
+                                  fill-rule: nonzero;
+                                  opacity: 1;
+                                "
+                                transform=" translate(-7.02, -7)"
+                                d="M 7.02368 8.5 C 7.98368 8.5 8.52368 7.96 8.52368 7 C 8.52368 6.04 7.98368 5.5 7.02368 5.5 C 6.06368 5.5 5.52368 6.04 5.52368 7 C 5.52368 7.96 6.06368 8.5 7.02368 8.5 Z"
+                                stroke-linecap="round"
+                              />
+                            </g>
+                            <g transform="matrix(1 0 0 1 4.74 0)">
+                              <path
+                                style="
+                                  stroke: rgb(0, 0, 0);
+                                  stroke-width: 1;
+                                  stroke-dasharray: none;
+                                  stroke-linecap: round;
+                                  stroke-dashoffset: 0;
+                                  stroke-linejoin: round;
+                                  stroke-miterlimit: 4;
+                                  fill: none;
+                                  fill-rule: nonzero;
+                                  opacity: 1;
+                                "
+                                transform=" translate(-11.74, -7)"
+                                d="M 11.7424 8.5 C 12.7024 8.5 13.2424 7.96 13.2424 7 C 13.2424 6.04 12.7024 5.5 11.7424 5.5 C 10.7824 5.5 10.2424 6.04 10.2424 7 C 10.2424 7.96 10.7824 8.5 11.7424 8.5 Z"
+                                stroke-linecap="round"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+
+                    <!-- Dropdown menu -->
+                    <div
+                      id="menu-dropdown"
+                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-72 dark:bg-gray-700 dark:divide-gray-600"
+                    >
+                      <ul
+                        class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200"
+                        aria-labelledby="dropdownToggleButton"
+                      >
+                        <li>
+                          <div
+                            class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                          >
+                            Profile
+                          </div>
+                        </li>
+                        <li>
+                          <div
+                            class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                          >
+                            Delete
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
                     <div
                       class="flex flex-col items-center justify-center gap-8"
                     >
                       <div class="w-full border rounded-md p-4 flex gap-6">
                         <div class="w-[70%] flex justify-end">
-                          <div class="w-8">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="white"
-                              class="size-6 bg-red-600 hover:bg-red-700 cursor-pointer shadow-md rounded-full p-1"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
-                              />
-                            </svg>
-                          </div>
                           <div class="text-sm text-gray-400 w-full text-end">
                             @username Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Nihil esse assumenda odit fugiat
@@ -967,6 +1076,97 @@
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+
+              <div class="left-10 right-10 ml-0 bottom-0 bg-white">
+                <div id="image-preview" class="flex flex-wrap gap-2 mb-2"></div>
+
+                <div
+                  id="image-modal"
+                  class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"
+                >
+                  <div
+                    class="bg-white p-4 rounded-lg max-w-3xl max-h-[90vh] overflow-auto"
+                  >
+                    <img
+                      id="modal-image"
+                      src=""
+                      alt="Preview"
+                      class="max-w-full h-auto"
+                    />
+                    <button
+                      type="button"
+                      id="close-modal"
+                      class="mt-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+
+                <input
+                  type="file"
+                  id="file-input"
+                  class="hidden"
+                  accept="image/*"
+                  multiple
+                />
+                <div class="w-full flex items-center gap-4 relative">
+                  <button
+                    class="absolute left-4 cursor-pointer"
+                    type="button"
+                    id="image-button"
+                    aria-label="Upload image"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-8 hover:bg-gray-200 p-1 rounded-lg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                      />
+                    </svg>
+                  </button>
+
+                  <!-- <input
+                    type="text"
+                    id="message-input"
+                    class="w-full rounded-full shadow-sm bg-white pl-14 border border-red-600 overflow-scroll"
+                    placeholder="Type your message here..."
+                    oninput="resizeInput(this)"
+                  /> -->
+                  <textarea
+                    class="w-full rounded-full shadow-sm bg-white pl-14 py-2"
+                    placeholder="Type your message here..."
+                    rows="1"
+                  ></textarea>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-10 p-2 rounded-full border bg-black hover:shadow-md text-white cursor-pointer"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                    />
+                  </svg>
+
+                  <!-- <div
+                  id="article-editor"
+                  class="h-[80px] overflow-auto border"
+                ></div> -->
                 </div>
               </div>
             </form>

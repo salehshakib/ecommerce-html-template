@@ -227,3 +227,20 @@ function sendMessage() {
   textInput.value = "";
   imagePreview.innerHTML = "";
 }
+
+const messageInput = document.getElementById("message-input");
+
+// Function to resize the input field based on its content
+function resizeInput() {
+  // Reset the height to calculate the new height
+  messageInput.style.height = "auto";
+
+  // Set the height to the scrollHeight to expand the input
+  messageInput.style.height = `${messageInput.scrollHeight}px`;
+}
+
+// Add event listener for input event to resize the input field
+messageInput.addEventListener("input", resizeInput);
+
+// Optional: Initialize the input field size
+resizeInput();
