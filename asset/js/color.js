@@ -50,6 +50,12 @@ a:hover .hover-text {
   color: var(--var-primary-color) !important;
 }
 
+.stroke-svg {
+stroke: var(--var-secondary-color) !important;
+&:hover {
+  stroke: var(--var-primary-color) !important;
+}
+}
 
 `;
 
