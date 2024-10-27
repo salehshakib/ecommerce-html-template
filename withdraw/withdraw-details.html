@@ -3,16 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="../asset/css/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
       rel="stylesheet"
     />
-
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <title>Article Details</title>
+    <script src="../asset/js/color.js"></script>
+    <title>All Users</title>
   </head>
   <body>
     <div id="loader">
@@ -21,7 +19,7 @@
 
     <div id="content">
       <nav
-        class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+        class="fixed top-0 z-40 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700"
       >
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between">
@@ -97,7 +95,7 @@
                   </div>
                   <ul class="py-1 px-4" role="none">
                     <li
-                      class="flex items-center text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                      class="flex items-center hover-text text-gray-700 secondary-bg dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
                     >
                       <img
                         src="https://cdn.jsdelivr.net/gh/vitasoftsolutions/assets-admin@latest/blade-admin-template/asset/icon/dashboard-1-svgrepo-com.svg"
@@ -153,7 +151,7 @@
                         class="w-5"
                       />
                       <a
-                        href="login.html"
+                        href="/login.html"
                         class="block p-2 text-sm"
                         role="menuitem"
                         >Sign out</a
@@ -169,7 +167,7 @@
 
       <aside
         id="logo-sidebar"
-        class="fixed top-0 -translate-x-full lg:translate-x-0 left-0 z-40 w-64 h-screen pt-20 transition-transform bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+        class="fixed top-0 sm:translate-x-0 left-0 z-30 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
         aria-label="Sidebar"
       >
         <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
@@ -210,14 +208,14 @@
               <ul class="hidden py-2 space-y-2">
                 <li>
                   <a
-                    href="../manage-users/all-users.html"
+                    href="all-users.html"
                     class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     >All Users</a
                   >
                 </li>
                 <li>
                   <a
-                    href="../manage-users/active-users.html"
+                    href="active-users.html"
                     class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     >Active Users</a
                   >
@@ -231,28 +229,28 @@
                 </li>
                 <li>
                   <a
-                    href="../manage-users/email-verified.html"
+                    href="email-verified.html"
                     class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     >Email Verified</a
                   >
                 </li>
                 <li>
                   <a
-                    href="../manage-users/email-unverified.html"
+                    href="email-unverified.html"
                     class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     >Email Unverified</a
                   >
                 </li>
                 <li>
                   <a
-                    href="../manage-users/kyc-verified.html"
+                    href="kyc-verified.html"
                     class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     >KYC Verified</a
                   >
                 </li>
                 <li>
                   <a
-                    href="../manage-users/kyc-unverified.html"
+                    href="kyc-unverified.html"
                     class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     >KYC Unverified</a
                   >
@@ -282,14 +280,14 @@
               <ul class="hidden py-2 space-y-2">
                 <li>
                   <a
-                    href="article.html"
+                    href="../blog/article.html"
                     class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     >Article</a
                   >
                 </li>
                 <li>
                   <a
-                    href="category.html"
+                    href="../blog/category.html"
                     class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     >Category</a
                   >
@@ -601,11 +599,11 @@
         </div>
       </aside>
 
-      <!-- article  details-->
+      <!-- user details -->
       <div class="p-4 ml-0 lg:ml-64">
         <div class="p-4 rounded-lg dark:border-gray-700 mt-14">
-          <div class="text-3xl w-full text-center lg:text-start">
-            Article Details
+          <div class="text-3xl w-full text-center lg:text-start font-bold">
+            Withdraw Details
           </div>
 
           <section class="mt-10 relative">
@@ -622,7 +620,7 @@
                   <li class="inline-flex items-center">
                     <a
                       href="/"
-                      class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                      class="inline-flex items-center text-sm font-medium text-gray-700 hover-text dark:text-gray-400 dark:hover:text-white"
                     >
                       <svg
                         class="w-3 h-3 me-2.5"
@@ -656,9 +654,9 @@
                         />
                       </svg>
                       <a
-                        href="article.html"
+                        href="all-users.html"
                         class="ms-1 text-sm font-medium text-gray-700 hover-text md:ms-2 dark:text-gray-400 dark:hover:text-white"
-                        >Article</a
+                        >Withdraw</a
                       >
                     </div>
                   </li>
@@ -681,7 +679,7 @@
                       </svg>
                       <span
                         class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400"
-                        >Article Details</span
+                        >Withdraw Details</span
                       >
                     </div>
                   </li>
@@ -690,176 +688,515 @@
               <div
                 class="flex justify-center lg:justify-end items-center gap-2 w-full"
               >
-                <button
+                <a
                   type="button"
-                  class="hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 border hover:text-white text-xs md:text-sm"
-                  onclick="window.location.href='article.html'"
+                  class="secondary-bg focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 border hover-text text-xs md:text-sm"
+                  href="pending-deposit.html"
                 >
                   Go Back
-                </button>
+                </a>
               </div>
             </div>
 
-            <div class="w-full lg:w-[80%] xl:w-[60%] mx-auto divide-y">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full xl:w-[80%] mx-auto"
+            >
               <div
-                class="grid grid-cols-4 gap-2 p-5 text-sm lg:text-base mt-20"
+                class="p-5 rounded-md bg-white border shadow-md flex flex-col gap-6"
               >
-                <div class="">Article Title</div>
-                <div class="col-span-3 text-gray-600">Lorem ipsum</div>
-              </div>
-              <div class="grid grid-cols-4 gap-2 p-5 text-sm lg:text-base">
-                <div class="">Category</div>
-                <div class="col-span-3 text-gray-600">Lorem ipsum</div>
-              </div>
-              <div class="grid grid-cols-4 gap-2 p-5 text-sm lg:text-base">
-                <div class="">Description</div>
-                <div class="col-span-3 text-gray-600">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
-                  distinctio pariatur impedit, doloremque expedita excepturi
-                  debitis harum numquam accusamus quisquam molestiae suscipit
-                  veniam corrupti, odit, quod assumenda eos ducimus deserunt?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                  quae perspiciatis optio itaque amet mollitia ipsum perferendis
-                  ex in a deserunt at blanditiis, temporibus tempore iste quas
-                  numquam eius! Libero.
-                </div>
-              </div>
-              <div class="grid grid-cols-4 gap-2 p-5 text-sm lg:text-base">
-                <div class="">Attachment</div>
-                <div
-                  class="col-span-3 text-gray-600 relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 items-center"
-                >
-                  <!-- First Image -->
-                  <div class="border w-full">
-                    <div class="w-full mx-auto">
-                      <div class="relative group">
-                        <img
-                          src="https://picsum.photos/600"
-                          alt="Product image 1"
-                          class="w-full h-[11rem]"
-                        />
-                        <button
-                          class="previewButton absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                          data-index="0"
-                        >
-                          Preview
-                        </button>
-                      </div>
-                      <div class="my-3 text-center">
-                        <h3 class="text-lg font-semibold">Logo</h3>
-                        <p class="text-sm text-gray-500">Product-1.jpeg</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Second Image -->
-                  <div class="border w-full">
-                    <div class="w-full mx-auto">
-                      <div class="relative group">
-                        <img
-                          src="https://picsum.photos/600?random=2"
-                          alt="Product image 2"
-                          class="w-full h-[11rem]"
-                        />
-                        <button
-                          class="previewButton absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                          data-index="1"
-                        >
-                          Preview
-                        </button>
-                      </div>
-                      <div class="my-3 text-center">
-                        <h3 class="text-lg font-semibold">Logo</h3>
-                        <p class="text-sm text-gray-500">Product-2.jpeg</p>
-                      </div>
-                    </div>
-                  </div>
+                <div class="text-xl font-semibold">
+                  Withdraw Via Bank Transfer
                 </div>
 
-                <!-- Modal -->
-                <div
-                  id="previewModal"
-                  class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
-                >
-                  <div class="relative max-w-4xl max-h-[90vh] overflow-hidden">
+                <div class="border rounded-md space-y-2 divide-y-2">
+                  <div class="flex justify-between items-center p-3">
+                    <span>Date</span>
+                    <span class="font-bold">25-06-2024</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3">
+                    <span>Transaction Number</span>
+                    <span class="font-bold">X2UPHSKN6UQH</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3">
+                    <span>Username</span>
+                    <span class="font-bold">@username</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3">
+                    <span>Method</span>
+                    <span class="font-bold">Bank Transfer</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3">
+                    <span>Amount</span>
+                    <span class="font-bold">$49.9USD</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3">
+                    <span>Charge</span>
+                    <span class="font-bold">$4.9USD</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3">
+                    <span>After Charge</span>
+                    <span class="font-bold">$.5USD</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3">
+                    <span>Rate</span>
+                    <span class="font-bold">1 USD = 1.00 USD</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3">
+                    <span>After Rate Coversion</span>
+                    <span class="font-bold">304.00 USD</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3">
+                    <span>Status</span>
+                    <span class="font-bold">Pending</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="p-5 rounded-md bg-white border shadow-md flex flex-col gap-6"
+              >
+                <div class="text-xl font-semibold">
+                  User Withdraw Information
+                </div>
+
+                <div class="rounded-md space-y-2 divide-y-2">
+                  <div class="flex justify-between items-center p-3">
+                    <span>First Name</span>
+                    <span class="font-bold">25-06-2024</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3">
+                    <span>Last Name</span>
+                    <span class="font-bold">25-06-2024</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3">
+                    <span>Bank Number</span>
+                    <span class="font-bold">X2UPHSKN6UQH</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3">
+                    <span>Transaction Number</span>
+                    <span class="font-bold">X2UPHSKN6UQH</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3">
                     <div
-                      id="imageSlider"
-                      class="flex transition-transform duration-300 ease-in-out"
+                      class="col-span-3 text-gray-600 relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 items-center"
                     >
-                      <img
-                        src="https://picsum.photos/600"
-                        alt="Product preview 1"
-                        class="w-full h-auto rounded-lg"
-                      />
-                      <img
-                        src="https://picsum.photos/600?random=2"
-                        alt="Product preview 2"
-                        class="w-full h-auto rounded-lg"
-                      />
+                      <!-- First Image -->
+                      <div class="border w-full">
+                        <div class="w-full mx-auto">
+                          <div class="relative group">
+                            <img
+                              src="https://picsum.photos/600"
+                              alt="Product image 1"
+                              class="w-full h-[11rem]"
+                            />
+                            <button
+                              class="previewButton absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                              data-index="0"
+                            >
+                              Preview
+                            </button>
+                          </div>
+                          <div class="my-3 text-center">
+                            <h3 class="text-lg font-semibold">Logo</h3>
+                            <p class="text-sm text-gray-500">Product-1.jpeg</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Second Image -->
+                      <div class="border w-full">
+                        <div class="w-full mx-auto">
+                          <div class="relative group">
+                            <img
+                              src="https://picsum.photos/600?random=2"
+                              alt="Product image 2"
+                              class="w-full h-[11rem]"
+                            />
+                            <button
+                              class="previewButton absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                              data-index="1"
+                            >
+                              Preview
+                            </button>
+                          </div>
+                          <div class="my-3 text-center">
+                            <h3 class="text-lg font-semibold">Logo</h3>
+                            <p class="text-sm text-gray-500">Product-2.jpeg</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <button
-                      id="prevButton"
-                      class="absolute top-1/2 left-[25%] xl:left-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-75"
+
+                    <!-- Modal -->
+                    <div
+                      id="previewModal"
+                      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                      <div
+                        class="relative max-w-4xl max-h-[90vh] overflow-hidden"
                       >
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                      </svg>
+                        <div
+                          id="imageSlider"
+                          class="flex transition-transform duration-300 ease-in-out"
+                        >
+                          <img
+                            src="https://picsum.photos/600"
+                            alt="Product preview 1"
+                            class="w-full h-auto rounded-lg"
+                          />
+                          <img
+                            src="https://picsum.photos/600?random=2"
+                            alt="Product preview 2"
+                            class="w-full h-auto rounded-lg"
+                          />
+                        </div>
+                        <button
+                          id="prevButton"
+                          class="absolute top-1/2 left-[25%] xl:left-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-75"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                          </svg>
+                        </button>
+                        <button
+                          id="nextButton"
+                          class="absolute top-1/2 right-[25%] xl:right-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-75"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </button>
+                        <button
+                          id="closeButton"
+                          class="absolute top-2 right-[25%] xl:right-4 text-white hover:text-gray-300"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-end gap-5 items-center p-3 mt-5">
+                    <button
+                      class="px-4 py-2 border rounded-md secondary-bg hover-text font-semibold"
+                    >
+                      Reject
                     </button>
                     <button
-                      id="nextButton"
-                      class="absolute top-1/2 right-[25%] xl:right-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-75"
+                      class="px-4 py-2 border rounded-md primary-bg text-white hover-text secondary-bg font-semibold"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                      </svg>
-                    </button>
-                    <button
-                      id="closeButton"
-                      class="absolute top-2 right-[25%] xl:right-4 text-white hover:text-gray-300"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg>
+                      Accept
                     </button>
                   </div>
                 </div>
               </div>
-
-              <!-- Styles for image slider -->
-              <style></style>
             </div>
           </section>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="add-balance-modal"
+      tabindex="-1"
+      class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    >
+      <div class="relative w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div
+            class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+          >
+            <h3 class="text-xl font-medium text-gray-900 dark:text-white">
+              Add Balance
+            </h3>
+            <button
+              type="button"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              data-modal-hide="add-balance-modal"
+            >
+              <svg
+                class="w-3 h-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-4 md:p-5 space-y-4">
+            <div>
+              <label
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                for="articleTitle"
+                >Amount <span class="text-red-600">*</span></label
+              >
+              <input
+                type="text"
+                id="articleTitle"
+                name="articleTitle"
+                class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Enter the article title"
+                required
+              />
+            </div>
+            <div class="">
+              <label
+                for="shortDescription"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Remark <span class="text-red-600">*</span></label
+              >
+              <textarea
+                id="shortDescription"
+                name="shortDescription"
+                rows="2"
+                class="block p-2 py-1 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Write your thoughts here..."
+                required
+              ></textarea>
+            </div>
+          </div>
+          <!-- Modal footer -->
+          <div
+            class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600"
+          >
+            <button
+              type="button"
+              data-modal-hide="add-balance-modal"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Submit
+            </button>
+            <button
+              data-modal-hide="add-balance-modal"
+              type="button"
+              class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="sub-balance-modal"
+      tabindex="-1"
+      class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    >
+      <div class="relative w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div
+            class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+          >
+            <h3 class="text-xl font-medium text-gray-900 dark:text-white">
+              Subtract Balance
+            </h3>
+            <button
+              type="button"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              data-modal-hide="sub-balance-modal"
+            >
+              <svg
+                class="w-3 h-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-4 md:p-5 space-y-4">
+            <div>
+              <label
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                for="articleTitle"
+                >Amount <span class="text-red-600">*</span></label
+              >
+              <input
+                type="text"
+                id="articleTitle"
+                name="articleTitle"
+                class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Enter the article title"
+                required
+              />
+            </div>
+            <div class="">
+              <label
+                for="shortDescription"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Remark <span class="text-red-600">*</span></label
+              >
+              <textarea
+                id="shortDescription"
+                name="shortDescription"
+                rows="2"
+                class="block p-2 py-1 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Write your thoughts here..."
+                required
+              ></textarea>
+            </div>
+          </div>
+          <!-- Modal footer -->
+          <div
+            class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600"
+          >
+            <button
+              type="button"
+              data-modal-hide="sub-balance-modal"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Submit
+            </button>
+            <button
+              data-modal-hide="sub-balance-modal"
+              type="button"
+              class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="ban-user-modal"
+      tabindex="-1"
+      class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    >
+      <div class="relative w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div
+            class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+          >
+            <h3 class="text-xl font-medium text-gray-900 dark:text-white">
+              Ban User
+            </h3>
+            <button
+              type="button"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              data-modal-hide="ban-user-modal"
+            >
+              <svg
+                class="w-3 h-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-4 md:p-5 space-y-4">
+            <div>
+              <span class="font-medium text-gray-800">
+                If you ban this user he/she won't able to access his/her
+                dashboard.
+              </span>
+            </div>
+            <div class="">
+              <label
+                for="shortDescription"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Reason <span class="text-red-600">*</span></label
+              >
+              <textarea
+                id="shortDescription"
+                name="shortDescription"
+                rows="2"
+                class="block p-2 py-1 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Write your thoughts here..."
+                required
+              ></textarea>
+            </div>
+          </div>
+          <!-- Modal footer -->
+          <div
+            class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600"
+          >
+            <button
+              type="button"
+              data-modal-hide="ban-user-modal"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Submit
+            </button>
+            <button
+              data-modal-hide="ban-user-modal"
+              type="button"
+              class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              Cancel
+            </button>
+          </div>
         </div>
       </div>
     </div>

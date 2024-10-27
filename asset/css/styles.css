@@ -174,3 +174,16 @@ input:checked ~ .switch-label::after {
 input:not(:checked) ~ .switch-label::after {
   content: "OFF";
 }
+
+#imageSlider img {
+  min-width: 100%; /* Ensures the image takes the full width of its container */
+  max-width: 100%; /* Prevents it from exceeding its container */
+  object-fit: contain; /* Keeps the entire image visible without cropping */
+}
+
+@media (max-width: 1024px) {
+  /* Applies height only on large screens (adjust breakpoint as needed) */
+  #imageSlider img {
+    height: 30rem; /* Sets a fixed height of 30rem for larger screens */
+  }
+}
