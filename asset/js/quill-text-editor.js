@@ -30,6 +30,12 @@ const options = {
 
 var articleEditor = new Quill("#article-editor", options);
 
+articleEditor.on("text-change", function () {
+  // const content = articleEditor.root.innerHTML;
+  const content = articleEditor.getContents();
+  document.getElementById("description").value = content;
+});
+
 function getContent() {
   const content = articleEditor.getContents();
 
