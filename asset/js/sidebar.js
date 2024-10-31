@@ -173,8 +173,8 @@
 //       "rounded-lg",
 //       "group",
 //       "hover:bg-gray-100",
-//       "dark:text-white",
-//       "dark:hover:bg-gray-700",
+//       "",
+//       "",
 //       "lg:text-base"
 //     );
 
@@ -224,8 +224,8 @@
 //         "rounded-lg",
 //         "group",
 //         "hover:bg-gray-100",
-//         "dark:text-white",
-//         "dark:hover:bg-gray-700",
+//         "",
+//         "",
 //         "cursor-pointer",
 //         "mx-auto",
 //         "text-sm",
@@ -291,9 +291,9 @@
 //       "p-2",
 //       "text-gray-900",
 //       "rounded-lg",
-//       "dark:text-white",
+//       "",
 //       "hover:bg-gray-100",
-//       "dark:hover:bg-gray-700",
+//       "",
 //       "group",
 //       "cursor-pointer",
 //       "text-sm",
@@ -376,8 +376,8 @@
 //       "rounded-lg",
 //       "group",
 //       "hover:bg-gray-100",
-//       "dark:text-white",
-//       "dark:hover:bg-gray-700",
+//       "",
+//       "",
 //       "lg:text-base"
 //     );
 
@@ -427,8 +427,8 @@
 //         "pl-11",
 //         "group",
 //         "hover:bg-gray-100",
-//         "dark:text-white",
-//         "dark:hover:bg-gray-700",
+//         "",
+//         "",
 //         "cursor-pointer",
 //         "text-sm",
 //         "lg:text-base"
@@ -474,9 +474,9 @@
 //       "p-2",
 //       "text-gray-900",
 //       "rounded-lg",
-//       "dark:text-white",
+//       "",
 //       "hover:bg-gray-100",
-//       "dark:hover:bg-gray-700",
+//       "",
 //       "group",
 //       "cursor-pointer"
 //     );

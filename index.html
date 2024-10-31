@@ -39,9 +39,7 @@
     </div>
 
     <div id="content">
-      <nav
-        class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700"
-      >
+      <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between">
             <div class="flex items-center justify-start rtl:justify-end">
@@ -50,7 +48,7 @@
                 data-drawer-toggle="logo-sidebar"
                 aria-controls="logo-sidebar"
                 type="button"
-                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 primary-text"
+                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none primary-text"
               >
                 <span class="sr-only">Open sidebar</span>
                 <svg
@@ -111,18 +109,15 @@
                   </button>
                 </div>
                 <div
-                  class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600 dropdown-menu"
+                  class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dropdown-menu"
                   id="dropdown-user"
                 >
                   <div class="px-5 py-3" role="none">
-                    <p
-                      class="text-lg text-gray-900 dark:text-white"
-                      role="none"
-                    >
+                    <p class="text-lg text-gray-900" role="none">
                       Vitasoft Solution Admin
                     </p>
                     <p
-                      class="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
+                      class="text-sm font-medium text-gray-900 truncate"
                       role="none"
                     >
                       vitasoftsolutions@gmail.com
@@ -130,7 +125,7 @@
                   </div>
                   <ul class="py-1 px-4" role="none">
                     <li
-                      class="flex items-center hover-text hover-bg dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                      class="flex items-center hover-text hover-bg rounded-md px-1 cursor-pointer"
                     >
                       <svg
                         id="Dashboard_Layout_20"
@@ -174,7 +169,7 @@
                     </li>
 
                     <li
-                      class="flex items-center text-gray-700 hover-text hover-bg dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                      class="flex items-center text-gray-700 hover-text hover-bg rounded-md px-1 cursor-pointer"
                     >
                       <svg
                         id="User_20"
@@ -220,7 +215,7 @@
                       >
                     </li>
                     <li
-                      class="flex items-center text-gray-700 hover-text hover-bg dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                      class="flex items-center text-gray-700 hover-text hover-bg rounded-md px-1 cursor-pointer"
                     >
                       <svg
                         id="Password_20"
@@ -266,7 +261,7 @@
                       >
                     </li>
                     <li
-                      class="flex items-center text-gray-700 hover-text hover-bg dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                      class="flex items-center text-gray-700 hover-text hover-bg rounded-md px-1 cursor-pointer"
                     >
                       <svg
                         id="Settings_20"
@@ -312,7 +307,7 @@
                       >
                     </li>
                     <li
-                      class="flex items-center text-gray-700 hover-text hover-bg dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white rounded-md px-1 cursor-pointer"
+                      class="flex items-center text-gray-700 hover-text hover-bg rounded-md px-1 cursor-pointer"
                     >
                       <svg
                         id="Door_Sensor_Checked_20"
@@ -367,10 +362,10 @@
 
       <aside
         id="logo-sidebar"
-        class="fixed top-0 -translate-x-full lg:translate-x-0 left-0 z-40 w-64 h-screen pt-20 transition-transform bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+        class="fixed top-0 -translate-x-full lg:translate-x-0 left-0 z-40 w-64 h-screen pt-20 transition-transform bg-white border-r border-gray-200"
         aria-label="Sidebar"
       >
-        <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+        <div class="h-full px-3 pb-4 overflow-y-auto bg-white">
           <ul class="space-y-2 font-medium" id="sidebar-menu">
             <li class="">
               <a
@@ -505,49 +500,49 @@
                 <li>
                   <a
                     href="manage-users/all-users.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white secondary-bg dark:hover:bg-gray-700 text-sm xl:text-base hover-text"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group secondary-bg text-sm xl:text-base hover-text"
                     >All Users</a
                   >
                 </li>
                 <li class="">
                   <a
                     href="manage-users/active-users.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Active Users</a
                   >
                 </li>
                 <li>
                   <a
                     href="manage-users/banned-users.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Banned Users</a
                   >
                 </li>
                 <li>
                   <a
                     href="manage-users/email-verified.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Email Verified</a
                   >
                 </li>
                 <li>
                   <a
                     href="manage-users/email-unverified.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Email Unverified</a
                   >
                 </li>
                 <li>
                   <a
                     href="manage-users/kyc-verified.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >KYC Verified</a
                   >
                 </li>
                 <li>
                   <a
                     href="manage-users/kyc-unverified.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >KYC Unverified</a
                   >
                 </li>
@@ -640,14 +635,14 @@
                 <li>
                   <a
                     href="blog/article.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Article</a
                   >
                 </li>
                 <li>
                   <a
                     href="blog/category.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Category</a
                   >
                 </li>
@@ -741,14 +736,14 @@
                 <li>
                   <a
                     href="email-manager/email-template.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Email Template</a
                   >
                 </li>
                 <li>
                   <a
                     href="email-manager/email-configuration.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Email Configuration</a
                   >
                 </li>
@@ -842,14 +837,14 @@
                 <li>
                   <a
                     href="sms-manager/sms-template.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >SMS Template</a
                   >
                 </li>
                 <li>
                   <a
                     href="sms-manager/sms-configuration.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >SMS Configuration</a
                   >
                 </li>
@@ -943,14 +938,14 @@
                 <li>
                   <a
                     href="notification/email.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Send Via Email</a
                   >
                 </li>
                 <li>
                   <a
                     href="notification/sms.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Send Via SMS</a
                   >
                 </li>
@@ -1041,42 +1036,42 @@
                 <li>
                   <a
                     href="deposit/pending-deposit.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Pending Deposit</a
                   >
                 </li>
                 <li>
                   <a
                     href="deposit/approved-deposit.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Approved Deposit</a
                   >
                 </li>
                 <li>
                   <a
                     href="deposit/successful-deposit.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Successful Deposit</a
                   >
                 </li>
                 <li>
                   <a
                     href="deposit/rejected-deposit.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Rejected Deposit</a
                   >
                 </li>
                 <li>
                   <a
                     href="deposit/initated-deposit.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Initiated Deposit</a
                   >
                 </li>
                 <li>
                   <a
                     href="deposit/all-deposit.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >All Deposit</a
                   >
                 </li>
@@ -1167,14 +1162,14 @@
                 <li>
                   <a
                     href="withdraw/pending-withdrawals.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Pending Withdrawals</a
                   >
                 </li>
                 <li>
                   <a
                     href="withdraw/approved-withdrawals.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Approved Withdrawals</a
                   >
                 </li>
@@ -1182,7 +1177,7 @@
                 <li>
                   <a
                     href="withdraw/rejected-withdrawals.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Rejected Withdrawals</a
                   >
                 </li>
@@ -1190,7 +1185,7 @@
                 <li>
                   <a
                     href="withdraw/all-wtihdrawals.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >All Withdrawals</a
                   >
                 </li>
@@ -1285,14 +1280,14 @@
                 <li>
                   <a
                     href="payement-gateway/manual.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Manual</a
                   >
                 </li>
                 <li>
                   <a
                     href="payement-gateway/automatic.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Automatic</a
                   >
                 </li>
@@ -1388,28 +1383,28 @@
                 <li>
                   <a
                     href="support/pending-ticket.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Pending Ticket</a
                   >
                 </li>
                 <li>
                   <a
                     href="support/closed-ticket.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Closed Ticket</a
                   >
                 </li>
                 <li>
                   <a
                     href="support/answered-ticket.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Answered Ticket</a
                   >
                 </li>
                 <li>
                   <a
                     href="support/all-ticket.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >All Ticket</a
                   >
                 </li>
@@ -1501,21 +1496,21 @@
                 <li>
                   <a
                     href="others/faq.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >FAQ</a
                   >
                 </li>
                 <li>
                   <a
                     href="others/privacy-policy.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Privacy Policy</a
                   >
                 </li>
                 <li>
                   <a
                     href="others/terms-conditions.html"
-                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group dark:text-white dark:hover:bg-gray-700 text-sm xl:text-base hover-text secondary-bg"
+                    class="flex items-center w-full p-2 pl-14 text-gray-900 transition duration-75 rounded-lg group text-sm xl:text-base hover-text secondary-bg"
                     >Terms & Conditions</a
                   >
                 </li>
@@ -1524,7 +1519,7 @@
           </ul>
 
           <ul
-            class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"
+            class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200"
             id="sidebar-extra"
           >
             <!-- General Settings -->
@@ -1720,17 +1715,17 @@
 
           <div
             id="dropdown-cta"
-            class="p-4 mt-6 rounded-lg bg-blue-50 dark:bg-blue-900"
+            class="p-4 mt-6 rounded-lg bg-blue-50"
             role="alert"
           >
             <div class="flex items-center mb-3">
               <span
-                class="bg-orange-100 text-orange-800 text-sm font-semibold me-2 px-2.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-900"
+                class="bg-orange-100 text-orange-800 text-sm font-semibold me-2 px-2.5 py-0.5 rounded"
                 >Beta</span
               >
               <button
                 type="button"
-                class="ms-auto -mx-1.5 -my-1.5 bg-blue-50 inline-flex justify-center items-center w-6 h-6 text-blue-900 rounded-lg focus:ring-2 focus:ring-blue-400 p-1 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-400 dark:hover:bg-blue-800"
+                class="ms-auto -mx-1.5 -my-1.5 bg-blue-50 inline-flex justify-center items-center w-6 h-6 text-blue-900 rounded-lg focus:ring-2 focus:ring-blue-400 p-1 hover:bg-blue-200"
                 data-dismiss-target="#dropdown-cta"
                 aria-label="Close"
               >
@@ -1752,12 +1747,12 @@
                 </svg>
               </button>
             </div>
-            <p class="mb-3 text-sm text-blue-800 dark:text-blue-400">
+            <p class="mb-3 text-sm text-blue-800">
               Preview the new ecommerce dashboard navigation! You can now see /
               add your comapany cta here
             </p>
             <a
-              class="text-sm text-blue-800 underline font-medium hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
+              class="text-sm text-blue-800 underline font-medium hover:text-blue-900"
               href="#"
               >Add new cta</a
             >
@@ -1766,7 +1761,7 @@
       </aside>
 
       <!-- dashboard -->
-      <div class="p-4 ml-0 lg:ml-64 bg-gray-50 dark:bg-gray-800">
+      <div class="p-4 ml-0 lg:ml-64 bg-gray-50">
         <div class="mt-14 text-2xl font-semibold">Dashboard</div>
         <div class="mt-8">
           <div

@@ -1,27 +1,26 @@
 const toolbarOptions = [
-  [{ size: ["small", false, "large", "huge"] }], // custom dropdown
+  [{ size: ["small", false, "large", "huge"] }],
   [{ header: [1, 2, 3, 4, 5, 6, false] }],
-  ["bold", "italic", "underline", "strike"], // toggled buttons
+  ["bold", "italic", "underline", "strike"],
   ["blockquote", "code-block"],
   ["link", "image"],
 
   [{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
-  [{ script: "sub" }, { script: "super" }], // superscript/subscript
-  [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
-  [{ direction: "rtl" }], // text direction
+  [{ script: "sub" }, { script: "super" }],
+  [{ indent: "-1" }, { indent: "+1" }],
+  [{ direction: "rtl" }],
 
-  [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+  [{ color: [] }, { background: [] }],
   [{ font: [] }],
   [{ align: [] }],
 
-  ["clean"], // remove formatting button
+  ["clean"],
 ];
 
 const options = {
-  //   debug: "info",
   modules: {
     toolbar: {
-      container: toolbarOptions, // Selector for toolbar container
+      container: toolbarOptions,
     },
   },
   placeholder: "Write an something",
@@ -31,7 +30,6 @@ const options = {
 var articleEditor = new Quill("#article-editor", options);
 
 articleEditor.on("text-change", function () {
-  // const content = articleEditor.root.innerHTML;
   const content = articleEditor.getContents();
   document.getElementById("description").value = content;
 });
@@ -45,7 +43,7 @@ function getContent() {
 var quill = new Quill("#sitemap-editor", {
   modules: {
     syntax: true,
-    toolbar: ["code-block"], // Enables syntax highlighting
+    toolbar: ["code-block"],
   },
   placeholder: "Write something",
   theme: "snow",
@@ -53,5 +51,3 @@ var quill = new Quill("#sitemap-editor", {
 hljs.highlightAll();
 
 quill.format("code-block", true);
-
-// Set the initial format to code-block

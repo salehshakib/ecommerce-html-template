@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
   <input
     type="text"
     placeholder="Object name"
-    class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500  "
   />
   <input
     type="text"
     placeholder="Key"
-    class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500  "
   />
   <button type="button" class="remove-shortcode text-red-500 font-bold rounded-full">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     >
                       <div>
                         <label
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          class="block mb-2 text-sm font-medium text-gray-900 "
                           for="articleTitle"
                           >Currency <span class="text-red-600">*</span></label
                         >
@@ -57,14 +57,14 @@ document.addEventListener("DOMContentLoaded", function () {
                           type="text"
                           id="articleTitle"
                           name="articleTitle"
-                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500  "
                           placeholder="Enter the article title"
                           required
                         />
                       </div>
                       <div>
                         <label
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          class="block mb-2 text-sm font-medium text-gray-900 "
                           for="articleTitle"
                           >Symbol <span class="text-red-600">*</span></label
                         >
@@ -72,14 +72,14 @@ document.addEventListener("DOMContentLoaded", function () {
                           type="text"
                           id="articleTitle"
                           name="articleTitle"
-                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500  "
                           placeholder="Enter the article title"
                           required
                         />
                       </div>
                       <div>
                         <label
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          class="block mb-2 text-sm font-medium text-gray-900 "
                           for="articleTitle"
                           >Minimum Amount
                           <span class="text-red-600">*</span></label
@@ -88,14 +88,14 @@ document.addEventListener("DOMContentLoaded", function () {
                           type="text"
                           id="articleTitle"
                           name="articleTitle"
-                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500  "
                           placeholder="Enter the article title"
                           required
                         />
                       </div>
                       <div>
                         <label
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          class="block mb-2 text-sm font-medium text-gray-900 "
                           for="articleTitle"
                           >Max Amount <span class="text-red-600">*</span></label
                         >
@@ -103,14 +103,14 @@ document.addEventListener("DOMContentLoaded", function () {
                           type="text"
                           id="articleTitle"
                           name="articleTitle"
-                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500  "
                           placeholder="Enter the article title"
                           required
                         />
                       </div>
                       <div>
                         <label
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          class="block mb-2 text-sm font-medium text-gray-900 "
                           for="articleTitle"
                           >Percent Charge
                           <span class="text-red-600">*</span></label
@@ -119,14 +119,14 @@ document.addEventListener("DOMContentLoaded", function () {
                           type="text"
                           id="articleTitle"
                           name="articleTitle"
-                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500  "
                           placeholder="Enter the article title"
                           required
                         />
                       </div>
                       <div>
                         <label
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          class="block mb-2 text-sm font-medium text-gray-900 "
                           for="articleTitle"
                           >Fixed Amount
                           <span class="text-red-600">*</span></label
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
                           type="text"
                           id="articleTitle"
                           name="articleTitle"
-                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500  "
                           placeholder="Enter the article title"
                           required
                         />
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                       <div>
                         <label
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          class="block mb-2 text-sm font-medium text-gray-900 "
                           for="articleTitle"
                           >Rate<span class="text-red-600">*</span></label
                         >
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
                           type="text"
                           id="articleTitle"
                           name="articleTitle"
-                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          class="block w-full p-2 py-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500  "
                           placeholder="Enter the article title"
                           required
                         />
@@ -163,14 +163,14 @@ document.addEventListener("DOMContentLoaded", function () {
                             id="remember"
                             aria-describedby="remember"
                             type="checkbox"
-                            class="w-5 h-5 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
+                            class="w-5 h-5 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300  "
                             required
                           />
                         </div>
                         <div class="ml-3">
                           <label
                             for="remember"
-                            class="text-gray-500 dark:text-gray-300"
+                            class="text-gray-500 "
                             >Crypto</label
                           >
                         </div>

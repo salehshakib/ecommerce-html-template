@@ -12,7 +12,7 @@
         <li class="inline-flex items-center">
           <a
             href="/"
-            class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+            class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600"
           >
             <svg
               class="w-3 h-3 me-2.5"
@@ -47,7 +47,7 @@
             </svg>
             <a
               href="/blog/article.html"
-              class="ms-1 text-sm font-medium text-gray-700 hover-text md:ms-2 dark:text-gray-400 dark:hover:text-white"
+              class="ms-1 text-sm font-medium text-gray-700 hover-text md:ms-2"
               >Article</a
             >
           </div>
@@ -69,8 +69,7 @@
                 d="m1 9 4-4-4-4"
               />
             </svg>
-            <span
-              class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400"
+            <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2"
               >Article Create</span
             >
           </div>
@@ -80,7 +79,7 @@
     <div class="flex justify-center lg:justify-end items-center gap-2 w-full">
       <button
         type="submit"
-        class="hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 border hover:text-white text-xs md:text-sm"
+        class="hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center border hover:text-white text-xs md:text-sm"
         onclick="window.location.href='/blog/article.html'"
       >
         Go Back
@@ -88,14 +87,14 @@
       <button
         type="submit"
         id="save"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-xs md:text-sm"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-5 py-2 text-center text-xs md:text-sm"
       >
         Save
       </button>
       <button
         type="submit"
         id="saveAndCreate"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-3 md:px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-xs md:text-sm"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto px-3 md:px-5 py-2 text-center text-xs md:text-sm"
       >
         Save & Create
       </button>
@@ -106,7 +105,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
       <div>
         <label
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900"
           for="articleTitle"
           >Article Title <span class="text-red-600">*</span></label
         >
@@ -114,7 +113,7 @@
           type="text"
           id="articleTitle"
           name="articleTitle"
-          class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500"
           placeholder="Enter the article title"
           required
         />
@@ -122,7 +121,7 @@
       <div class="relative">
         <label
           for="articleCategory"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900"
         >
           Select Category <span class="text-red-600">*</span>
         </label>
@@ -130,7 +129,7 @@
           type="text"
           id="articleCategory"
           placeholder="Search for a category"
-          class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500"
           onfocus="showDropdown()"
           autocomplete="off"
           required
@@ -219,23 +218,21 @@
     <div class="">
       <label
         for="shortDescription"
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        class="block mb-2 text-sm font-medium text-gray-900"
         >Short Description <span class="text-red-600">*</span></label
       >
       <textarea
         id="shortDescription"
         name="shortDescription"
         rows="2"
-        class="block p-2 py-[6px] w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        class="block p-2 py-[6px] w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
         placeholder="Write your thoughts here..."
         required
       ></textarea>
     </div>
 
     <div class="">
-      <label
-        for="article"
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      <label for="article" class="block mb-2 text-sm font-medium text-gray-900"
         >Article <span class="text-red-600">*</span></label
       >
       <div id="article-editor" class="h-[150px] overflow-auto border"></div>
@@ -276,11 +273,9 @@
           id="seo-checkbox"
           name="seo-checkbox"
           type="checkbox"
-          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
         />
-        <label
-          for="seo-checkbox"
-          class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        <label for="seo-checkbox" class="ms-2 text-sm font-medium text-gray-900"
           >SEO</label
         >
       </div>
@@ -294,28 +289,28 @@
       <div>
         <label
           for="metaTitle"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900"
           >Meta Title <span class="text-red-600">*</span></label
         >
         <input
           type="text"
           id="metaTitle"
           name="metaTitle"
-          class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500"
           placeholder="Enter meta title"
         />
       </div>
       <div>
         <label
           for="metaTag"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900"
           >Meta Tag <span class="text-red-600">*</span></label
         >
         <input
           type="text"
           id="metaTag"
           name="metaTag"
-          class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="block w-full p-2 py-[6px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500"
           placeholder="Enter meta tag"
         />
       </div>
@@ -323,14 +318,14 @@
       <div class="col-span-1 md:col-span-2">
         <label
           for="metaDescription"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900"
           >Meta Description <span class="text-red-600">*</span></label
         >
         <textarea
           id="metaDescription"
           rows="2"
           name="metaDescription"
-          class="block p-2 py-[6px] w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="block p-2 py-[6px] w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
           placeholder="Write meta description..."
         ></textarea>
       </div>
